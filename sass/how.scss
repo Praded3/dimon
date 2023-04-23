@@ -71,6 +71,9 @@
     gap: 35px;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: 767px){
+         gap: 65px;
+    }
      @media screen and (max-width: 425px){
        gap: 20px;
     }
