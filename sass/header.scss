@@ -113,6 +113,10 @@
     font-size: 18px;
     line-height: 100%;
     margin-top: 7px;
+    @media screen and (max-width: 767px){
+        font-size: 14px;
+        margin-top: 15px;
+    }
 }
 .header__sup-title {
     font-family: $secondury_font;
