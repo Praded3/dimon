@@ -156,6 +156,8 @@
 ._our-company {
 }
 .advantages__btn {
+    display: flex;
+    justify-content: center;
     font-weight: 600;
     font-size: 24px;
     line-height: 142%;
@@ -165,7 +167,7 @@
     padding: 15px 178px;
     background-color: #F1F6FE;
     box-shadow: 12px 12px 22px rgba(156, 173, 201, 1), -12px -12px 22px rgba(156, 173, 201, 1);
-    
+    text-align: center;
     border-radius: 11px;
     white-space: nowrap;
     transition: $transition__stock;
@@ -180,8 +182,14 @@
         margin-top: 58px;}
     @media screen and (max-width: 767px) {  
         margin-top: 40px;
-        padding: 15px 25px;
+        padding: 15px 15px;
+        font-size: 21px;
+        width: 95%;
+    }
+    @media screen and (max-width: 375px) {  
+        padding: 15px 15px;
         font-size: 18px;
+        width: 95%;
     }
    
 }
