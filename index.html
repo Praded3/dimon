@@ -244,7 +244,7 @@
                         <svg class='steps__icon'>
                             <use href='./img/sprite.svg#step-1'></use>
                         </svg>
-                        <h3 class='steps__title'>Step</h3>
+                        <h3 class='steps__title _title__first'>Step</h3>
                         <p class='steps__description'>Tell us about your no longer wanted house or property that you
                             want to sell here on our site or by calling us.</p>
                     </div>
@@ -255,7 +255,7 @@
                         <svg class='steps__icon'>
                             <use href='./img/sprite.svg#step-2'></use>
                         </svg>
-                        <h3 class='steps__title'>Step</h3>
+                        <h3 class='steps__title _title__second'>Step</h3>
                         <p class='steps__description'>We will contact you right away to set up a quick appointment.</p>
                     </div>
                     <svg class='steps__icon-arrow'>
@@ -265,7 +265,7 @@
                         <svg class='steps__icon'>
                             <use href='./img/sprite.svg#step-3'></use>
                         </svg>
-                        <h3 class='steps__title'>Step</h3>
+                        <h3 class='steps__title _title__third'>Step</h3>
                         <p class='steps__description'>We will propose to you a fair, written, no-obligation cash offer
                             on your house or property.</p>
                     </div>
@@ -276,19 +276,35 @@
                         <svg class='steps__icon'>
                             <use href='./img/sprite.svg#step-4'></use>
                         </svg>
-                        <h3 class='steps__title'>Step</h3>
+                        <h3 class='steps__title _title__fourth'>Step</h3>
                         <p class='steps__description'>We will close together with you at a local reputable title
                             company, you get the cash for your house in as little as 7
                             days! What? Yes! You heard that correctly.</p>
                     </div>
                 </div>
-                <div class='steps__bottop-container'>
-                    <h2 class='steps__title'>Enter your information to get started</h2>
-                    <p class='steps__description'>Secure & Confidential. We will not give you an offer if your house is
+                <div class='steps__bottom-container'>
+                    <h2 class='steps__bottom-title'>Enter your information to get started</h2>
+                    <p class='steps__bottom-description'>Secure & Confidential. We will not give you an offer if your
+                        house is
                         already listed with a R.E. Agent.</p>
-                    <form class="steps__form">
-                        <input class="steps__input" type="text">
-                        <button type='button' class='steps__btn'>GET MY FAIR CASH OFFER</button>
+                    <form class="steps__form" autocomplete="on">
+                        <span class="form__input-wrapper"><svg class='input__icon'>
+                                <use href='./img/sprite.svg#icon-name'></use>
+                            </svg><input class="steps__input" name="Name" type="text" required
+                                placeholder="Full Name"></span>
+                        <span class="form__input-wrapper"><svg class='input__icon'>
+                                <use href='./img/sprite.svg#icon-phone'></use>
+                            </svg><input class="steps__input" name="Phone" type="tel" required
+                                placeholder="Phone Number"></span>
+                        <span class="form__input-wrapper"><svg class='input__icon'>
+                                <use href='./img/sprite.svg#icon-mail'></use>
+                            </svg><input class="steps__input" name="E-Mail" type="email" required
+                                placeholder="E-Mail Address"></span>
+                        <span class="form__input-wrapper"><svg class='input__icon'>
+                                <use href='./img/sprite.svg#icon-adress'></use>
+                            </svg><input class="steps__input" name="Address" type="text" required
+                                placeholder="Property Address"></span>
+                        <button type='submit' class='steps__btn'>GET MY FAIR CASH OFFER</button>
                     </form>
                 </div>
             </div>
