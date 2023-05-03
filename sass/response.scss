@@ -11,6 +11,8 @@
 }
 .response__bcg-img{
     object-fit: cover;
+    width: 100%;
+    display: flex;
 }
 .response__title {
 }
@@ -23,8 +25,15 @@
 .response__stars-container {
 }
 .response__stars-img {
+   
+ 
 }
 .response__stars-description {
 }
 .response__btn {
+}
+.response__img{
+    position: absolute;
+    top:10%;
+    left: 10%;
 }
