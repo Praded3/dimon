@@ -1,15 +1,8 @@
-.how__container{   position: relative;
- 
-//    padding: 220px 400px 100px 290px;
+.how__container{  
+    position: relative;
 }
 .how__section{
     padding: 0;
-
-}
-._container {
-}
-.how__wrapper1{
-
 }
 .how__wrapper {
     display: flex;
@@ -18,14 +11,14 @@
     max-width: 100%;
     padding-top: 200px;
     padding-bottom: 100px;
-     @media screen and (max-width: 767px){
+    @media screen and (max-width: 767px){
         flex-direction: column;
         padding-top: 40px;
         padding-bottom: 40px;
         gap: 55px;
-     }
-      @media screen and (max-width: 425px){
-         gap: 35px;
+    }
+    @media screen and (max-width: 425px){
+        gap: 35px;
     }
 
 }
@@ -36,8 +29,8 @@
     z-index: -1;
     position: relative;
     @media screen and (max-width: 767px){
-       display: none;;
-     }
+    display: none;;
+    }
 
  
 }
@@ -46,7 +39,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-   flex-shrink: 0;
+    flex-shrink: 0;
     width: 50px;
     height: 50px;
     padding: 23px 43px ;
@@ -54,17 +47,16 @@
     background-color: $primery-bgc;
     box-shadow: 8px 8px 16px  #9CADC9, -8px -8px 16px  rgba(255, 255, 255, 0.8);
     @media screen and (max-width: 767px){
-         padding: 13px 33px ;
+    padding: 13px 33px ;
     }
 }
 .how__icon.how__icon-hous{
-     width: 60px;
+    width: 60px;
     height: 60px;
-     padding: 18px 38px ;
-     @media screen and (max-width: 767px){
-         padding: 8px 28px ;
-         box-shadow: -8px 8px 16px  #9CADC9, 8px -8px 16px  rgba(255, 255, 255, 0.8);
-    
+    padding: 18px 38px ;
+    @media screen and (max-width: 767px){
+        padding: 8px 28px ;
+        box-shadow: -8px 8px 16px  #9CADC9, 8px -8px 16px  rgba(255, 255, 255, 0.8);
     }
 }
 
@@ -74,12 +66,11 @@
     justify-content: center;
     align-items: center;
     @media screen and (max-width: 767px){
-         gap: 65px;
+        gap: 65px;
     }
-     @media screen and (max-width: 425px){
-       gap: 20px;
+    @media screen and (max-width: 425px){
+    gap: 20px;
     }
-   
 
 }
 .how__item-container {
@@ -87,11 +78,9 @@
     flex-direction: column;
     max-width: 170px;
     gap: 2px;
- @media screen and (max-width: 920px){
-          min-width: 150px;
+    @media screen and (max-width: 920px){
+        min-width: 150px;
     }
-
-   
 }
 .how__item-name {
     color: #394661;

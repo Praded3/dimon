@@ -96,7 +96,7 @@
     border-radius: 45px;
     margin-bottom: 60px;
     margin-right: 30px;
-    box-shadow: 0px 22px 26px #9CADC9;
+    box-shadow: 0px 22px 21px #9CADC9;
     @media screen and (max-width: 1210px){
      padding: 60px 40px 40px 70px;
     }
@@ -107,6 +107,7 @@
      @media screen and (max-width: 900px){
     margin-top: 160px;
         padding: 50px 30px 30px 50px;
+         margin-bottom: 40px;
     }
     @media screen and (max-width: 660px){
     align-self: center;
@@ -116,10 +117,12 @@
      padding: 30px ;
        border-radius: 25px;
         margin-top: 140px;
+         margin-bottom: 40px;
     }
     @media screen and (max-width: 370px){
         margin-top: 150px;
         padding: 15px ;
+
     }
 }
 
@@ -212,7 +215,7 @@ fill: red;
      @media screen and (max-width: 550px){
      padding: 5px 0px 5px 0px;
      margin-top: 0px;
-     font-size: 18px;
+     font-size: 20px;
     }
 }
 .nationwide__btn__icon {
