@@ -1,58 +1,18 @@
-(() => {
-  const refs = {
-    openModalBtn: document.querySelector("[data-modal-open]"),
-    closeModalBtn: document.querySelector("[data-modal-close]"),
-    modal: document.querySelector("[data-modal]"),
-  };
+const refs = {
+    backdrop: document.querySelector('.backdrop'),
+    modalForm: document.activeElement('.modal__form'),
+    modalFormBtn: document.querySelector('.modal__btn'),
+}
 
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
-  refs.body.removeEventListener("click", toggleModal);
+const openBtns = {
+    heroBtn: document.querySelector('.hero__btn'),
+    advantagesBtn: document.querySelector('.advantages__btn'),
+    nationwideBtn: document.querySelector('.nationwide__btn'),
+    questionBtn: document.querySelector('.question__btn'),
+}
 
-  function toggleModal() {
-    refs.modal.classList.toggle("is-hidden");
-  }
-})();
+function doModalOpen (btn) {
+    
+}
 
-// (() => {
-//   const refs = {
-//     openModalBtn: document.querySelector("[data-modal-open]"),
-//     closeModalBtn: document.querySelector("[data-modal-close]"),
-//     modal: document.querySelector("[data-modal]"),
-//   };
-
-//   refs.openModalBtn.addEventListener("click", toggleModal);
-//   refs.closeModalBtn.addEventListener("click", toggleModal);
-
-//   function toggleModal() {
-//     refs.modal.classList.toggle("is-hidden");
-//   }
-// })();
-// (() => {
-//   const refs = {
-//     openModalBtn: document.querySelector("[data-modal-open1]"),
-//     closeModalBtn: document.querySelector("[data-modal-close]"),
-//     modal: document.querySelector("[data-modal]"),
-//   };
-
-//   refs.openModalBtn.addEventListener("click", toggleModal);
-//   refs.closeModalBtn.addEventListener("click", toggleModal);
-
-//   function toggleModal() {
-//     refs.modal.classList.toggle("is-hidden");
-//   }
-// })();
-// (() => {
-//   const refs = {
-//     openModalBtn: document.querySelector("[data-modal-open2]"),
-//     closeModalBtn: document.querySelector("[data-modal-close]"),
-//     modal: document.querySelector("[data-modal]"),
-//   };
-
-//   refs.openModalBtn.addEventListener("click", toggleModal);
-//   refs.closeModalBtn.addEventListener("click", toggleModal);
-
-//   function toggleModal() {
-//     refs.modal.classList.toggle("is-hidden");
-//   }
-// })();
+console.log(refs.backdrop);

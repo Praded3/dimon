@@ -312,7 +312,26 @@
                 </div>
             </div>
         </section>
+        <div class='backdrop is-hiden'>
+            <div class='modal'>
+                <h3 class='modal__title'>Enter your information to get started</h3>
+                <form class="modal__form" autocomplete="on">
+                    <input class="modal__input-adress" required name="modal-state" placeholder="State" type="text">
+                    <input class="modal__input-adress" required name="modal-city" placeholder="City" type="text">
+                    <input class="modal__input-adress" required name="modal-property-address"
+                        placeholder="Property Address" type="text">
+                    <input class="modal__input-adress" required name="modal-zip" placeholder="ZIP code" type="text">
+                    <input class="modal__input-adress" required name="modal-name" placeholder="Full Name" type="text">
+                    <input class="modal__input-adress" required name="modal-phone" placeholder="Phone Number"
+                        type="tel">
+                    <input class="modal__input-adress" required name="modal-mail" placeholder="E-Mail Address"
+                        type="email">
+                    <button type='submit' class='modal__btn'>submit</button>
+                </form>
+            </div>
+        </div>
     </main>
+    <script src="./modal.js" type="module"></script>
 </body>
 
 </html>
