@@ -265,6 +265,9 @@
         outline: none;
         box-shadow: 12px 12px 22px #F1F6FE, -12px -12px 22px #F1F6FE;
         border-color: #629DE2;
+    }
+    &:hover{
+        border-color: #629DE2;
 
     }
     @media screen and (max-width: 620px){

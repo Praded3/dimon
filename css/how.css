@@ -1,21 +1,21 @@
 /*
 Error: Undefined variable: "$primery-bgc".
-        on line 54 of C:\prog\dimon\sass\how.scss
+        on line 47 of C:\prog\dimon\sass\how.scss
 
-49:    flex-shrink: 0;
-50:     width: 50px;
-51:     height: 50px;
-52:     padding: 23px 43px ;
-53:     border-radius: 11%;
-54:     background-color: $primery-bgc;
-55:     box-shadow: 8px 8px 16px  #9CADC9, -8px -8px 16px  rgba(255, 255, 255, 0.8);
-56:     @media screen and (max-width: 767px){
-57:          padding: 13px 33px ;
-58:     }
-59: }
+42:     flex-shrink: 0;
+43:     width: 50px;
+44:     height: 50px;
+45:     padding: 23px 43px ;
+46:     border-radius: 11%;
+47:     background-color: $primery-bgc;
+48:     box-shadow: 8px 8px 16px  #9CADC9, -8px -8px 16px  rgba(255, 255, 255, 0.8);
+49:     @media screen and (max-width: 767px){
+50:     padding: 13px 33px ;
+51:     }
+52: }
 
 Backtrace:
-C:\prog\dimon\sass\how.scss:54
+C:\prog\dimon\sass\how.scss:47
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Program Files (x86)/Koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -62,4 +62,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$primery-bgc\".\A         on line 54 of C:\prog\dimon\sass\how.scss\A \A 49:    flex-shrink: 0;\A 50:     width: 50px;\A 51:     height: 50px;\A 52:     padding: 23px 43px ;\A 53:     border-radius: 11%;\A 54:     background-color: $primery-bgc;\A 55:     box-shadow: 8px 8px 16px  #9CADC9, -8px -8px 16px  rgba(255, 255, 255, 0.8);\A 56:     @media screen and (max-width: 767px){\A 57:          padding: 13px 33px ;\A 58:     }\A 59: }"; }
+  content: "Error: Undefined variable: \"$primery-bgc\".\A         on line 47 of C:\prog\dimon\sass\how.scss\A \A 42:     flex-shrink: 0;\A 43:     width: 50px;\A 44:     height: 50px;\A 45:     padding: 23px 43px ;\A 46:     border-radius: 11%;\A 47:     background-color: $primery-bgc;\A 48:     box-shadow: 8px 8px 16px  #9CADC9, -8px -8px 16px  rgba(255, 255, 255, 0.8);\A 49:     @media screen and (max-width: 767px){\A 50:     padding: 13px 33px ;\A 51:     }\A 52: }"; }
