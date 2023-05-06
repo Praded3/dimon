@@ -317,11 +317,11 @@
                 <h3 class='modal__title'>Enter your information to get started</h3>
                 <form class="modal__form" autocomplete="on">
 
-                    <div class='modal__first-step'>
+                    <div class='modal__first-step modal__step'>
                         <input class="modal__input-adress" required name="modal-zip" placeholder="ZIP code" type="text">
                         <button type='button' class='first-step__btn'>ZIP code is correct</button>
                     </div>
-                    <div class='modal__second-step'>
+                    <div class='modal__second-step modal__step is-not-displayed'>
                         <h3 class='second-step-title modal__step-title'>Are you owner of this property or an agent</h3>
                         <input value="true" name="owner" id="is-owner" type="radio">
                         <label for="is-owner">owner</label>
@@ -329,21 +329,21 @@
                         <label for="is-agent">agent</label>
                     </div>
 
-                    <div class='modal__agent-step modal__step'>
+                    <div class='modal__agent-step modal__step is-not-displayed'>
                         <h2 class='thanks-page-title'>fuck yourself</h2>
                     </div>
 
 
 
-                    <div class='modal__third-step modal__step'>
+                    <div class='modal__third-step modal__step is-not-displayed'>
                         <h3 class='third-step-title modal__step-title'>Is there anyone living on the property</h3>
                         <input value="true" name="is-living" id="is-living" type="radio">
                         <label for="is-living">Yes</label>
                         <input value="false" name="is-living" id="nobody-living" type="radio">
                         <label for="nobody-living">No</label>
-                        <button type='button' class='previous-step__btn'>Back</button>
+                        <button type='button' class='previous-step__btn previous-third-step__btn'>Back</button>
                     </div>
-                    <div class='modal__fourth-step modal__step'>
+                    <div class='modal__fourth-step modal__step is-not-displayed'>
                         <h3 class='fourth-step-title modal__step-title'>What best describes why you want to sell?</h3>
                         <ul class='fourth-step__list step__list'>
                             <li class='fourth-step__item _list step__item'>
@@ -420,11 +420,11 @@
                             </li>
 
                         </ul>
-                        <button type='button' class='previous-step__btn'>Back</button>
+                        <button type='button' class='previous-step__btn previous-fourth-step__btn'>Back</button>
                         <button type='button' class='fourth-step__btn step__btn'>Next</button>
 
                     </div>
-                    <div class='modal__fifth-step modal__step'>
+                    <div class='modal__fifth-step modal__step is-not-displayed'>
                         <h3 class='fifth-step-title modal__step-title'>What repairs and touchups are needed to get the
                             house to perfect condition?<span>*</span></h3>
                         <ul class='fifth-step__list step__list'>
@@ -513,45 +513,45 @@
                                 <label for="AIR-CONDITIONING">AIR CONDITIONING</label>
                             </li>
                         </ul>
-                        <button type='button' class='previous-step__btn'>Back</button>
+                        <button type='button' class='previous-step__btn fifth-previous-step__btn'>Back</button>
                         <button type='button' class='fifth-step__btn step__btn'>Next</button>
                     </div>
 
-                    <div class='modal__sixth-step modal__step'>
+                    <div class='modal__sixth-step modal__step is-not-displayed'>
                         <h3 class='sixth-step-title modal__step-title'>Is your property listed with a real estate agent?
                         </h3>
                         <input value="true" name="agent" id="with-agent" type="radio">
                         <label for="with-agent">Yes</label>
                         <input value="false" name="agent" id="no-agent" type="radio">
                         <label for="no-agent">No</label>
-                        <button type='button' class='previous-step__btn'>Back</button>
+                        <button type='button' class='previous-step__btn sixth-previous-step__btn'>Back</button>
                     </div>
 
-                    <div class='modal__listing modal__step'>
+                    <div class='modal__listing modal__step is-not-displayed'>
                         <h3 class='modal__listing-title modal__step-title'>When the listing expired?</h3>
                         <input name="listing-expired-date" id="listing-expired-date" type="date">
-                        <button type='button' class='previous-step__btn'>Back</button>
-                        <button type='button' class='fifth-step__btn step__btn'>Next</button>
+                        <button type='button' class='previous-step__btn listing-previous-step__btn'>Back</button>
+                        <button type='button' class='listing-step__btn step__btn'>Next</button>
                     </div>
 
-                    <div class='modal__seven-step modal__step'>
+                    <div class='modal__seven-step modal__step is-not-displayed'>
                         <h3 class='seven-step-title modal__step-title'>Is your property under contract with wholesaler?
                         </h3>
                         <input value="true" name="wholesaler" id="with-wholesaler" type="radio">
                         <label for="with-wholesaler">Yes</label>
                         <input value="false" name="wholesaler" id="no-wholesaler" type="radio">
                         <label for="no-wholesaler">No</label>
-                        <button type='button' class='previous-step__btn'>Back</button>
+                        <button type='button' class='previous-step__btn seven-revious-step__btn'>Back</button>
                     </div>
 
-                    <div class='modal__contract modal__step'>
+                    <div class='modal__contract modal__step is-not-displayed'>
                         <h3 class='modal__contract-title modal__step-title'>When the contract expired?</h3>
                         <input name="contract-expired-date" id="contract-expired-date" type="date">
-                        <button type='button' class='previous-step__btn'>Back</button>
-                        <button type='button' class='fifth-step__btn step__btn'>Next</button>
+                        <button type='button' class='previous-step__btn contract-previous-step__btn'>Back</button>
+                        <button type='button' class='contract-step__btn step__btn'>Next</button>
                     </div>
 
-                    <div class='modal__eighth-step modal__step'>
+                    <div class='modal__eighth-step modal__step is-not-displayed'>
                         <h3 class="eighth-step-title">When do you want to finalize the sale of your home?</h3>
 
                         <input value="ASAP" name="finalize-sale" id="ASAP" type="radio">
@@ -564,10 +564,10 @@
                         <label for="2-3-month">2-3 month</label>
 
 
-                        <button type='button' class='previous-step__btn'>Back</button>
+                        <button type='button' class='previous-step__btn eighth-previous-step__btn'>Back</button>
                     </div>
 
-                    <div class='modal__and-step modal__step'>
+                    <div class='modal__and-step modal__step is-not-displayed'>
                         <h3 class='and-step-title modal__step-title'>Data for feedback
                             <input class="modal__input-adress" required name="modal-name" placeholder="Full Name"
                                 type="text">
@@ -579,7 +579,7 @@
 
                     </div>
                 </form>
-                <div class='modal__thanks-page'>
+                <div class='modal__thanks-page is-not-displayed'>
                     <h2 class='thanks-page-title'>
                         спасибо, пожалуйта
                     </h2>
@@ -601,7 +601,7 @@
             </div>
         </div>
     </main>
-    <script src="./modal.js" type="module"></script>
+    <script src="./modal.js"></script>
 </body>
 
 </html>
