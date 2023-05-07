@@ -3,6 +3,7 @@ const refs = {
     modalForm: document.querySelector('.modal__form'),
     modalFormBtn: document.querySelector('.modal__btn'),
     modalCloseBtn: document.querySelector('.modal__close-btn'),
+    body: document.querySelector('body'),
 };
 
 const openBtns = {
@@ -27,6 +28,7 @@ const openBtns = {
 //==================== open & close modal ======================
 const doModalClose = () => {
     refs.backdrop.classList.toggle('is-hiden');
+    // refs.body.classList.toggle('lock');
     openBtns.heroBtn.addEventListener('click', (visabilityBackdrop) );
     openBtns.advantagesBtn.addEventListener('click', (visabilityBackdrop) );
     openBtns.nationwideBtn.addEventListener('click', (visabilityBackdrop) );
@@ -37,6 +39,7 @@ refs.modalCloseBtn.addEventListener('click', (doModalClose) )
 
 const visabilityBackdrop = () => {
     refs.backdrop.classList.toggle('is-hiden');
+    // refs.body.classList.toggle('lock');
     openBtns.heroBtn.removeEventListener('click', (visabilityBackdrop) );
     openBtns.advantagesBtn.removeEventListener('click', (visabilityBackdrop) );
     openBtns.nationwideBtn.removeEventListener('click', (visabilityBackdrop) );
