@@ -55,6 +55,7 @@
     font-size: 18px;
     line-height: 155%;
     padding-left: 24px;
+    padding-right: 24px;
     &:focus{
         outline: none;
         box-shadow: 12px 12px 22px #F1F6FE, -12px -12px 22px #F1F6FE;
@@ -116,4 +117,13 @@
 }
 .is-not-displayed{
     display: none;
+}
+
+.modal__step{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+.step__list{
 }
