@@ -131,21 +131,34 @@
 }
 
 .step__list.step__list-radio{
-        flex-direction: row;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 
+}
+.modal__third-step  .step__list-radio{
+    @media screen and (max-width: 680px){
+        flex-direction: column;
+    }
+}
+
+.modal__eighth-step .step__list-radio{
+    @media screen and (max-width: 450px){
+        flex-direction: column;
+    }
 }
 .modal__step-title{
     font-weight: 700;
-    font-size: 26px;
+    font-size:36px;
     line-height: 108%;
     margin-bottom: 36px;
     text-align: center;
     color: #4B4B4B;
     @media screen and (max-width: 1024px){
-        font-size: 22px;
+        font-size: 28px;
     }
     @media screen and (max-width: 768px){
-        font-size: 18px;
+        font-size: 24px;
     }
 
 }
@@ -166,7 +179,7 @@
     border: none;
     margin-top: 48px;
     padding: 10px 40px 10px 40px;
-    background-color: rgb(15, 15, 15);
+    background-color: rgba(15, 15, 15, 0.7);
     -webkit-box-shadow: 10px 10px 80px -4px #275eb6;
     -moz-box-shadow: 10px 10px 80px -4px #275eb6;
     box-shadow: 10px 10px 80px -4px #275eb6;
@@ -269,6 +282,16 @@
     }
 }
 
+.visually-hidden{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
 .lock{
     overflow: hidden;
 }
@@ -276,8 +299,145 @@
 .is-not-displayed{
     display: none;
 }
-// .input-radio{
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-// }
+.input-radio-label{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 142%;
+    color:  #F1F6FE;
+    border: none;
+    margin-top: 48px;
+    padding: 10px 40px 10px 40px;
+    background-color: rgb(32, 31, 31);
+    -webkit-box-shadow: 10px 10px 80px -4px #275eb6;
+    -moz-box-shadow: 10px 10px 80px -4px #275eb6;
+    box-shadow: 10px 10px 80px -4px #275eb6;
+    border-radius: 11px;
+    white-space: nowrap;
+    transition: $transition__stock;
+  
+    &:hover,
+    &:focus{
+        outline: none;
+        background-color:  #F1F6FE;
+        color: rgb(15, 15, 15);
+        transition: $transition__stock;
+    }
+    @media screen and (max-width: 768px) {  
+        padding: 10px 30px 10px 30px;
+        font-size: 20px;
+    }
+      @media screen and (max-width: 425px){
+         margin-top: 24px;
+         padding: 10px 20px 10px 20px;
+    
+    }
+    @media screen and (max-width: 370px){
+         font-size: 16px;
+         
+    }
+}
+
+.input-radio{
+  &:checked + .input-radio-label{
+    background-color: #D10914;
+    transition: $transition__stock;
+  }
+}
+
+
+.input-radio{
+    &:focus + .input-radio-label{
+         background-color:#F1F6FE ;
+        color:rgb(15, 15, 15);
+        transition: $transition__stock;
+   
+    }}
+
+
+
+
+
+
+
+
+.input-checkbox-label{
+     display: flex;
+    justify-content: center;
+    position: relative;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 142%;
+    color:  rgb(32, 31, 31);
+    border: 3px solid rgb(32, 31, 31);
+    margin-top: 48px;
+    padding: 10px 40px 10px 60px;
+    background-color: #F1F6FE;
+    -webkit-box-shadow: 10px 10px 80px -4px #275eb6;
+    -moz-box-shadow: 10px 10px 80px -4px #275eb6;
+    box-shadow: 10px 10px 80px -4px #275eb6;
+    border-radius: 11px;
+    cursor: pointer;
+    transition: $transition__stock;
+  
+    &:hover{
+        outline: none;
+        background-color: rgb(15, 15, 15) ;
+        color:#F1F6FE ;
+        transition: $transition__stock;
+        &::before{ border: 3px solid #D10914;
+        transition: $transition__stock;}
+    }
+
+
+    &::before{
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 3%;
+        transform: translate(0,-50%);
+        content: '';
+        height: 24px;
+        width: 24px;
+        border-radius: 4px;
+        border: 3px solid rgb(32, 31, 31);
+    }
+    @media screen and (max-width: 768px) {  
+        padding: 10px 30px 10px 60px;
+        font-size: 20px;
+    }
+      @media screen and (max-width: 425px){
+         margin-top: 24px;
+         padding: 10px 20px 10px 50px;
+    
+    }
+    @media screen and (max-width: 370px){
+         font-size: 16px;
+         
+    }
+}
+
+.input-checkbox{
+    &:focus + .input-checkbox-label{
+         background-color: rgb(15, 15, 15) ;
+        color:#F1F6FE ;
+        transition: $transition__stock;
+    &::before{ border: 3px solid #D10914;}
+    }
+  &:checked + .input-checkbox-label{
+        outline: none;
+        background-color: rgb(15, 15, 15) ;
+        color:#F1F6FE ;
+        transition: $transition__stock;
+  }
+  &:checked + .input-checkbox-label{
+    &::before{
+        border: 3px solid #D10914;
+        background-color: #D10914;
+        box-shadow: inset 0 0 0 5px  rgb(15, 15, 15);
+        transition: $transition__stock;
+    }
+  }
+}
