@@ -321,20 +321,20 @@
                     <div class='modal__first-step modal__step'>
                         <input class="modal__input-adress modal-zip" name="modal-zip" placeholder="ZIP code"
                             type="text">
-                        <button type='button' class='first-step__btn'>Get your offer!</button>
+                        <button type='button' class='first-step__btn help-btn'>Get your offer!</button>
                     </div>
 
                     <div class='modal__correct-zip modal__step is-not-displayed'>
                         <h3 class='second-step-title modal__step-title'>Is this address correct?</h3>
                         <h2 class='correct-zip-code'></h2>
-                        <ul class='step__list'>
-                            <li class='_list step__item'><input value="true" name="correct-zip" id="zip-is-correct"
-                                    type="radio">
-                                <label for="zip-is-correct">Yes, that's right</label>
+                        <ul class='step__list step__list-radio'>
+                            <li class='_list step__item'><input class="input-radio" value="true" name="correct-zip"
+                                    id="zip-is-correct" type="radio">
+                                <label class="input-radio-label" for="zip-is-correct">Yes, that's right</label>
                             </li>
-                            <li class='_list step__item'><input value="false" name="correct-zip" id="fix-adress"
-                                    type="radio">
-                                <label for="fix-adress">Fix adress</label>
+                            <li class='_list step__item'><input class="input-radio" value="false" name="correct-zip"
+                                    id="fix-adress" type="radio">
+                                <label class="input-radio-label" for="fix-adress">Fix adress</label>
                             </li>
                         </ul>
 
@@ -361,18 +361,20 @@
 
                             </li>
                         </ul>
-                        <button type='submit' class='update__btn'>update</button>
+                        <button type='submit' class='update__btn help-btn'>update</button>
                     </div>
 
 
                     <div class='modal__second-step modal__step is-not-displayed'>
                         <h3 class='second-step-title modal__step-title'>Are you owner of this property or an agent</h3>
-                        <ul class='step__list'>
-                            <li class='_list step__item'><input value="true" name="owner" id="is-owner" type="radio">
-                                <label for="is-owner">owner</label>
+                        <ul class='step__list step__list-radio'>
+                            <li class='_list step__item'><input class="input-radio" value="true" name="owner"
+                                    id="is-owner" type="radio">
+                                <label class="input-radio-label" for="is-owner">owner</label>
                             </li>
-                            <li class='_list step__item'><input value="false" name="owner" id="is-agent" type="radio">
-                                <label for="is-agent">agent</label>
+                            <li class='_list step__item'><input class="input-radio" value="false" name="owner"
+                                    id="is-agent" type="radio">
+                                <label class="input-radio-label" for="is-agent">agent</label>
                             </li>
 
                         </ul>
@@ -388,18 +390,18 @@
                     <div class='modal__third-step modal__step is-not-displayed'>
                         <h3 class='third-step-title modal__step-title'>Is there anyone living on the property</h3>
 
-                        <ul class='step__list'>
-                            <li class='_list step__item'><input value="true" name="is-living" id="owner-occupied"
-                                    type="radio">
-                                <label for="owner-occupied">Owner Occupied</label>
+                        <ul class='step__list step__list-radio'>
+                            <li class='_list step__item'><input class="input-radio" value="true" name="is-living"
+                                    id="owner-occupied" type="radio">
+                                <label class="input-radio-label" for="owner-occupied">Owner Occupied</label>
                             </li>
-                            <li class='_list step__item'><input value="false" name="is-living" id="tenant-occupied"
-                                    type="radio">
-                                <label for="tenant-occupied">Tenant Occupied</label>
+                            <li class='_list step__item'><input class="input-radio" value="false" name="is-living"
+                                    id="tenant-occupied" type="radio">
+                                <label class="input-radio-label" for="tenant-occupied">Tenant Occupied</label>
                             </li>
-                            <li class='_list step__item'><input value="false" name="is-living" id="nobody-living"
-                                    type="radio">
-                                <label for="nobody-living">No its Vacant</label>
+                            <li class='_list step__item'><input class="input-radio" value="false" name="is-living"
+                                    id="nobody-living" type="radio">
+                                <label class="input-radio-label" for="nobody-living">No its Vacant</label>
                             </li>
 
                         </ul>
@@ -410,81 +412,100 @@
                         <h3 class='fourth-step-title modal__step-title'>What best describes why you want to sell?</h3>
                         <ul class='fourth-step__list step__list'>
                             <li class='fourth-step__item _list step__item'>
-                                <input value="PREFORECLOSURE" name="sell-reasons" id="PREFORECLOSURE" type="checkbox">
-                                <label for="PREFORECLOSURE">PREFORECLOSURE</label>
+                                <input class="input-checkbox" value="PREFORECLOSURE" name="sell-reasons"
+                                    id="PREFORECLOSURE" type="checkbox">
+                                <label class="input-checkbox-label" for="PREFORECLOSURE">PREFORECLOSURE</label>
                             </li>
 
                             <li class='fourth-step__item _list step__item'>
-                                <input value="FINANCIAL REASONS" name="sell-reasons" id="FINANCIAL" type="checkbox">
-                                <label for="FINANCIAL">FINANCIAL REASONS</label>
+                                <input class="input-checkbox" value="FINANCIAL REASONS" name="sell-reasons"
+                                    id="FINANCIAL" type="checkbox">
+                                <label class="input-checkbox-label" for="FINANCIAL">FINANCIAL REASONS</label>
                             </li>
 
                             <li class='fourth-step__item _list step__item'>
-                                <input value="SELL-AND-RENT-INSTEAD" name="sell-reasons" id="SELL-AND-RENT-INSTEAD"
+                                <input class="input-checkbox" value="SELL-AND-RENT-INSTEAD" name="sell-reasons"
+                                    id="SELL-AND-RENT-INSTEAD" type="checkbox">
+                                <label class="input-checkbox-label" for="SELL-AND-RENT-INSTEAD">SELL AND RENT
+                                    INSTEAD</label>
+                            </li>
+
+                            <li class='fourth-step__item _list step__item'>
+                                <input class="input-checkbox" value="SELL-WITHOUT-SHOWINGS" name="sell-reasons"
+                                    id="SELL-WITHOUT-SHOWINGS" type="checkbox">
+                                <label class="input-checkbox-label" for="SELL-WITHOUT-SHOWINGS">SELL WITHOUT
+                                    SHOWINGS</label>
+                            </li>
+
+                            <li class='fourth-step__item _list step__item'>
+                                <input class="input-checkbox" value="DOWNSIZING" name="sell-reasons" id="DOWNSIZING"
                                     type="checkbox">
-                                <label for="SELL-AND-RENT-INSTEAD">SELL AND RENT INSTEAD</label>
+                                <label class="input-checkbox-label" for="DOWNSIZING">DOWNSIZING</label>
                             </li>
 
                             <li class='fourth-step__item _list step__item'>
-                                <input value="SELL-WITHOUT-SHOWINGS" name="sell-reasons" id="SELL-WITHOUT-SHOWINGS"
-                                    type="checkbox">
-                                <label for="SELL-WITHOUT-SHOWINGS">SELL WITHOUT SHOWINGS</label>
+                                <input class="input-checkbox" value="MOVING-CLOSER-TO-FAMILY" name="sell-reasons"
+                                    id="MOVING-CLOSER-TO-FAMILY" type="checkbox">
+                                <label class="input-checkbox-label" for="MOVING-CLOSER-TO-FAMILY">MOVING CLOSER TO
+                                    FAMILY</label>
                             </li>
 
                             <li class='fourth-step__item _list step__item'>
-                                <input value="DOWNSIZING" name="sell-reasons" id="DOWNSIZING" type="checkbox">
-                                <label for="DOWNSIZING">DOWNSIZING</label>
-                            </li>
-
-                            <li class='fourth-step__item _list step__item'>
-                                <input value="MOVING-CLOSER-TO-FAMILY" name="sell-reasons" id="MOVING-CLOSER-TO-FAMILY"
-                                    type="checkbox">
-                                <label for="MOVING-CLOSER-TO-FAMILY">MOVING CLOSER TO FAMILY</label>
-                            </li>
-
-                            <li class='fourth-step__item _list step__item'>
-                                <input value="MOVING-FROM-UNITED-STATES" name="sell-reasons"
+                                <input class="input-checkbox" value="MOVING-FROM-UNITED-STATES" name="sell-reasons"
                                     id="MOVING-FROM-UNITED-STATES" type="checkbox">
-                                <label for="MOVING-FROM-UNITED-STATES">MOVING FROM UNITED STATES</label>
+                                <label class="input-checkbox-label" for="MOVING-FROM-UNITED-STATES">MOVING FROM UNITED
+                                    STATES</label>
                             </li>
 
                             <li class='fourth-step__item _list step__item'>
-                                <input value="EMERGENCY-REASONS" name="sell-reasons" id="EMERGENCY-REASONS"
+                                <input class="input-checkbox" value="EMERGENCY-REASONS" name="sell-reasons"
+                                    id="EMERGENCY-REASONS" type="checkbox">
+                                <label class="input-checkbox-label" for="EMERGENCY-REASONS">EMERGENCY REASONS</label>
+                            </li>
+
+                            <li class='fourth-step__item _list step__item'>
+                                <input class="input-checkbox" value="VACANT/NON-OCCUPIED" name="sell-reasons"
+                                    id="VACANT" type="checkbox">
+                                <label class="input-checkbox-label" for="VACANT">SELLING A VACANT/NON-OCCUPIED
+                                    HOUSE</label>
+                            </li>
+
+                            <li class='fourth-step__item _list step__item'>
+                                <input class="input-checkbox" value="DEATH-IN-THE-FAMILY" name="sell-reasons"
+                                    id="DEATH-IN-THE-FAMILY" type="checkbox">
+                                <label class="input-checkbox-label" for="DEATH-IN-THE-FAMILY">DEATH IN THE
+                                    FAMILY</label>
+                            </li>
+
+                            <li class='fourth-step__item _list step__item'>
+                                <input class="input-checkbox" value="INHERITED-PROPERTY" name="sell-reasons"
+                                    id="INHERITED-PROPERTY" type="checkbox">
+                                <label class="input-checkbox-label" for="INHERITED-PROPERTY">INHERITED PROPERTY</label>
+                            </li>
+
+                            <li class='fourth-step__item _list step__item'>
+                                <input class="input-checkbox" value="TIRED" name="sell-reasons" id="TIRED"
                                     type="checkbox">
-                                <label for="EMERGENCY-REASONS">EMERGENCY REASONS</label>
+                                <label class="input-checkbox-label" for="TIRED">TIRED OF BEING A LANDLORD</label>
                             </li>
 
                             <li class='fourth-step__item _list step__item'>
-                                <input value="VACANT/NON-OCCUPIED" name="sell-reasons" id="VACANT" type="checkbox">
-                                <label for="VACANT">SELLING A VACANT/NON-OCCUPIED HOUSE</label>
-                            </li>
-
-                            <li class='fourth-step__item _list step__item'>
-                                <input value="DEATH-IN-THE-FAMILY" name="sell-reasons" id="DEATH-IN-THE-FAMILY"
-                                    type="checkbox">
-                                <label for="DEATH-IN-THE-FAMILY">DEATH IN THE FAMILY</label>
-                            </li>
-
-                            <li class='fourth-step__item _list step__item'>
-                                <input value="INHERITED-PROPERTY" name="sell-reasons" id="INHERITED-PROPERTY"
-                                    type="checkbox">
-                                <label for="INHERITED-PROPERTY">INHERITED PROPERTY</label>
-                            </li>
-
-                            <li class='fourth-step__item _list step__item'>
-                                <input value="TIRED" name="sell-reasons" id="TIRED" type="checkbox">
-                                <label for="TIRED">TIRED OF BEING A LANDLORD</label>
-                            </li>
-
-                            <li class='fourth-step__item _list step__item'>
-                                <input value="RETIREMENT-ELSEWHERE" name="sell-reasons" id="RETIREMENT-ELSEWHERE"
-                                    type="checkbox">
-                                <label for="RETIREMENT-ELSEWHERE">RETIREMENT ELSEWHERE</label>
+                                <input class="input-checkbox" value="RETIREMENT-ELSEWHERE" name="sell-reasons"
+                                    id="RETIREMENT-ELSEWHERE" type="checkbox">
+                                <label class="input-checkbox-label" for="RETIREMENT-ELSEWHERE">RETIREMENT
+                                    ELSEWHERE</label>
                             </li>
 
                         </ul>
-                        <button type='button' class='previous-step__btn previous-fourth-step__btn'>Back</button>
-                        <button type='button' class='fourth-step__btn step__btn'>Next</button>
+                        <ul class='buttons__list'>
+                            <li class='buttons__item _list'><button type='button'
+                                    class='previous-step__btn previous-fourth-step__btn'>Back</button></li>
+                            <li class='buttons__item _list'><button type='button'
+                                    class='fourth-step__btn step__btn'>Next</button></li>
+                        </ul>
+
+
+
 
                     </div>
                     <div class='modal__fifth-step modal__step is-not-displayed'>
@@ -492,103 +513,125 @@
                             house to perfect condition?<span>*</span></h3>
                         <ul class='fifth-step__list step__list'>
                             <li class='fifth-step__item _list step__item'>
-                                <input value="STRUCTURAL-PROBLEMS" name="repairs" id="STRUCTURAL-PROBLEMS"
+                                <input class="input-checkbox" value="STRUCTURAL-PROBLEMS" name="repairs"
+                                    id="STRUCTURAL-PROBLEMS" type="checkbox">
+                                <label class="input-checkbox-label" for="STRUCTURAL-PROBLEMS">STRUCTURAL
+                                    PROBLEMS</label>
+                            </li>
+                            <li class='fifth-step__item _list step__item'>
+                                <input class="input-checkbox" value="ROOF-NEEDS-REPLACEMENT" name="repairs"
+                                    id="ROOF-NEEDS-REPLACEMENT" type="checkbox">
+                                <label class="input-checkbox-label" for="ROOF-NEEDS-REPLACEMENT">ROOF NEEDS
+                                    REPLACEMENT</label>
+                            </li>
+                            <li class='fifth-step__item _list step__item'>
+                                <input class="input-checkbox" value="BATHROOM(S)-NEED-WORK" name="repairs"
+                                    id="BATHROOM(S)-NEED-WORK" type="checkbox">
+                                <label class="input-checkbox-label" for="BATHROOM(S)-NEED-WORK">BATHROOM(S) NEED
+                                    WORK</label>
+                            </li>
+
+                            <li class='fifth-step__item _list step__item'>
+                                <input class="input-checkbox" value="NOTHING" name="repairs" id="NOTHING"
                                     type="checkbox">
-                                <label for="STRUCTURAL-PROBLEMS">STRUCTURAL PROBLEMS</label>
+                                <label class="input-checkbox-label" for="NOTHING">IT'S A BRAND NEW HOME AND NEEDS
+                                    NOTHING</label>
                             </li>
+
                             <li class='fifth-step__item _list step__item'>
-                                <input value="ROOF-NEEDS-REPLACEMENT" name="repairs" id="ROOF-NEEDS-REPLACEMENT"
+                                <input class="input-checkbox" value="LANDSCAPING" name="repairs" id="LANDSCAPING"
                                     type="checkbox">
-                                <label for="ROOF-NEEDS-REPLACEMENT">ROOF NEEDS REPLACEMENT</label>
+                                <label class="input-checkbox-label" for="LANDSCAPING">LANDSCAPING</label>
                             </li>
+
                             <li class='fifth-step__item _list step__item'>
-                                <input value="BATHROOM(S)-NEED-WORK" name="repairs" id="BATHROOM(S)-NEED-WORK"
+                                <input class="input-checkbox" value="PLUMBING" name="repairs" id="PLUMBING"
                                     type="checkbox">
-                                <label for="BATHROOM(S)-NEED-WORK">BATHROOM(S) NEED WORK</label>
+                                <label class="input-checkbox-label" for="PLUMBING">PLUMBING</label>
                             </li>
 
                             <li class='fifth-step__item _list step__item'>
-                                <input value="NOTHING" name="repairs" id="NOTHING" type="checkbox">
-                                <label for="NOTHING">IT'S A BRAND NEW HOME AND NEEDS NOTHING</label>
+                                <input class="input-checkbox" value="KITCHEN-CABINETS" name="repairs"
+                                    id="KITCHEN-CABINETS" type="checkbox">
+                                <label class="input-checkbox-label" for="KITCHEN-CABINETS">KITCHEN CABINETS</label>
                             </li>
 
                             <li class='fifth-step__item _list step__item'>
-                                <input value="LANDSCAPING" name="repairs" id="LANDSCAPING" type="checkbox">
-                                <label for="LANDSCAPING">LANDSCAPING</label>
-                            </li>
-
-                            <li class='fifth-step__item _list step__item'>
-                                <input value="PLUMBING" name="repairs" id="PLUMBING" type="checkbox">
-                                <label for="PLUMBING">PLUMBING</label>
-                            </li>
-
-                            <li class='fifth-step__item _list step__item'>
-                                <input value="KITCHEN-CABINETS" name="repairs" id="KITCHEN-CABINETS" type="checkbox">
-                                <label for="KITCHEN-CABINETS">KITCHEN CABINETS</label>
-                            </li>
-
-                            <li class='fifth-step__item _list step__item'>
-                                <input value="PAINT-OUTSIDE" name="repairs" id="PAINT-OUTSIDE" type="checkbox">
-                                <label for="PAINT-OUTSIDE">PAINT OUTSIDE</label>
-                            </li>
-
-                            <li class='fifth-step__item _list step__item'>
-                                <input value="FLOOD/STORM/FIRE-DAMAGE" name="repairs" id="FLOOD/STORM/FIRE-DAMAGE"
+                                <input class="input-checkbox" value="PAINT-OUTSIDE" name="repairs" id="PAINT-OUTSIDE"
                                     type="checkbox">
-                                <label for="FLOOD/STORM/FIRE-DAMAGE">FLOOD/STORM/FIRE DAMAGE</label>
+                                <label class="input-checkbox-label" for="PAINT-OUTSIDE">PAINT OUTSIDE</label>
                             </li>
 
                             <li class='fifth-step__item _list step__item'>
-                                <input value="FOUNDATION-PROBLEMS" name="repairs" id="FOUNDATION-PROBLEMS"
+                                <input class="input-checkbox" value="FLOOD/STORM/FIRE-DAMAGE" name="repairs"
+                                    id="FLOOD/STORM/FIRE-DAMAGE" type="checkbox">
+                                <label class="input-checkbox-label" for="FLOOD/STORM/FIRE-DAMAGE">FLOOD/STORM/FIRE
+                                    DAMAGE</label>
+                            </li>
+
+                            <li class='fifth-step__item _list step__item'>
+                                <input class="input-checkbox" value="FOUNDATION-PROBLEMS" name="repairs"
+                                    id="FOUNDATION-PROBLEMS" type="checkbox">
+                                <label class="input-checkbox-label" for="FOUNDATION-PROBLEMS">FOUNDATION
+                                    PROBLEMS</label>
+                            </li>
+
+                            <li class='fifth-step__item _list step__item'>
+                                <input class="input-checkbox" value="PAINT-INSIDE" name="repairs" id="PAINT-INSIDE"
                                     type="checkbox">
-                                <label for="FOUNDATION-PROBLEMS">FOUNDATION PROBLEMS</label>
+                                <label class="input-checkbox-label" for="PAINT-INSIDE">PAINT INSIDE</label>
                             </li>
 
                             <li class='fifth-step__item _list step__item'>
-                                <input value="PAINT-INSIDE" name="repairs" id="PAINT-INSIDE" type="checkbox">
-                                <label for="PAINT-INSIDE">PAINT INSIDE</label>
+                                <input class="input-checkbox" value="BOILER/WATER-HEATER" name="repairs"
+                                    id="BOILER/WATER-HEATER" type="checkbox">
+                                <label class="input-checkbox-label" for="BOILER/WATER-HEATER">BOILER/WATER
+                                    HEATER</label>
                             </li>
 
                             <li class='fifth-step__item _list step__item'>
-                                <input value="BOILER/WATER-HEATER" name="repairs" id="BOILER/WATER-HEATER"
+                                <input class="input-checkbox" value="ELECTRICAL" name="repairs" id="ELECTRICAL"
                                     type="checkbox">
-                                <label for="BOILER/WATER-HEATER">BOILER/WATER HEATER</label>
+                                <label class="input-checkbox-label" for="ELECTRICAL">ELECTRICAL</label>
                             </li>
 
                             <li class='fifth-step__item _list step__item'>
-                                <input value="ELECTRICAL" name="repairs" id="ELECTRICAL" type="checkbox">
-                                <label for="ELECTRICAL">ELECTRICAL</label>
-                            </li>
-
-                            <li class='fifth-step__item _list step__item'>
-                                <input value="FLOORING" name="repairs" id="FLOORING" type="checkbox">
-                                <label for="FLOORING">FLOORING</label>
-                            </li>
-
-                            <li class='fifth-step__item _list step__item'>
-                                <input value="KITCHEN-APPLIANCES" name="repairs" id="KITCHEN-APPLIANCES"
+                                <input class="input-checkbox" value="FLOORING" name="repairs" id="FLOORING"
                                     type="checkbox">
-                                <label for="KITCHEN-APPLIANCES">KITCHEN APPLIANCES</label>
+                                <label class="input-checkbox-label" for="FLOORING">FLOORING</label>
                             </li>
 
                             <li class='fifth-step__item _list step__item'>
-                                <input value="AIR-CONDITIONING" name="repairs" id="AIR-CONDITIONING" type="checkbox">
-                                <label for="AIR-CONDITIONING">AIR CONDITIONING</label>
+                                <input class="input-checkbox" value="KITCHEN-APPLIANCES" name="repairs"
+                                    id="KITCHEN-APPLIANCES" type="checkbox">
+                                <label class="input-checkbox-label" for="KITCHEN-APPLIANCES">KITCHEN APPLIANCES</label>
+                            </li>
+
+                            <li class='fifth-step__item _list step__item'>
+                                <input class="input-checkbox" value="AIR-CONDITIONING" name="repairs"
+                                    id="AIR-CONDITIONING" type="checkbox">
+                                <label class="input-checkbox-label" for="AIR-CONDITIONING">AIR CONDITIONING</label>
                             </li>
                         </ul>
-                        <button type='button' class='previous-step__btn fifth-previous-step__btn'>Back</button>
-                        <button type='button' class='fifth-step__btn step__btn'>Next</button>
+                        <ul class='buttons__list'>
+                            <li class='buttons__item _list'><button type='button'
+                                    class='previous-step__btn previous-fourth-step__btn'>Back</button></li>
+                            <li class='buttons__item _list'><button type='button'
+                                    class='fourth-step__btn step__btn'>Next</button></li>
+                        </ul>
                     </div>
 
                     <div class='modal__sixth-step modal__step is-not-displayed'>
                         <h3 class='sixth-step-title modal__step-title'>Is your property listed with a real estate agent?
                         </h3>
-                        <ul class='step__list'>
-                            <li class='_list step__item'><input value="true" name="agent" id="with-agent" type="radio">
-                                <label for="with-agent">Yes</label>
+                        <ul class='step__list step__list-radio'>
+                            <li class='_list step__item'><input class="input-radio" value="true" name="agent"
+                                    id="with-agent" type="radio">
+                                <label class="input-radio-label" for="with-agent">Yes</label>
                             </li>
-                            <li class='_list step__item'><input value="false" name="agent" id="no-agent" type="radio">
-                                <label for="no-agent">No</label>
+                            <li class='_list step__item'><input class="input-radio" value="false" name="agent"
+                                    id="no-agent" type="radio">
+                                <label class="input-radio-label" for="no-agent">No</label>
                             </li>
                         </ul>
                         <button type='button' class='previous-step__btn sixth-previous-step__btn'>Back</button>
@@ -598,22 +641,26 @@
                         <h3 class='modal__listing-title modal__step-title'>When the listing expired?</h3>
                         <input class="modal__input-adress" name=" listing-expired-date" id="listing-expired-date"
                             type="date" placeholder="Data expired">
-                        <button type='button' class='previous-step__btn listing-previous-step__btn'>Back</button>
-                        <button type='button' class='listing-step__btn step__btn'>Next</button>
+                        <ul class='buttons__list'>
+                            <li class='buttons__item _list'><button type='button'
+                                    class='previous-step__btn previous-fourth-step__btn'>Back</button></li>
+                            <li class='buttons__item _list'><button type='button'
+                                    class='fourth-step__btn step__btn'>Next</button></li>
+                        </ul>
                     </div>
 
                     <div class='modal__seven-step modal__step is-not-displayed'>
                         <h3 class='seven-step-title modal__step-title'>Is your property under contract with wholesaler?
                         </h3>
 
-                        <ul class='step__list'>
-                            <li class='_list step__item'><input value="true" name="wholesaler" id="with-wholesaler"
-                                    type="radio">
-                                <label for="with-wholesaler">Yes</label>
+                        <ul class='step__list step__list-radio'>
+                            <li class='_list step__item'><input class="input-radio" value="true" name="wholesaler"
+                                    id="with-wholesaler" type="radio">
+                                <label class="input-radio-label" for="with-wholesaler">Yes</label>
                             </li>
-                            <li class='_list step__item'><input value="false" name="wholesaler" id="no-wholesaler"
-                                    type="radio">
-                                <label for="no-wholesaler">No</label>
+                            <li class='_list step__item'><input class="input-radio" value="false" name="wholesaler"
+                                    id="no-wholesaler" type="radio">
+                                <label class="input-radio-label" for="no-wholesaler">No</label>
                             </li>
                         </ul>
 
@@ -625,25 +672,30 @@
                         <h3 class='modal__contract-title modal__step-title'>When the contract expired?</h3>
                         <input class="modal__input-adress" name="contract-expired-date" id="contract-expired-date"
                             type="date">
-                        <button type='button' class='previous-step__btn contract-previous-step__btn'>Back</button>
-                        <button type='button' class='contract-step__btn step__btn'>Next</button>
+                        <ul class='buttons__list'>
+                            <li class='buttons__item _list'><button type='button'
+                                    class='previous-step__btn previous-fourth-step__btn'>Back</button></li>
+                            <li class='buttons__item _list'><button type='button'
+                                    class='fourth-step__btn step__btn'>Next</button></li>
+                        </ul>
                     </div>
 
                     <div class='modal__eighth-step modal__step is-not-displayed'>
-                        <h3 class="eighth-step-title">When do you want to finalize the sale of your home?</h3>
+                        <h3 class="eighth-step-title modal__step-title">When do you want to finalize the sale of your
+                            home?</h3>
 
-                        <ul class='step__list'>
-                            <li class='_list step__item'><input value="ASAP" name="finalize-sale" id="ASAP"
-                                    type="radio">
-                                <label for="ASAP">ASAP</label>
+                        <ul class='step__list step__list-radio'>
+                            <li class='_list step__item'><input class="input-radio" value="ASAP" name="finalize-sale"
+                                    id="ASAP" type="radio">
+                                <label class="input-radio-label" for="ASAP">ASAP</label>
                             </li>
-                            <li class='_list step__item'><input value="1-month" name="finalize-sale" id="1-month"
-                                    type="radio">
-                                <label for="1-month">1 month</label>
+                            <li class='_list step__item'><input class="input-radio" value="1-month" name="finalize-sale"
+                                    id="1-month" type="radio">
+                                <label class="input-radio-label" for="1-month">1 month</label>
                             </li>
-                            <li class='_list step__item'><input value="2-3-month" name="finalize-sale" id="2-3-month"
-                                    type="radio">
-                                <label for="2-3-month">2-3 month</label>
+                            <li class='_list step__item'><input class="input-radio" value="2-3-month"
+                                    name="finalize-sale" id="2-3-month" type="radio">
+                                <label class="input-radio-label" for="2-3-month">2-3 month</label>
                             </li>
                         </ul>
 
@@ -652,9 +704,23 @@
 
                     <div class='modal__and-step modal__step is-not-displayed'>
                         <h3 class='and-step-title modal__step-title'>Data for feedback</h3>
-                        <input class="modal__input-adress" name="modal-name" placeholder="Full Name" type="text">
-                        <input class="modal__input-adress" name="modal-phone" placeholder="Phone Number" type="tel">
-                        <input class="modal__input-adress" name="modal-mail" placeholder="E-Mail Address" type="email">
+
+
+                        <ul class='step__list '>
+                            <li class='_list step__item'><input class="modal__input-adress" name="modal-name"
+                                    placeholder="Full Name" type="text">
+                            </li>
+                            <li class='_list step__item'><input class="modal__input-adress" name="modal-phone"
+                                    placeholder="Phone Number" type="tel">
+
+                            </li>
+                            <li class='_list step__item'><input class="modal__input-adress" name="modal-mail"
+                                    placeholder="E-Mail Address" type="email">
+
+                            </li>
+                        </ul>
+
+
                         <button type='submit' class='modal__btn'>submit</button>
 
                     </div>

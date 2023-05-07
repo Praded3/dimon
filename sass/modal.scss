@@ -75,30 +75,30 @@
     width: 210px;
     }
 }
-.modal__btn {
-    display: flex;
+.modal__btn { display: flex;
     justify-content: center;
-    padding: 15px 60px 15px 60px;
+    padding: 10px 60px 10px 60px;
     margin-top: 44px;
+    align-self: center;
     font-weight: 600;
     font-size: 24px;
     line-height: 140%;
-    border: 2px solid #D10914;
+    border: 2px solid #eb0606;
     border-radius: 12px;
-    background-color: #D10914;
+    background-color: #eb0606;
     color: #FFFFFF;
     transition: $transition__stock;
     text-transform: uppercase;
     width: 90%;
     text-align: center;
     &:hover, &:focus{
-        border-color: #629DE2;
-        background-color: #F1F6FE;
-        color: #D10914;
+        // border-color: #629DE2;
+        background-color: #D10914;
+       
         box-shadow: 12px 12px 22px #F1F6FE, -12px -12px 22px #F1F6FE;
     }
     @media screen and (max-width: 767px){
-         padding:20px;
+         padding:10px;
          font-size: 20px;
     }
      @media screen and (max-width: 425px){
@@ -115,15 +115,166 @@
     visibility: hidden;
     pointer-events: none;
 }
-.is-not-displayed{
-    display: none;
-}
+
 
 .modal__step{
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 20px;
+    
 }
 .step__list{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
+
+.step__list.step__list-radio{
+        flex-direction: row;
+
+}
+.modal__step-title{
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 108%;
+    margin-bottom: 36px;
+    text-align: center;
+    color: #4B4B4B;
+    @media screen and (max-width: 1024px){
+        font-size: 22px;
+    }
+    @media screen and (max-width: 768px){
+        font-size: 18px;
+    }
+
+}
+
+.buttons__list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.previous-step__btn{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 142%;
+    color:  #F1F6FE;
+    border: none;
+    margin-top: 48px;
+    padding: 10px 40px 10px 40px;
+    background-color: rgb(15, 15, 15);
+    -webkit-box-shadow: 10px 10px 80px -4px #275eb6;
+    -moz-box-shadow: 10px 10px 80px -4px #275eb6;
+    box-shadow: 10px 10px 80px -4px #275eb6;
+    border-radius: 11px;
+    white-space: nowrap;
+    transition: $transition__stock;
+  
+    &:hover,
+    &:focus{
+        outline: none;
+        background-color:  #F1F6FE;
+        color: rgb(15, 15, 15);
+        transition: $transition__stock;
+    }
+    @media screen and (max-width: 768px) {  
+        padding: 10px 30px 10px 30px;
+        font-size: 20px;
+    }
+      @media screen and (max-width: 425px){
+         margin-top: 24px;
+         padding: 10px 20px 10px 20px;
+    
+    }
+    @media screen and (max-width: 370px){
+         font-size: 16px;
+         
+    }
+}
+
+.step__btn{
+    display: flex;
+    justify-content: center;
+    padding: 10px 90px 10px 90px;
+    margin-top: 48px;
+    align-self: center;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    border: 2px solid #eb0606;
+    border-radius: 12px;
+    background-color: #eb0606;
+    color: #FFFFFF;
+    transition: $transition__stock;
+    text-transform: uppercase;
+  
+    text-align: center;
+    &:hover, &:focus{
+        // border-color: #629DE2;
+        background-color: #D10914;
+       
+        box-shadow: 12px 12px 22px #F1F6FE, -12px -12px 22px #F1F6FE;
+    }
+    @media screen and (max-width: 768px){
+        padding: 10px 60px 10px 60px;
+        font-size: 20px;
+    }
+     @media screen and (max-width: 425px){
+        margin-top: 24px;
+        padding: 10px 40px 10px 40px;
+    }
+    @media screen and (max-width: 370px){
+        font-size: 16px;
+    }
+}
+
+.help-btn{
+    display: flex;
+    justify-content: center;
+    padding: 10px 60px 10px 60px;
+    margin-top: 44px;
+    align-self: center;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    border: 2px solid #eb0606;
+    border-radius: 12px;
+    background-color: #eb0606;
+    color: #FFFFFF;
+    transition: $transition__stock;
+    text-transform: uppercase;
+    width: 90%;
+    text-align: center;
+    &:hover, &:focus{
+        // border-color: #629DE2;
+        background-color: #D10914;
+       
+        box-shadow: 12px 12px 22px #F1F6FE, -12px -12px 22px #F1F6FE;
+    }
+    @media screen and (max-width: 767px){
+         padding:10px;
+         font-size: 20px;
+    }
+     @media screen and (max-width: 425px){
+         margin-top: 24px;
+         padding: 10px 60px 10px 60px;
+    }
+    @media screen and (max-width: 370px){
+         font-size: 16px;
+         
+    }
+}
+
+
+.is-not-displayed{
+    display: none;
+}
+// .input-radio{
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+// }
