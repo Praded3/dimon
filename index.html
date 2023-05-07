@@ -312,7 +312,7 @@
                 </div>
             </div>
         </section>
-        <div class='backdrop '>
+        <div class='backdrop is-hiden'>
             <div class='modal'>
                 <button type='button' class='modal__close-btn'>close</button>
                 <h3 class='modal__title'>Enter your information to get started</h3>
@@ -321,7 +321,7 @@
                     <div class='modal__first-step modal__step'>
                         <input class="modal__input-adress modal-zip" name="modal-zip" placeholder="ZIP code"
                             type="text">
-                        <button type='button' class='first-step__btn help-btn'>Get your offer!</button>
+                        <button type='button' disabled class='first-step__btn help-btn'>Get your offer!</button>
                     </div>
 
                     <div class='modal__correct-zip modal__step is-not-displayed'>
@@ -366,7 +366,8 @@
 
 
                     <div class='modal__second-step modal__step is-not-displayed'>
-                        <h3 class='second-step-title modal__step-title'>Are you owner of this property or an agent</h3>
+                        <h3 class='second-step-title modal__step-title'>Are you owner of this property, or an agent, or
+                            a wholesaler?</h3>
                         <ul class='step__list step__list-radio'>
                             <li class='_list step__item'><input class="input-radio visually-hidden" value="true"
                                     name="owner" id="is-owner" type="radio">
@@ -374,18 +375,17 @@
                             </li>
                             <li class='_list step__item'><input class="input-radio visually-hidden" value="false"
                                     name="owner" id="is-agent" type="radio">
-                                <label class="input-radio-label" for="is-agent">agent</label>
+                                <label class="input-radio-label" for="is-agent">an agent</label>
+                            </li>
+                            <li class='_list step__item'><input class="input-radio visually-hidden" value="false"
+                                    name="owner" id="is-wholesaler" type="radio">
+                                <label class="input-radio-label" for="is-wholesaler">a wholesaler</label>
                             </li>
 
                         </ul>
+                        <button type='button' class='previous-step__btn previous-third-step__btn'>Back</button>
 
                     </div>
-
-                    <div class='modal__agent-step modal__step is-not-displayed'>
-                        <h2 class='thanks-page-title'>fuck yourself</h2>
-                    </div>
-
-
 
                     <div class='modal__third-step modal__step is-not-displayed'>
                         <h3 class='third-step-title modal__step-title'>Is there anyone living on the property</h3>
@@ -686,15 +686,15 @@
 
                         <ul class='step__list step__list-radio'>
                             <li class='_list step__item'><input class="input-radio visually-hidden" value="ASAP"
-                                    name="finalize-sale" id="ASAP" type="radio">
+                                    name="finalize_sale" id="ASAP" type="radio">
                                 <label class="input-radio-label" for="ASAP">ASAP</label>
                             </li>
                             <li class='_list step__item'><input class="input-radio visually-hidden" value="1-month"
-                                    name="finalize-sale" id="1-month" type="radio">
+                                    name="finaliz_esale" id="1-month" type="radio">
                                 <label class="input-radio-label" for="1-month">1 month</label>
                             </li>
                             <li class='_list step__item'><input class="input-radio visually-hidden" value="2-3-month"
-                                    name="finalize-sale" id="2-3-month" type="radio">
+                                    name="finalize_sale" id="2-3-month" type="radio">
                                 <label class="input-radio-label" for="2-3-month">2-3 month</label>
                             </li>
                         </ul>
