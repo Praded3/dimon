@@ -91,13 +91,13 @@ const firstStep = {
 let zipCode;
 
 function onInutChange(event) {
-    // console.log(event.currentTarget.value);
     zipCode = event.currentTarget.value;
     firstStep.btn.disabled = !zipCode;
-    
+
     if (zipCode) {
         firstStep.btn.addEventListener('click', onfirstStepBtnClick);
     };
+
     console.log(zipCode);
 };
 
@@ -114,9 +114,9 @@ function onfirstStepBtnClick(event) {
 //===================/ first step /==================
 
 //=================== second step ==================
-const secondStep = {
+// const secondStep = {
    
-};
+// };
 
 
 //===================/ second step /==================
