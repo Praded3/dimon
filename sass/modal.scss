@@ -32,7 +32,7 @@
         padding: 35px 25px;
     }
     @media screen and (max-width: 475px){
-        padding: 35px 25px;
+        padding: 35px 10px;
     }
 }
 .modal__title {
@@ -130,7 +130,8 @@
 .modal__step{
     display: flex;
     flex-direction: column;
-    justify-content: center;    
+    justify-content: center; 
+    padding: 50px 0;   
 }
 .step__list{
     display: flex;
@@ -424,7 +425,6 @@
         font-size: 20px;
     }
       @media screen and (max-width: 425px){
-         margin-top: 24px;
          padding: 10px 20px 10px 50px;
     
     }
