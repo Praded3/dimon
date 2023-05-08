@@ -80,6 +80,50 @@ openBtns.questionBtn.addEventListener('click', (visabilityBackdrop) );
 
 //==================== /open & close modal/ ======================
 
+//==================== estate agent ======================
+
+const sixthModalStep = {
+    checkBoxYes: document.querySelector('.with-agent'),
+    checkBoxNo: document.querySelector('.no-agent'), 
+    buttonPrev: document.querySelector('.sixth-previous-step__btn'), 
+
+}
+
+function onSixthModalStepCheckBoxYesClick(event) {
+    console.log('yes');
+
+    steps.modalSixthStep.classList.toggle('is-not-displayed');
+    steps.modalListing.classList.toggle('is-not-displayed');
+    sixthModalStep.checkBoxNo.removeEventListener('click', (onSixthModalStepCheckBoxNoClick));
+    sixthModalStep.buttonPrev.removeEventListener('click', (onSixthModalStepButtonPrevClick));
+    sixthModalStep.checkBoxYes.removeEventListener('click', (onSixthModalStepCheckBoxYesClick));
+
+}
+
+function onSixthModalStepCheckBoxNoClick(event) {
+    console.log('no');
+    
+    steps.modalSixthStep.classList.toggle('is-not-displayed');
+    steps.modalSevenStep.classList.toggle('is-not-displayed');
+    sixthModalStep.checkBoxYes.removeEventListener('click', (onSixthModalStepCheckBoxYesClick));
+    sixthModalStep.buttonPrev.removeEventListener('click', (onSixthModalStepButtonPrevClick));
+    sixthModalStep.checkBoxNo.removeEventListener('click', (onSixthModalStepCheckBoxNoClick));
+
+}
+function onSixthModalStepButtonPrevClick(params) {
+    steps.modalSixthStep.classList.toggle('is-not-displayed');
+    steps.modalFifthStep.classList.toggle('is-not-displayed');
+    fifthModalStep.buttonNext.addEventListener('click', (onFifthModalStepButtonNextClick));
+    sixthModalStep.checkBoxNo.removeEventListener('click', (onSixthModalStepCheckBoxNoClick));
+    sixthModalStep.checkBoxYes.removeEventListener('click', (onSixthModalStepCheckBoxYesClick));
+        sixthModalStep.buttonPrev.removeEventListener('click', (onSixthModalStepButtonPrevClick));
+
+
+}
+
+
+//==================== /estate agent/ ======================
+
 //==================== repairs ======================
 
 const fifthModalStep = {
@@ -92,10 +136,16 @@ function onFifthModalStepButtonNextClick(event) {
         
     console.log('er');
 
-    fifthModalStep.buttonNext.removeEventListener('click', (onFifthModalStepButtonNextClick));
+    
     steps.modalFifthStep.classList.toggle('is-not-displayed');
     steps.modalSixthStep.classList.toggle('is-not-displayed');
     fifthModalStep.checkBox.removeEventListener('click', (onRepairsItemClick));
+    sixthModalStep.checkBoxYes.addEventListener('click', (onSixthModalStepCheckBoxYesClick));
+    sixthModalStep.checkBoxNo.addEventListener('click', (onSixthModalStepCheckBoxNoClick));
+    sixthModalStep.buttonPrev.addEventListener('click', (onSixthModalStepButtonPrevClick));
+    fifthModalStep.buttonNext.removeEventListener('click', (onFifthModalStepButtonNextClick));
+
+
 
 
 }
@@ -103,11 +153,11 @@ function onFifthModalStepButtonNextClick(event) {
 function onFifthModalStepButtonPrevClick(event) {
         
     console.log('er');
-    fifthModalStep.buttonPrev.removeEventListener('click', (onFifthModalStepButtonPrevClick)) ;
     steps.modalFourthStep.classList.toggle('is-not-displayed');
     steps.modalFifthStep.classList.toggle('is-not-displayed');
     fourthModalStep.buttonPrev.addEventListener('click', (onfourthModalStepButtonPrevClick));
     fourthModalStep.buttonNext.addEventListener('click', (onFourthModalStepButtonNextClick));
+    fifthModalStep.buttonPrev.removeEventListener('click', (onFifthModalStepButtonPrevClick)) ;
 
 
     }
@@ -141,21 +191,20 @@ function onFourthModalStepButtonNextClick(event) {
     steps.modalFifthStep.classList.toggle('is-not-displayed');
     steps.modalFourthStep.classList.toggle('is-not-displayed');
     fourthModalStep.checkBox.removeEventListener('click', (onReasonsItemClick)) ;
-    fourthModalStep.buttonNext.removeEventListener('click', (onFourthModalStepButtonNextClick));
     fifthModalStep.checkBox.addEventListener('click', (onRepairsItemClick))
     fifthModalStep.buttonPrev.addEventListener('click', (onFifthModalStepButtonPrevClick)) ;
-
+    fourthModalStep.buttonNext.removeEventListener('click', (onFourthModalStepButtonNextClick));
 }
 
 
 function onfourthModalStepButtonPrevClick(event) {
         
     console.log('er');
-    fourthModalStep.buttonPrev.removeEventListener('click', (onfourthModalStepButtonPrevClick)) ;
+    
     steps.modalThirdStep.classList.toggle('is-not-displayed');
     steps.modalFourthStep.classList.toggle('is-not-displayed');
     modalThirdStep.livingList.addEventListener('click', (onLivingItemClick));
-
+    fourthModalStep.buttonPrev.removeEventListener('click', (onfourthModalStepButtonPrevClick)) ;
     }
 
 
@@ -185,10 +234,9 @@ function onLivingItemClick(event) {
 
         steps.modalThirdStep.classList.toggle('is-not-displayed');
         steps.modalFourthStep.classList.toggle('is-not-displayed');
-        modalThirdStep.livingList.removeEventListener('click', onLivingItemClick);
         fourthModalStep.checkBox.addEventListener('click', (onReasonsItemClick));
         fourthModalStep.buttonPrev.addEventListener('click', (onfourthModalStepButtonPrevClick)) ;
-
+        modalThirdStep.livingList.removeEventListener('click', onLivingItemClick);
     }
 };
 
@@ -396,12 +444,12 @@ function onCorrectZipClick(event) {
 
 
 
-const qqq = document.querySelectorAll('.is-not-displayed');
+// const qqq = document.querySelectorAll('.is-not-displayed');
 
-const www = function eee(array) {
-    array.forEach(element => {
-        element.classList.toggle('is-not-displayed');
-    });
-}
-www(qqq);
+// const www = function eee(array) {
+//     array.forEach(element => {
+//         element.classList.toggle('is-not-displayed');
+//     });
+// }
+// www(qqq);
 
