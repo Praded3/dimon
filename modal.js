@@ -86,7 +86,22 @@ const firstStep = {
     btn: document.querySelector('.first-step__btn'),
     input: document.querySelector('.modal-zip'),
     zipCodeCheck: document.querySelector('.correct-zip-code'),
+    correctZip: document.querySelectorAll('.correct-zip'),
 };
+
+ console.log(firstStep.correctZip);
+
+// firstStep.correctZip.forEach(function(zip, id){
+//     console.log(zip.id === 'zip-is-correct');
+    
+//  })
+
+
+
+
+
+
+
 
 let zipCode;
 
@@ -109,8 +124,29 @@ function onfirstStepBtnClick(event) {
     firstStep.zipCodeCheck.textContent = zipCode;
 
 }
+let zip;
 
+function onCorrectZipClick(event) {
+    firstStep.correctZip.forEach(function (zip, id) {
+        zip.addEventListener('click', (onCorrectZipChect));
 
+        function onCorrectZipChect() {
+
+            if (zip.id === 'zip-is-correct') {
+                console.log('ура'); 
+            }
+
+            else {
+                console.log('ffffff');
+                
+            }
+            zip.removeEventListener('click', (onCorrectZipChect));
+        };
+     
+    });
+};
+
+onCorrectZipClick(firstStep.correctZip);
 //===================/ first step /==================
 
 //=================== second step ==================
@@ -123,12 +159,12 @@ function onfirstStepBtnClick(event) {
 
 
 
-// const qqq = document.querySelectorAll('.is-not-displayed');
+const qqq = document.querySelectorAll('.is-not-displayed');
 
-// const www = function eee(array) {
-//     array.forEach(element => {
-//         element.classList.toggle('is-not-displayed');
-//     });
-// }
-// www(qqq);
+const www = function eee(array) {
+    array.forEach(element => {
+        element.classList.toggle('is-not-displayed');
+    });
+}
+www(qqq);
 
