@@ -80,45 +80,98 @@ openBtns.questionBtn.addEventListener('click', (visabilityBackdrop) );
 
 //==================== /open & close modal/ ======================
 
+//==================== repairs ======================
 
-//==================== open & close modal ======================
+const fifthModalStep = {
+    checkBox: document.querySelector('.repairs'),
+    buttonNext: document.querySelector('.fifth-step__btn'), 
+    buttonPrev: document.querySelector('.previous-fifth-step__btn'), 
+
+}
+function onFifthModalStepButtonNextClick(event) {
+        
+    console.log('er');
+
+    fifthModalStep.buttonNext.removeEventListener('click', (onFifthModalStepButtonNextClick));
+    steps.modalFifthStep.classList.toggle('is-not-displayed');
+    steps.modalSixthStep.classList.toggle('is-not-displayed');
+    fifthModalStep.checkBox.removeEventListener('click', (onRepairsItemClick));
+
+
+}
+    
+function onFifthModalStepButtonPrevClick(event) {
+        
+    console.log('er');
+    fifthModalStep.buttonPrev.removeEventListener('click', (onFifthModalStepButtonPrevClick)) ;
+    steps.modalFourthStep.classList.toggle('is-not-displayed');
+    steps.modalFifthStep.classList.toggle('is-not-displayed');
+    fourthModalStep.buttonPrev.addEventListener('click', (onfourthModalStepButtonPrevClick));
+    fourthModalStep.buttonNext.addEventListener('click', (onFourthModalStepButtonNextClick));
+
+
+    }
+
+    function onRepairsItemClick(event) {
+
+    const checkedReasons = event.target.nodeName == 'INPUT';
+    fifthModalStep.buttonNext.disabled = !checkedReasons;
+
+    if (checkedReasons) {
+        fifthModalStep.buttonNext.addEventListener('click', (onFifthModalStepButtonNextClick));
+    }
+}
+
+
+//====================/ repairs /======================
+
+//==================== reasons ======================
 
 const fourthModalStep = {
     checkBox: document.querySelector('.reasons'),
     buttonNext: document.querySelector('.fourth-step__btn'), 
-    buttonPrev: document.querySelectorAll('previous-fourth-step__btn'), 
+    buttonPrev: document.querySelector('.previous-fourth-step__btn'), 
 
 }
 
  console.log(fourthModalStep.checkBox);
 
 
-function onfourthModalStepButtonNextClick(event) {
+function onFourthModalStepButtonNextClick(event) {
     steps.modalFifthStep.classList.toggle('is-not-displayed');
     steps.modalFourthStep.classList.toggle('is-not-displayed');
     fourthModalStep.checkBox.removeEventListener('click', (onReasonsItemClick)) ;
-    fourthModalStep.buttonNext.removeEventListener('click', (onfourthModalStepButtonNextClick));
+    fourthModalStep.buttonNext.removeEventListener('click', (onFourthModalStepButtonNextClick));
+    fifthModalStep.checkBox.addEventListener('click', (onRepairsItemClick))
+    fifthModalStep.buttonPrev.addEventListener('click', (onFifthModalStepButtonPrevClick)) ;
+
 }
 
-function onReasonsItemClick(event) {
+
+function onfourthModalStepButtonPrevClick(event) {
+        
+    console.log('er');
+    fourthModalStep.buttonPrev.removeEventListener('click', (onfourthModalStepButtonPrevClick)) ;
+    steps.modalThirdStep.classList.toggle('is-not-displayed');
+    steps.modalFourthStep.classList.toggle('is-not-displayed');
+    modalThirdStep.livingList.addEventListener('click', (onLivingItemClick));
+
+    }
+
+
+    function onReasonsItemClick(event) {
 
     const checkedReasons = event.target.nodeName == 'INPUT';
     fourthModalStep.buttonNext.disabled = !checkedReasons;
 
     if (checkedReasons) {
-        fourthModalStep.buttonNext.addEventListener('click', (onfourthModalStepButtonNextClick));
-        // steps.modalThirdStep.classList.toggle('is-not-displayed');
-        // steps.modalFourthStep.classList.toggle('is-not-displayed');
-        // modalThirdStep.livingList.removeEventListener('click', onLivingItemClick);
-
+        fourthModalStep.buttonNext.addEventListener('click', (onFourthModalStepButtonNextClick));
     }
 }
 
+//==================== /reasons/ ======================
 
-
-//==================== /open & close modal/ ======================
 //==================== owner ======================
-
 
 const modalThirdStep = {
     radios: document.querySelectorAll('.living-radio'),
@@ -133,10 +186,11 @@ function onLivingItemClick(event) {
         steps.modalThirdStep.classList.toggle('is-not-displayed');
         steps.modalFourthStep.classList.toggle('is-not-displayed');
         modalThirdStep.livingList.removeEventListener('click', onLivingItemClick);
-        fourthModalStep.checkBox.addEventListener('click', (onReasonsItemClick)) ;
+        fourthModalStep.checkBox.addEventListener('click', (onReasonsItemClick));
+        fourthModalStep.buttonPrev.addEventListener('click', (onfourthModalStepButtonPrevClick)) ;
+
     }
 };
-
 
 //==================== /owner/ ======================
 
