@@ -33,10 +33,10 @@
                             VISITS NECESSARY! <span> NATIONWIDE!</span></h1>
                     </div>
                     <div class='hero__right-side'>
-                        <iframe class="hero__video" width="420" height="210"
+                        <!-- <iframe class="hero__video" width="420" height="210"
                             src="https://www.youtube.com/embed/K-OVYg97dFs" title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                            allowfullscreen></iframe> -->
                         <p class='hero__right-side__description'>How to avoid unnecessary expenses</p>
                     </div>
                 </div>
@@ -361,56 +361,53 @@
 
                             </li>
                         </ul>
-                        <button type='submit' class='update__btn help-btn'>update</button>
+                        <button type='button' class='update__btn help-btn' disabled>update</button>
                     </div>
 
 
                     <div class='modal__second-step modal__step is-not-displayed'>
                         <h3 class='second-step-title modal__step-title'>Are you owner of this property, or an agent, or
                             a wholesaler?</h3>
-                        <ul class='step__list step__list-radio'>
-                            <li class='_list step__item'><input class="input-radio visually-hidden" value="true"
-                                    name="owner" id="is-owner" type="radio">
+                        <ul class='step__list is-owner step__list-radio'>
+                            <li class='_list step__item'><input class="input-radio owner-check-boxes visually-hidden"
+                                    value="true" name="owner" id="is-owner" type="radio">
                                 <label class="input-radio-label" for="is-owner">owner</label>
                             </li>
-                            <li class='_list step__item'><input class="input-radio visually-hidden" value="false"
-                                    name="owner" id="is-agent" type="radio">
+                            <li class='_list step__item'><input class="input-radio owner-check-boxes visually-hidden"
+                                    value="false" name="owner" id="is-agent" type="radio">
                                 <label class="input-radio-label" for="is-agent">an agent</label>
                             </li>
-                            <li class='_list step__item'><input class="input-radio visually-hidden" value="false"
-                                    name="owner" id="is-wholesaler" type="radio">
+                            <li class='_list step__item'><input class="input-radio owner-check-boxes visually-hidden"
+                                    value="false" name="owner" id="is-wholesaler" type="radio">
                                 <label class="input-radio-label" for="is-wholesaler">a wholesaler</label>
                             </li>
 
                         </ul>
-                        <button type='button' class='previous-step__btn previous-third-step__btn'>Back</button>
-
                     </div>
 
                     <div class='modal__third-step modal__step is-not-displayed'>
                         <h3 class='third-step-title modal__step-title'>Is there anyone living on the property</h3>
 
-                        <ul class='step__list step__list-radio'>
-                            <li class='_list step__item'><input class="input-radio visually-hidden" value="true"
-                                    name="is-living" id="owner-occupied" type="radio">
+                        <ul class='step__list is-living step__list-radio'>
+                            <li class='_list step__item'><input class="input-radio living-radio visually-hidden"
+                                    value="true" name="is-living" id="owner-occupied" type="radio">
                                 <label class="input-radio-label" for="owner-occupied">Owner Occupied</label>
                             </li>
-                            <li class='_list step__item'><input class="input-radio visually-hidden" value="false"
-                                    name="is-living" id="tenant-occupied" type="radio">
+                            <li class='_list step__item'><input class="input-radio living-radio visually-hidden"
+                                    value="false" name="is-living" id="tenant-occupied" type="radio">
                                 <label class="input-radio-label" for="tenant-occupied">Tenant Occupied</label>
                             </li>
-                            <li class='_list step__item'><input class="input-radio visually-hidden" value="false"
-                                    name="is-living" id="nobody-living" type="radio">
+                            <li class='_list step__item'><input class="input-radio living-radio visually-hidden"
+                                    value="false" name="is-living" id="nobody-living" type="radio">
                                 <label class="input-radio-label" for="nobody-living">No its Vacant</label>
                             </li>
 
                         </ul>
 
-                        <button type='button' class='previous-step__btn previous-third-step__btn'>Back</button>
                     </div>
                     <div class='modal__fourth-step modal__step is-not-displayed'>
                         <h3 class='fourth-step-title modal__step-title'>What best describes why you want to sell?</h3>
-                        <ul class='fourth-step__list step__list'>
+                        <ul class='fourth-step__list reasons step__list'>
                             <li class='fourth-step__item _list step__item'>
                                 <input class="input-checkbox visually-hidden" value="PREFORECLOSURE" name="sell-reasons"
                                     id="PREFORECLOSURE" type="checkbox">
@@ -497,11 +494,11 @@
                             </li>
 
                         </ul>
-                        <ul class='buttons__list'>
+                        <ul class='buttons__list fourth-step-buttons'>
                             <li class='buttons__item _list'><button type='button'
                                     class='previous-step__btn previous-fourth-step__btn'>Back</button></li>
-                            <li class='buttons__item _list'><button type='button'
-                                    class='fourth-step__btn step__btn'>Next</button></li>
+                            <li class='buttons__item _list'><button type='button' class='fourth-step__btn step__btn'
+                                    disabled>Next</button></li>
                         </ul>
 
 
@@ -707,21 +704,21 @@
 
 
                         <ul class='step__list '>
-                            <li class='_list step__item'><input class="modal__input-adress" name="modal-name"
-                                    placeholder="Full Name" type="text">
+                            <li class='_list step__item'><input class="modal__input-adress last-step-input"
+                                    name="modal-name" placeholder="Full Name" type="text">
                             </li>
-                            <li class='_list step__item'><input class="modal__input-adress" name="modal-phone"
-                                    placeholder="Phone Number" type="tel">
+                            <li class='_list step__item'><input class="modal__input-adress last-step-input"
+                                    name="modal-phone" placeholder="Phone Number" type="tel">
 
                             </li>
-                            <li class='_list step__item'><input class="modal__input-adress" name="modal-mail"
-                                    placeholder="E-Mail Address" type="email">
+                            <li class='_list step__item'><input class="modal__input-adress last-step-input"
+                                    name="modal-mail" placeholder="E-Mail Address" type="email">
 
                             </li>
                         </ul>
 
 
-                        <button type='submit' class='modal__btn'>submit</button>
+                        <button type='submit' class='modal__btn submit-btn'>submit</button>
 
                     </div>
                 </form>

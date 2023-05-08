@@ -80,44 +80,8 @@ openBtns.questionBtn.addEventListener('click', (visabilityBackdrop) );
 
 //==================== /open & close modal/ ======================
 
-
-//==================== open & close modal ======================
-
-const fourthModalStep = {
-    checkBox: document.querySelector('.reasons'),
-    buttonNext: document.querySelector('.fourth-step__btn'), 
-    buttonPrev: document.querySelectorAll('previous-fourth-step__btn'), 
-
-}
-
- console.log(fourthModalStep.checkBox);
-
-
-function onfourthModalStepButtonNextClick(event) {
-    steps.modalFifthStep.classList.toggle('is-not-displayed');
-    steps.modalFourthStep.classList.toggle('is-not-displayed');
-    fourthModalStep.checkBox.removeEventListener('click', (onReasonsItemClick)) ;
-    fourthModalStep.buttonNext.removeEventListener('click', (onfourthModalStepButtonNextClick));
-}
-
-function onReasonsItemClick(event) {
-
-    const checkedReasons = event.target.nodeName == 'INPUT';
-    fourthModalStep.buttonNext.disabled = !checkedReasons;
-
-    if (checkedReasons) {
-        fourthModalStep.buttonNext.addEventListener('click', (onfourthModalStepButtonNextClick));
-        // steps.modalThirdStep.classList.toggle('is-not-displayed');
-        // steps.modalFourthStep.classList.toggle('is-not-displayed');
-        // modalThirdStep.livingList.removeEventListener('click', onLivingItemClick);
-
-    }
-}
-
-
-
-//==================== /open & close modal/ ======================
 //==================== owner ======================
+
 
 
 const modalThirdStep = {
@@ -126,6 +90,9 @@ const modalThirdStep = {
 };
 console.log(modalThirdStep.livingList);
 
+
+
+
 function onLivingItemClick(event) {
 
     if (event.target.nodeName == 'INPUT') {
@@ -133,9 +100,36 @@ function onLivingItemClick(event) {
         steps.modalThirdStep.classList.toggle('is-not-displayed');
         steps.modalFourthStep.classList.toggle('is-not-displayed');
         modalThirdStep.livingList.removeEventListener('click', onLivingItemClick);
-        fourthModalStep.checkBox.addEventListener('click', (onReasonsItemClick)) ;
+
     }
-};
+}
+
+
+
+
+// function onLivingChecking(event) {
+//     modalThirdStep.previousBtn.addEventListener('click', (onThirdStepPreviousBtnBtnClick));
+//     modalThirdStep.radios.forEach(function (radio) {
+//         radio.addEventListener('click', (onLivingRadioClick));
+//          console.log("wewewe");
+        
+//         function onLivingRadioClick() {
+
+//             if (radio.checked) {
+//                 steps.modalThirdStep.classList.toggle('is-not-displayed');
+//                 steps.modalFourthStep.classList.toggle('is-not-displayed');
+
+//                 modalThirdStep.radios.forEach(function (radio) {
+//                     radio.removeEventListener('click', (onLivingRadioClick));
+//                 });
+//             };
+
+//         };
+     
+//     });
+// };
+
+
 
 
 //==================== /owner/ ======================
@@ -198,7 +192,6 @@ const secondStep = {
 }
 
 
-
 function onOwnerChecking(event) {
     secondStep.ownerCheckBoxes.forEach(function (checkBox, id) {
         checkBox.addEventListener('click', (onOwnerCheckBoxesClick));
@@ -208,7 +201,7 @@ function onOwnerChecking(event) {
             if (checkBox.id === 'is-owner') {
                 steps.modalSecondStep.classList.toggle('is-not-displayed');
                 steps.modalThirdStep.classList.toggle('is-not-displayed');
-                modalThirdStep.livingList.addEventListener('click', (onLivingItemClick));
+                modalThirdStep.livingList.addEventListener('click', onLivingItemClick);
             }
 
             else {
@@ -222,6 +215,31 @@ function onOwnerChecking(event) {
 
     });
 };
+
+
+// function onOwnerChecking(event) {
+//     secondStep.ownerCheckBoxes.forEach(function (checkBox, id) {
+//         checkBox.addEventListener('click', (onOwnerCheckBoxesClick));
+
+//         function onOwnerCheckBoxesClick() {
+
+//             if (checkBox.id === 'is-owner') {
+//                 steps.modalSecondStep.classList.toggle('is-not-displayed');
+//                 steps.modalThirdStep.classList.toggle('is-not-displayed');
+//                 modalThirdStep.livingList.addEventListener('click', onLivingItemClick);
+//             }
+
+//             else {
+//                 steps.modalSecondStep.classList.toggle('is-not-displayed');
+//                 steps.modalAndStep.classList.toggle('is-not-displayed');
+//                 onLastStepInputChange(lastStep.input);
+//             }
+//                 // checkBox.removeEventListener('click', (onOwnerCheckBoxesClick));
+
+//         };
+
+//     });
+// };
 
 
 
