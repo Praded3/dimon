@@ -342,12 +342,12 @@ function onCorrectZipClick(event) {
 
 
 
-// const qqq = document.querySelectorAll('.is-not-displayed');
+const qqq = document.querySelectorAll('.is-not-displayed');
 
-// const www = function eee(array) {
-//     array.forEach(element => {
-//         element.classList.toggle('is-not-displayed');
-//     });
-// }
-// www(qqq);
+const www = function eee(array) {
+    array.forEach(element => {
+        element.classList.toggle('is-not-displayed');
+    });
+}
+www(qqq);
 
