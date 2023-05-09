@@ -307,8 +307,19 @@
                                 <use href='./img/sprite.svg#icon-adress'></use>
                             </svg><input class="steps__input" name="Address" type="text" required
                                 placeholder="Property Address"></span>
-                        <button type='submit' class='steps__btn'>GET MY FAIR CASH OFFER</button>
+                        <button type='submit' class='steps__btn' disabled>GET MY FAIR CASH OFFER</button>
                     </form>
+                </div>
+                <div class="steps__form-backdrop is-hiden">
+                    <div class='modal__thanks-steps__form steps__form-modal'>
+
+                        <h2 class='modal__thanks-title'><span class='modal__thanks-name'></span> we will call
+                            you back with the best offer</h2>
+
+                        <button type='button' class='steps__form-close-btn'>I am waiting for a call</button>
+
+
+                    </div>
                 </div>
             </div>
         </section>
@@ -745,7 +756,8 @@
             </div>
         </div>
     </main>
-    <script src="./modal.js"></script>
+    <script src="./modal.js" type="module"></script>
+    <script src="./small-form.js" type="module"></script>
 </body>
 
 </html>

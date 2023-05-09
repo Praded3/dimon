@@ -4,7 +4,9 @@ const refs = {
     modalFormBtn: document.querySelector('.modal__btn'),
     modalCloseBtn: document.querySelector('.modal__close-btn'),
     body: document.querySelector('body'),
+
 };
+
 
 const openBtns = {
     heroBtn: document.querySelector('.hero__btn'),
@@ -513,8 +515,6 @@ function onLastStepBtnClick(event) {
 //==================== /agent & wholesaler/ ======================
 
 
-
-
 //=================== second step ==================
 
 const secondStep = {
@@ -658,10 +658,6 @@ function onCorrectZipClick(event) {
     });
 };
 
-
-// const secondStep = {
-   
-// };
 
 
 

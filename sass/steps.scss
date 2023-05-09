@@ -204,7 +204,7 @@
 
 .steps__btn {
     display: flex;
-    padding: 22px 60px 15px 60px;
+    padding: 15px 60px 15px 60px;
     margin-top: 44px;
     font-weight: 600;
     font-size: 24px;
@@ -220,12 +220,13 @@
         color: #D10914;
         box-shadow: 12px 12px 22px #F1F6FE, -12px -12px 22px #F1F6FE;
     }
-    @media screen and (max-width: 767px){
-         padding:20px;
+  @media screen and (max-width: 767px){
+         padding:15px;
          font-size: 20px;
     }
      @media screen and (max-width: 425px){
          margin-top: 24px;
+         padding:10px;
     }
     @media screen and (max-width: 370px){
          font-size: 16px;
