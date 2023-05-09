@@ -43,8 +43,8 @@ function modalFormSubmit(event) {
     console.log(formData);
   
     formData.forEach((x, y) => {
-        // console.log(x);
-        // console.log(y);
+        console.log(x);
+        console.log(y);
         
     });
     // console.dir(event.currentTarget.elements.repairs.checked);
@@ -66,6 +66,8 @@ const doModalClose = () => {
 refs.modalCloseBtn.addEventListener('click', (doModalClose) )
 
 const visabilityBackdrop = () => {
+    refs.modalForm.addEventListener('submit', modalFormSubmit);
+
     refs.backdrop.classList.toggle('is-hiden');
     refs.body.classList.toggle('lock');
     openBtns.heroBtn.removeEventListener('click', (visabilityBackdrop) );
@@ -472,6 +474,8 @@ function onLivingItemClick(event) {
 const lastStep = {
     input: document.querySelectorAll('.last-step-input'),
     btn: document.querySelector('.submit-btn'),
+    clientName: document.querySelector('.thanks-page-name'),
+    closeBtn: document.querySelector('.modal__form-close-btn'),
 }
 
 
@@ -495,6 +499,13 @@ function userDataCheck(event) {
     
 };
 
+function onLastStepCloseBtnClick(event) {
+    refs.backdrop.classList.toggle('is-hiden');
+    refs.body.classList.toggle('lock');
+    lastStep.closeBtn.removeEventListener('click', (onLastStepCloseBtnClick));
+
+}
+
 function onLastStepBtnClick(event) {
     console.log('qqqq');
     steps.modalAndStep.classList.toggle('is-not-displayed');
@@ -504,6 +515,8 @@ function onLastStepBtnClick(event) {
         input.removeEventListener('input', (userDataCheck));
         
     });
+    lastStep.clientName.textContent = `Dear ${lastStep.input[0].value},`;
+    lastStep.closeBtn.addEventListener('click', (onLastStepCloseBtnClick));
     lastStep.btn.removeEventListener('click', (onLastStepBtnClick));
 
     // firstStep.zipCodeCheck.textContent = zipCode;

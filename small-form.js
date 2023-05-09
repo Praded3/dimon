@@ -70,7 +70,7 @@ function onModalFormBtnClick(event) {
     refs.modalFormBtn.removeEventListener('click', (onModalFormBtnClick));
     refs.modalCloseBtn.addEventListener('click', (onModalCloseBtnClick));
 
-    refs.clientName.textContent = `Dear ${refs.modalInput[0].value},`
+    refs.clientName.textContent = `Dear ${refs.modalInput[0].value},`;
 
 }
 
