@@ -2,4 +2,7 @@ body {
   font-family: "Fira Sans", sans-serif;
   background-color: #F1F6FE; }
 
+* {
+  outline: 1px solid red; }
+
 /*# sourceMappingURL=root.css.map */
