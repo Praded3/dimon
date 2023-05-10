@@ -325,11 +325,14 @@
         </section>
         <div class='backdrop is-hiden'>
             <div class='modal'>
-                <button type='button' class='modal__close-btn'></button>
-                <h3 class='modal__title'>Enter your information to get started</h3>
+                <button type='button' class='modal__close-btn'><svg class='modal__close__icon'>
+                        <use href='./img/sprite.svg#icon_close'></use>
+                    </svg></button>
+
                 <form class="modal__form" autocomplete="on">
 
                     <div class='modal__first-step modal__step'>
+                        <h3 class='modal__title'>Enter your information to get started</h3>
                         <input class="modal__input-adress modal-zip" name="modal-zip" placeholder="Address" type="text">
                         <button type='button' disabled class='first-step__btn help-btn'>Get your offer!</button>
                     </div>

@@ -5,7 +5,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.5);
     z-index: 100;
     transition: $transition__stock;
     // display: none;
@@ -24,8 +24,7 @@
     top: 50%;
     transform: translate(-50%, -50%);
     padding: 55px;
-    border-radius: 20px;
-    background-color: #629DE2;
+    background-color: #fff;
     @media screen and (max-width: 1024px){
         padding: 35px 25px;
     }
@@ -98,9 +97,14 @@
     }
     }
 }
+
+.modal__close__icon{
+    width: 32px;
+    height: 32px;
+}
 .modal__close-btn{
-    width: 20px;
-    height: 20px;
+    width: 32px;
+    height: 32px;
     position: absolute;
     display: flex;
     justify-content: center;
@@ -112,31 +116,36 @@
     border-radius: 50%;
     cursor: pointer;
     padding: 5px;
+    transition: $transition__stock;
     &:hover,
     &:focus{
         outline: none;
-        background-color: #D10914;
+        background-color: #394661;
     }
-    &::after{
-        content: '';
-    background-color: #4B4B4B;
-    height: 15px;
-    width: 2px;
-    position: absolute;
-    top: 13%;
-    right: 44%;
-    transform: rotate(-45deg);
+    &:hover > .modal__close__icon,
+    &:focus{
+        fill:#fff;
     }
-    &::before{
-         content: '';
-    background-color: #4B4B4B;
-    height: 15px;
-    width: 2px;
-    position: absolute;
-    top: 13%;
-    right: 44%;
-    transform: rotate(45deg);
-    }
+    // &::after{
+    //     content: '';
+    // background-color: #4B4B4B;
+    // height: 15px;
+    // width: 2px;
+    // position: absolute;
+    // top: 13%;
+    // right: 44%;
+    // transform: rotate(-45deg);
+    // }
+    // &::before{
+    //      content: '';
+    // background-color: #4B4B4B;
+    // height: 15px;
+    // width: 2px;
+    // position: absolute;
+    // top: 13%;
+    // right: 44%;
+    // transform: rotate(45deg);
+    // }
 }
 
 
@@ -152,8 +161,7 @@
     // top: 50%;
     transform: translate(-50%, 0);
     padding: 55px;
-    border-radius: 20px;
-    background-color: grey;
+    background-color: #fff;
 ;
     @media screen and (max-width: 1024px){
         padding: 35px 25px;
@@ -189,6 +197,8 @@
      justify-content: center;
     align-items: center;
 }
+
+
 .modal__input-adress {
     display: flex;
     justify-content: center;
