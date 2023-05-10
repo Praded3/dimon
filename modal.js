@@ -116,7 +116,7 @@ function onSixthModalStepButtonPrevClick(params) {
     fifthModalStep.buttonNext.addEventListener('click', (onFifthModalStepButtonNextClick));
     sixthModalStep.checkBoxNo.removeEventListener('click', (onSixthModalStepCheckBoxNoClick));
     sixthModalStep.checkBoxYes.removeEventListener('click', (onSixthModalStepCheckBoxYesClick));
-        sixthModalStep.buttonPrev.removeEventListener('click', (onSixthModalStepButtonPrevClick));
+    sixthModalStep.buttonPrev.removeEventListener('click', (onSixthModalStepButtonPrevClick));
 
 
 }
