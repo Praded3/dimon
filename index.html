@@ -307,8 +307,19 @@
                                 <use href='./img/sprite.svg#icon-adress'></use>
                             </svg><input class="steps__input" name="Address" type="text" required
                                 placeholder="Property Address"></span>
-                        <button type='submit' class='steps__btn'>GET MY FAIR CASH OFFER</button>
+                        <button type='submit' class='steps__btn' disabled>GET MY FAIR CASH OFFER</button>
                     </form>
+                </div>
+                <div class="steps__form-backdrop is-hiden">
+                    <div class='modal__thanks-steps__form steps__form-modal'>
+
+                        <h2 class='modal__thanks-title'><span class='modal__thanks-name'></span> we will call
+                            you back with the best offer</h2>
+
+                        <button type='button' class='steps__form-close-btn'>I am waiting for a call</button>
+
+
+                    </div>
                 </div>
             </div>
         </section>
@@ -636,13 +647,13 @@
 
                     <div class='modal__listing modal__step is-not-displayed'>
                         <h3 class='modal__listing-title modal__step-title'>When the listing expired?</h3>
-                        <input class="modal__input-adress" name=" listing-expired-date" id="listing-expired-date"
-                            type="date" placeholder="Data expired">
+                        <input class="modal__input-adress listing-expired-date" name=" listing-expired-date"
+                            id="listing-expired-date" type="date" placeholder="Data expired">
                         <ul class='buttons__list'>
                             <li class='buttons__item _list'><button type='button'
-                                    class='previous-step__btn previous-fourth-step__btn'>Back</button></li>
+                                    class='previous-step__btn listing-expired-previous-step__btn'>Back</button></li>
                             <li class='buttons__item _list'><button type='button'
-                                    class='fourth-step__btn step__btn'>Next</button></li>
+                                    class='listing-expired-step__btn step__btn' disabled>Next</button></li>
                         </ul>
                     </div>
 
@@ -651,12 +662,12 @@
                         </h3>
 
                         <ul class='step__list step__list-radio'>
-                            <li class='_list step__item'><input class="input-radio visually-hidden" value="true"
-                                    name="wholesaler" id="with-wholesaler" type="radio">
+                            <li class='_list step__item with-wholesaler'><input class="input-radio visually-hidden"
+                                    value="true" name="wholesaler" id="with-wholesaler" type="radio">
                                 <label class="input-radio-label" for="with-wholesaler">Yes</label>
                             </li>
-                            <li class='_list step__item'><input class="input-radio visually-hidden" value="false"
-                                    name="wholesaler" id="no-wholesaler" type="radio">
+                            <li class='_list step__item no-wholesaler'><input class="input-radio visually-hidden"
+                                    value="false" name="wholesaler" id="no-wholesaler" type="radio">
                                 <label class="input-radio-label" for="no-wholesaler">No</label>
                             </li>
                         </ul>
@@ -667,13 +678,14 @@
 
                     <div class='modal__contract modal__step is-not-displayed'>
                         <h3 class='modal__contract-title modal__step-title'>When the contract expired?</h3>
-                        <input class="modal__input-adress" name="contract-expired-date" id="contract-expired-date"
-                            type="date">
+                        <input class="modal__input-adress contract-expired-date" name="contract-expired-date"
+                            id="contract-expired-date" type="date">
                         <ul class='buttons__list'>
                             <li class='buttons__item _list'><button type='button'
-                                    class='previous-step__btn previous-fourth-step__btn'>Back</button></li>
+                                    class='contract-expired-previous-step__btn previous-step__btn'>Back</button>
+                            </li>
                             <li class='buttons__item _list'><button type='button'
-                                    class='fourth-step__btn step__btn'>Next</button></li>
+                                    class='contract-expired-step__btn step__btn' disabled>Next</button></li>
                         </ul>
                     </div>
 
@@ -681,7 +693,7 @@
                         <h3 class="eighth-step-title modal__step-title">When do you want to finalize the sale of your
                             home?</h3>
 
-                        <ul class='step__list step__list-radio'>
+                        <ul class='step__list time-list step__list-radio'>
                             <li class='_list step__item'><input class="input-radio visually-hidden" value="ASAP"
                                     name="finalize_sale" id="ASAP" type="radio">
                                 <label class="input-radio-label" for="ASAP">ASAP</label>
@@ -723,9 +735,11 @@
                     </div>
                 </form>
                 <div class='modal__thanks-page is-not-displayed'>
-                    <h2 class='thanks-page-title'>
-                        спасибо, пожалуйта
+                    <h2 class='thanks-page-title'><span class='thanks-page-name'></span> we will call
+                        you back with the best offer
                     </h2>
+                    <button type='button' class='modal__form-close-btn'>I am waiting for a call</button>
+
                 </div>
 
 
@@ -744,7 +758,8 @@
             </div>
         </div>
     </main>
-    <script src="./modal.js"></script>
+    <script src="./modal.js" type="module"></script>
+    <script src="./small-form.js" type="module"></script>
 </body>
 
 </html>

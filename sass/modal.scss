@@ -1,4 +1,4 @@
-.backdrop{
+.backdrop, .steps__form-backdrop{
     position: fixed;
     overflow: auto;
     left: 0;
@@ -10,6 +10,95 @@
     transition: $transition__stock;
     // display: none;
 }
+.steps__form-modal { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    overflow: auto;
+    gap: 40px;
+    left: 50%;
+    width: 70%;
+    height: 70%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 55px;
+    border-radius: 20px;
+    background-color: #629DE2;
+    @media screen and (max-width: 1024px){
+        padding: 35px 25px;
+    }
+    @media screen and (max-width: 860px){
+        width: 90%;
+    }
+    @media screen and (max-width: 767px){
+        padding: 35px 15px;
+    }
+    @media screen and (max-width: 475px){
+        padding: 35px 10px;
+    }
+}
+
+.steps__form-close-btn, .modal__form-close-btn{
+    display: flex;
+    padding: 15px 60px 15px 60px;
+    margin-top: 44px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    border: 2px solid #D10914;
+    border-radius: 12px;
+    background-color: #D10914;
+    color: #FFFFFF;
+    transition: $transition__stock;
+    &:hover, &:focus{
+        border-color: #629DE2;
+        background-color: #F1F6FE;
+        color: #D10914;
+        box-shadow: 12px 12px 22px #F1F6FE, -12px -12px 22px #F1F6FE;
+    }
+    @media screen and (max-width: 767px){
+         padding:15px;
+         font-size: 20px;
+    }
+     @media screen and (max-width: 425px){
+         margin-top: 24px;
+         padding:10px;
+    }
+    @media screen and (max-width: 370px){
+         font-size: 16px;
+
+    }
+}
+
+.modal__thanks-title, .thanks-page-title{
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    font-weight: 700;
+    font-size:36px;
+    line-height: 108%;
+    text-align: center;
+    color: #4B4B4B;
+    @media screen and (max-width: 1024px){
+        font-size: 28px;
+    }
+    @media screen and (max-width: 768px){
+        font-size: 24px;
+    }
+    &>span{
+        color:#D10914;
+        font-size: 40px;
+        @media screen and (max-width: 1024px){
+        font-size: 30px;
+    }
+        @media screen and (max-width: 768px){
+        font-size: 26px;
+    }
+    }
+}
+
 .modal { 
     display: flex;
     flex-direction: column;

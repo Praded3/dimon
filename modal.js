@@ -4,7 +4,9 @@ const refs = {
     modalFormBtn: document.querySelector('.modal__btn'),
     modalCloseBtn: document.querySelector('.modal__close-btn'),
     body: document.querySelector('body'),
+
 };
+
 
 const openBtns = {
     heroBtn: document.querySelector('.hero__btn'),
@@ -39,10 +41,10 @@ function modalFormSubmit(event) {
     const formData = new FormData(event.currentTarget);
 
     console.log(formData);
-    
+  
     formData.forEach((x, y) => {
-        // console.log(x);
-        // console.log(y);
+        console.log(x);
+        console.log(y);
         
     });
     // console.dir(event.currentTarget.elements.repairs.checked);
@@ -64,6 +66,8 @@ const doModalClose = () => {
 refs.modalCloseBtn.addEventListener('click', (doModalClose) )
 
 const visabilityBackdrop = () => {
+    refs.modalForm.addEventListener('submit', modalFormSubmit);
+
     refs.backdrop.classList.toggle('is-hiden');
     refs.body.classList.toggle('lock');
     openBtns.heroBtn.removeEventListener('click', (visabilityBackdrop) );
@@ -80,6 +84,217 @@ openBtns.questionBtn.addEventListener('click', (visabilityBackdrop) );
 
 //==================== /open & close modal/ ======================
 
+
+//==================== eighth-step ======================
+
+const eighthStep = {
+    timeList: document.querySelector('.time-list'),
+    buttonPrev: document.querySelector('.eighth-previous-step__btn'), 
+}
+
+function onEighthSepButtonPrevClick(event) {
+    console.log('prev8');
+    sevenModalStep.checkBoxYes.addEventListener('click', (onSevenModalStepCheckBoxYesClick));
+    sevenModalStep.checkBoxNo.addEventListener('click', (onSevenModalStepCheckBoxNOClick));
+    sevenModalStep.buttonPrev.addEventListener('click', (onSevenModalStepButtonPrevClick));
+    steps.modalSevenStep.classList.toggle('is-not-displayed');
+    steps.modalEighthStep.classList.toggle('is-not-displayed');
+
+
+    eighthStep.buttonPrev.removeEventListener('click', (onEighthSepButtonPrevClick));
+
+}
+
+function onTimeItemClick(event) {
+
+    if (event.target.nodeName == 'INPUT') {
+
+        steps.modalEighthStep.classList.toggle('is-not-displayed');
+        steps.modalAndStep.classList.toggle('is-not-displayed');
+        eighthStep.buttonPrev.removeEventListener('click', (onEighthSepButtonPrevClick));
+        onLastStepInputChange(lastStep.input);
+
+        eighthStep.timeList.removeEventListener('click', (onTimeItemClick));
+
+    }
+};
+
+
+
+
+//====================/ eighth-step /======================
+
+//==================== contract lose date ======================
+
+const loseDate = {
+    input: document.querySelector('.contract-expired-date'),
+    buttonNext: document.querySelector('.contract-expired-step__btn'), 
+    buttonPrev: document.querySelector('.contract-expired-previous-step__btn'), 
+}
+
+function onLoseDateButtonNextClick(event) {
+    console.log('next lose');
+    loseDate.input.removeEventListener('input', (onLoseDateInutChange));
+    loseDate.buttonPrev.removeEventListener('click', (onLoseDateButtonPrevClick));
+    steps.modalContract.classList.toggle('is-not-displayed');
+    steps.modalAndStep.classList.toggle('is-not-displayed');
+    onLastStepInputChange(lastStep.input);
+    
+    
+    
+    loseDate.buttonNext.removeEventListener('click', onLoseDateButtonNextClick);
+
+
+}
+
+function onLoseDateButtonPrevClick(event) {
+    console.log(' back lose');
+    loseDate.buttonNext.removeEventListener('click', onLoseDateButtonNextClick);
+    loseDate.input.removeEventListener('input', (onLoseDateInutChange));
+    steps.modalSevenStep.classList.toggle('is-not-displayed');
+    steps.modalContract.classList.toggle('is-not-displayed');
+    sevenModalStep.checkBoxYes.addEventListener('click', (onSevenModalStepCheckBoxYesClick));
+    sevenModalStep.checkBoxNo.addEventListener('click', (onSevenModalStepCheckBoxNOClick));
+    sevenModalStep.buttonPrev.addEventListener('click', (onSevenModalStepButtonPrevClick));
+
+    
+    
+    loseDate.buttonPrev.removeEventListener('click', (onLoseDateButtonPrevClick));
+
+}
+
+
+let losDate;
+    
+function onLoseDateInutChange(event) {
+    losDate = event.currentTarget.value;
+    loseDate.buttonNext.disabled = !losDate;
+    
+    if (losDate) {
+
+        loseDate.buttonNext.addEventListener('click', onLoseDateButtonNextClick);
+    };
+
+};
+
+//==================== /contract lose date/ ======================
+
+
+//====================  expiredDate  ======================
+
+const expiredDate = {
+    input: document.querySelector('.listing-expired-date'),
+    buttonNext: document.querySelector('.listing-expired-step__btn'), 
+    buttonPrev: document.querySelector('.listing-expired-previous-step__btn'), 
+}
+
+
+function onExpiredDateButtonNextClick(event) {
+    console.log('asdfd');
+    expiredDate.input.removeEventListener('input', (onExpiredDateInutChange));
+    expiredDate.buttonPrev.removeEventListener('click', (onExpiredDateButtonPrevClick));
+    steps.modalListing.classList.toggle('is-not-displayed');
+    steps.modalAndStep.classList.toggle('is-not-displayed');
+    onLastStepInputChange(lastStep.input);
+    expiredDate.buttonNext.removeEventListener('click', (onExpiredDateButtonNextClick));
+
+}
+
+function onExpiredDateButtonPrevClick(event) {
+    console.log('XXXXXXXXX');
+    expiredDate.input.removeEventListener('input', (onExpiredDateInutChange));
+    steps.modalListing.classList.toggle('is-not-displayed');
+    steps.modalSixthStep.classList.toggle('is-not-displayed');
+    sixthModalStep.checkBoxYes.addEventListener('click', (onSixthModalStepCheckBoxYesClick));
+    sixthModalStep.buttonPrev.addEventListener('click', (onSixthModalStepButtonPrevClick));
+    sixthModalStep.checkBoxNo.addEventListener('click', (onSixthModalStepCheckBoxNoClick));
+    expiredDate.buttonNext.removeEventListener('click', (onExpiredDateButtonNextClick));
+    expiredDate.buttonPrev.removeEventListener('click', (onExpiredDateButtonPrevClick));
+
+}
+
+
+let expDate;
+
+function onExpiredDateInutChange(event) {
+    expDate = event.currentTarget.value;
+    expiredDate.buttonNext.disabled = !expDate;
+     console.log(expDate);
+    
+    if (expDate) {
+        expiredDate.buttonNext.addEventListener('click', onExpiredDateButtonNextClick);
+    };
+
+    console.log(zipCode);
+};
+
+//==================== /expiredDate/ ======================
+
+//==================== wholesaler =======================
+
+const sevenModalStep = {
+    checkBoxYes: document.querySelector('.with-wholesaler'),
+    checkBoxNo: document.querySelector('.no-wholesaler'), 
+    buttonPrev: document.querySelector('.seven-revious-step__btn'), 
+
+}
+
+
+
+function onSevenModalStepCheckBoxYesClick(event) {
+    console.log('yes wholesaler');
+    sevenModalStep.buttonPrev.removeEventListener('click', (onSevenModalStepButtonPrevClick));
+    sixthModalStep.checkBoxNo.addEventListener('click', (onSixthModalStepCheckBoxNoClick));
+    steps.modalSevenStep.classList.toggle('is-not-displayed');
+    steps.modalContract.classList.toggle('is-not-displayed');
+    loseDate.input.addEventListener('input', (onLoseDateInutChange));
+    loseDate.buttonPrev.addEventListener('click', (onLoseDateButtonPrevClick));
+
+    
+    
+    
+    sevenModalStep.checkBoxYes.removeEventListener('click', (onSevenModalStepCheckBoxYesClick));
+
+}
+
+function onSevenModalStepCheckBoxNOClick(event) {
+    console.log('no wholesaler');
+    sevenModalStep.buttonPrev.removeEventListener('click', (onSevenModalStepButtonPrevClick));
+    sevenModalStep.checkBoxYes.removeEventListener('click', (onSevenModalStepCheckBoxYesClick));
+    steps.modalSevenStep.classList.toggle('is-not-displayed');
+    steps.modalEighthStep.classList.toggle('is-not-displayed');
+    //suda
+    eighthStep.buttonPrev.addEventListener('click', (onEighthSepButtonPrevClick));
+    eighthStep.timeList.addEventListener('click', (onTimeItemClick));
+
+    
+    
+    sevenModalStep.checkBoxNo.removeEventListener('click', (onSevenModalStepCheckBoxNOClick));
+
+   
+
+}
+function onSevenModalStepButtonPrevClick(event) {
+    console.log('prev wholesaler');
+    sevenModalStep.checkBoxYes.removeEventListener('click', (onSevenModalStepCheckBoxYesClick));
+    sevenModalStep.checkBoxNo.removeEventListener('click', (onSevenModalStepCheckBoxNOClick));
+    steps.modalSixthStep.classList.toggle('is-not-displayed');
+    steps.modalSevenStep.classList.toggle('is-not-displayed');
+    sixthModalStep.checkBoxYes.addEventListener('click', (onSixthModalStepCheckBoxYesClick));
+    sixthModalStep.checkBoxNo.addEventListener('click', (onSixthModalStepCheckBoxNoClick));
+    sixthModalStep.buttonPrev.addEventListener('click', (onSixthModalStepButtonPrevClick));
+    
+    
+    sevenModalStep.buttonPrev.removeEventListener('click', (onSevenModalStepButtonPrevClick));
+   
+
+}
+
+
+
+//====================/ wholesaler /======================
+
+
 //==================== estate agent ======================
 
 const sixthModalStep = {
@@ -90,23 +305,32 @@ const sixthModalStep = {
 }
 
 function onSixthModalStepCheckBoxYesClick(event) {
-    console.log('yes');
+    console.log('yes agent');
 
     steps.modalSixthStep.classList.toggle('is-not-displayed');
     steps.modalListing.classList.toggle('is-not-displayed');
     sixthModalStep.checkBoxNo.removeEventListener('click', (onSixthModalStepCheckBoxNoClick));
     sixthModalStep.buttonPrev.removeEventListener('click', (onSixthModalStepButtonPrevClick));
+    expiredDate.input.addEventListener('input', onExpiredDateInutChange);
+    expiredDate.buttonPrev.addEventListener('click', (onExpiredDateButtonPrevClick));
+    
+
     sixthModalStep.checkBoxYes.removeEventListener('click', (onSixthModalStepCheckBoxYesClick));
 
 }
 
 function onSixthModalStepCheckBoxNoClick(event) {
-    console.log('no');
+    console.log('no agent');
     
     steps.modalSixthStep.classList.toggle('is-not-displayed');
     steps.modalSevenStep.classList.toggle('is-not-displayed');
     sixthModalStep.checkBoxYes.removeEventListener('click', (onSixthModalStepCheckBoxYesClick));
     sixthModalStep.buttonPrev.removeEventListener('click', (onSixthModalStepButtonPrevClick));
+    sevenModalStep.checkBoxYes.addEventListener('click', (onSevenModalStepCheckBoxYesClick));
+    sevenModalStep.checkBoxNo.addEventListener('click', (onSevenModalStepCheckBoxNOClick));
+    sevenModalStep.buttonPrev.addEventListener('click', (onSevenModalStepButtonPrevClick));
+
+
     sixthModalStep.checkBoxNo.removeEventListener('click', (onSixthModalStepCheckBoxNoClick));
 
 }
@@ -116,6 +340,12 @@ function onSixthModalStepButtonPrevClick(params) {
     fifthModalStep.buttonNext.addEventListener('click', (onFifthModalStepButtonNextClick));
     sixthModalStep.checkBoxNo.removeEventListener('click', (onSixthModalStepCheckBoxNoClick));
     sixthModalStep.checkBoxYes.removeEventListener('click', (onSixthModalStepCheckBoxYesClick));
+<<<<<<< HEAD
+=======
+    
+    
+    
+>>>>>>> 9b89d8e33d4c395e15ba4fa6c448724c6c01a3a6
     sixthModalStep.buttonPrev.removeEventListener('click', (onSixthModalStepButtonPrevClick));
 
 
@@ -247,6 +477,8 @@ function onLivingItemClick(event) {
 const lastStep = {
     input: document.querySelectorAll('.last-step-input'),
     btn: document.querySelector('.submit-btn'),
+    clientName: document.querySelector('.thanks-page-name'),
+    closeBtn: document.querySelector('.modal__form-close-btn'),
 }
 
 
@@ -270,16 +502,26 @@ function userDataCheck(event) {
     
 };
 
+function onLastStepCloseBtnClick(event) {
+    refs.backdrop.classList.toggle('is-hiden');
+    refs.body.classList.toggle('lock');
+    lastStep.closeBtn.removeEventListener('click', (onLastStepCloseBtnClick));
+
+}
+
 function onLastStepBtnClick(event) {
     console.log('qqqq');
     steps.modalAndStep.classList.toggle('is-not-displayed');
     steps.modalThanksPage.classList.toggle('is-not-displayed');
-    lastStep.btn.removeEventListener('click', (onLastStepBtnClick));
     
     lastStep.input.forEach(function (input) {
         input.removeEventListener('input', (userDataCheck));
         
     });
+    lastStep.clientName.textContent = `Dear ${lastStep.input[0].value},`;
+    lastStep.closeBtn.addEventListener('click', (onLastStepCloseBtnClick));
+    lastStep.btn.removeEventListener('click', (onLastStepBtnClick));
+
     // firstStep.zipCodeCheck.textContent = zipCode;
 
 
@@ -287,8 +529,6 @@ function onLastStepBtnClick(event) {
 
 
 //==================== /agent & wholesaler/ ======================
-
-
 
 
 //=================== second step ==================
@@ -434,10 +674,6 @@ function onCorrectZipClick(event) {
     });
 };
 
-
-// const secondStep = {
-   
-// };
 
 
 
