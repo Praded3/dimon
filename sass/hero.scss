@@ -7,14 +7,16 @@
 }
 .hero__section{
     padding: 50px 255px 64px 264px;
-    background: linear-gradient( rgba(0, 0, 0, 0.5 ), rgba(0, 0, 0, 0.5)), url(./img/hero/1.jpg);
+    background: linear-gradient( rgba(0, 0, 0, 0.5 ), 
+    rgba(0, 0, 0, 0.5)), url(./img/hero/1.jpg);
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-     background: linear-gradient( rgba(0, 0, 0, 0.5 ), rgba(0, 0, 0, 0.5)), url(./img/hero/1@2x.jpg);
+     background: linear-gradient( rgba(0, 0, 0, 0.5 ), 
+     rgba(0, 0, 0, 0.5)), url(./img/hero/1@2x.jpg);
     }
     @media screen and (max-width: 1150px){
          padding: 50px 150px 64px 150px;
