@@ -45,5 +45,9 @@
 <symbol id="icon-adress" viewBox="0 0 24 32">
 <path fill="#4189dd" style="fill: var(--color1, #4189dd)" d="M10.767 31.354c-9.081-13.165-10.767-14.516-10.767-19.354 0-6.627 5.373-12 12-12s12 5.373 12 12c0 4.838-1.686 6.189-10.767 19.354-0.596 0.861-1.871 0.861-2.466 0zM12 17c2.761 0 5-2.239 5-5s-2.239-5-5-5c-2.761 0-5 2.239-5 5s2.239 5 5 5z"></path>
 </symbol>
+<symbol id="icon-x" viewBox="0 0 32 32">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.7333" d="M24 8l-16 16"></path>
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.7333" d="M8 8l16 16"></path>
+</symbol>
 </defs>
 </svg>
