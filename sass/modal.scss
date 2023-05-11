@@ -20,7 +20,7 @@
     gap: 40px;
     left: 50%;
     width: 70%;
-    min-height: 70%;
+    min-height: 80%;
     top: 50%;
     transform: translate(-50%, -50%);
     padding: 55px;
@@ -157,8 +157,16 @@
     // transform: rotate(45deg);
     // }
 }
-.modal__fourth-step, .modal__fifth-step{
-    margin-top: 170px;
+.modal__fourth-step.modal__step, .modal__fifth-step.modal__step{
+    // justify-content: flex-end; 
+    // align-items: flex-start;
+    align-self: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 50px 0;
+     left: 50%;
+     transform: translate(-50%, 0);
 }
 
 
@@ -173,7 +181,7 @@
     left: 50%;
     top: 10%;
     width: 80%;
-    height: 60%;
+    height: 70%;
     // top: 50%;
     transform: translate(-50%, 0);
     padding: 55px;
