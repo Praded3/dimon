@@ -43,13 +43,18 @@
     display: flex;
     padding: 15px 60px 15px 60px;
     margin-top: 44px;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 24px;
     line-height: 140%;
-    border: 2px solid #D10914;
-    border-radius: 12px;
-    background-color: #D10914;
-    color: #FFFFFF;
+    border-radius: 11px;
+
+    text-decoration: underline;
+    // border: 2px solid #D10914;
+    // border-radius: 12px;
+    // background-color: #D10914;
+    background-color: transparent;
+    border: none;
+    color: #4189DD;
     transition: $transition__stock;
     &:hover, &:focus{
         background-color: #e7e7e7;
@@ -69,12 +74,19 @@
     }
 }
 
+
+.modal__thanks-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .modal__thanks-title, .thanks-page-title{
     display: flex;
     flex-direction: column;
     gap: 36px;
     font-weight: 700;
-    font-size:36px;
+    font-size:32px;
     line-height: 108%;
     text-align: center;
     color: #4B4B4B;
@@ -323,7 +335,7 @@
     font-weight: 500;
     font-size:30px;
     line-height: 133%;
-    margin-bottom: 36px;
+    margin-bottom: 46px;
     text-align: center;
     color: #4B4B4B;
     @media screen and (max-width: 1024px){
