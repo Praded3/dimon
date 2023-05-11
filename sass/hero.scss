@@ -2,11 +2,12 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     color: $color_white;
+    padding: 0;
 }
 .hero__section{
-    padding: 50px 255px 64px 264px;
+    padding: 60px 160px 160px 160px;
     background: linear-gradient( rgba(0, 0, 0, 0.5 ), 
     rgba(0, 0, 0, 0.5)), url(./img/hero/1.jpg);
     height: 100%;
@@ -28,17 +29,23 @@
          padding: 50px 50px 64px 50px;
     }
     @media screen and (max-width: 767px){
-         padding: 50px 10px 64px 10px;
+         padding: 50px 15px 64px 15px;
     }
     @media screen and (max-width: 425px){
-         padding: 25px 10px 25px 10px;
+         padding: 50px 15px 34px 15px;
     }
 }
 .hero__link {
+    display: flex;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 ._link {
 }
 .logo__img {
+    
+    
     @media screen and (max-width: 767px){
         width: 300px;
     }
@@ -48,7 +55,7 @@
 }
 .hero__content {
     display: flex;
-    margin-top: 67px;
+    margin-top: 118px;
     gap: 32px;
     justify-content: center;
     align-items: center;
@@ -67,16 +74,18 @@
 }
 .main-title {
     display: flex; 
-    gap: 14px;
+    gap: 34px;
     flex-direction: column;
     justify-content: center;
     font-weight: 500;
-    font-size: 30px;
-    line-height: 100%;
+    font-size: 24px;
+    line-height: 133%;
+    max-width: 647px;
     &>span{
+        display: block;
         font-weight: 900;
-        font-size: 82px;
-        line-height: 53%;
+        font-size: 96px;
+        line-height: 80%;
         @media screen and (max-width: 767px){
          font-size: 72px;
     }
@@ -92,34 +101,34 @@
      }
 }
 
-.hero__right-side {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+// .hero__right-side {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
    
-}
-.hero__video{
-    filter: drop-shadow(24px 12px 12px rgba(0, 0, 0, 0.28));
-    border-radius: 16px;
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    @media screen and (max-width: 425px){
-    width:300px;
-    height:150px;
-    }
-}
+// }
+// .hero__video{
+//     filter: drop-shadow(24px 12px 12px rgba(0, 0, 0, 0.28));
+//     border-radius: 16px;
+//     border: 1px solid rgba(0, 0, 0, 0.5);
+//     @media screen and (max-width: 425px){
+//     width:300px;
+//     height:150px;
+//     }
+// }
 
 
-.hero__right-side__description {
+// .hero__right-side__description {
   
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 100%;
-    margin-top: 7px;
-    @media screen and (max-width: 767px){
-        font-size: 14px;
-        margin-top: 15px;
-    }
-}
+//     font-weight: 500;
+//     font-size: 18px;
+//     line-height: 100%;
+//     margin-top: 7px;
+//     @media screen and (max-width: 767px){
+//         font-size: 14px;
+//         margin-top: 15px;
+//     }
+// }
 .hero__sup-title {
     font-family: $secondury_font;
     //  display: flex;
@@ -129,11 +138,17 @@
     // max-width: 641px;
     font-weight: 400;
     font-size: 26px;
-    line-height: 119%;
-    margin-top: 46px;
+    line-height: 133%;
+    margin-top: 125px;
+    max-width: 647px;
+    @media screen and (max-width: 1024px){
+        margin-top: 70px;
+
+    }
     @media screen and (max-width: 767px){
     font-size: 22px;
-    text-align: center;
+
+    margin-top: 50px;
     
  }
  @media screen and (max-width:475px){
@@ -148,31 +163,35 @@
 
 .hero__btn {
  color: $color_white;
- padding: 16px 225px;
- border: 1px solid rgba(255, 255, 255, 0.3) ;
+ padding: 12px 130px;
+//  border: 1px solid rgba(255, 255, 255, 0.3) ;
  border-radius: 14px;
  background: transparent;
- font-size: 24px;
+ font-size: 18px;
  font-weight: 600;
- line-height: 119%;
- margin-top: 45px;
- backdrop-filter: blur(24px);
+ line-height: 178%;
+ margin-top: 24px;
+//  backdrop-filter: blur(24px);
 white-space: nowrap;
+background: linear-gradient(0deg, #D10914, #D10914), linear-gradient(180deg, #FF2828 0%, #FF6F2F 100%);
+border: 1px solid rgba(255, 255, 255, 0.3);
+
+border-radius: 12px;
  transition: $transition__stock;
  &:hover,
  &:focus{
     outline: transparent;
     background:  #FF2828;
     border-color: transparent;
-    filter: drop-shadow(22px -12px -12px rgb(255, 255, 255));
+    // filter: drop-shadow(22px -12px -12px rgb(255, 255, 255));
  }
  @media screen and (max-width: 767px){
     padding: 20px 55px;
-    margin-top: 25px;
+    margin-top: 20px;
  }
   @media screen and (max-width: 350px){
     padding: 20px 35px;
-    margin-top: 25px;
+    margin-top: 20px;
  }
 }
 
