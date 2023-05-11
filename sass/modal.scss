@@ -172,6 +172,7 @@
     transform: translate(-50%, 0);
     padding: 55px;
     background-color: #fff;
+    overscroll-behavior-y: contain;
 ;
     @media screen and (max-width: 1024px){
         padding: 35px 25px;
