@@ -11,8 +11,8 @@ Error: Undefined variable: "$color_white".
 7:     padding: 0;
 8: }
 9: .hero__section{
-10:     padding: 60px 160px 160px 160px;
-11:     background: linear-gradient( rgba(0, 0, 0, 0.5 ), 
+10:     position: relative;
+11:     padding: 60px 160px 160px 160px;
 
 Backtrace:
 C:\prog\dimon\sass\hero.scss:6
@@ -62,4 +62,4 @@ C:/Program Files (x86)/Koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color_white\".\A         on line 6 of C:\prog\dimon\sass\hero.scss\A \A 1: .hero__container{\A 2:     display: flex;\A 3:     justify-content: center;\A 4:     flex-direction: column;\A 5:     align-items: flex-start;\A 6:     color: $color_white;\A 7:     padding: 0;\A 8: }\A 9: .hero__section{\A 10:     padding: 60px 160px 160px 160px;\A 11:     background: linear-gradient( rgba(0, 0, 0, 0.5 ), "; }
+  content: "Error: Undefined variable: \"$color_white\".\A         on line 6 of C:\prog\dimon\sass\hero.scss\A \A 1: .hero__container{\A 2:     display: flex;\A 3:     justify-content: center;\A 4:     flex-direction: column;\A 5:     align-items: flex-start;\A 6:     color: $color_white;\A 7:     padding: 0;\A 8: }\A 9: .hero__section{\A 10:     position: relative;\A 11:     padding: 60px 160px 160px 160px;"; }
