@@ -162,11 +162,15 @@
     // align-items: flex-start;
     align-self: flex-start;
     position: absolute;
-    top: 0;
+    top: auto;
     left: 0;
     padding: 50px 0;
      left: 50%;
      transform: translate(-50%, 0);
+     width: 90%;
+   @media screen and (max-width: 1920px){
+    top: 0;
+   }
 }
 
 
