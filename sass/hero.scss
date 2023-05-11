@@ -5,17 +5,13 @@
     align-items: flex-start;
     color: $color_white;
     padding: 0;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5 ), 
-    rgba(0, 0, 0, 0.5));
-    
 }
 .hero__section{
     position: relative;
     padding: 60px 160px 160px 160px;
     //  background-image: linear-gradient( rgba(0, 0, 0, 0.5 ), 
     // rgba(0, 0, 0, 0.5)), url(./img/hero/1.jpg);
-     background-image: linear-gradient( rgba(0, 0, 0, 0.5 ), 
-    rgba(0, 0, 0, 0.5));
+    background-color: rgba(0,0,0, 0.5);
     height: 100%;
     object-fit: cover;
     background-position: center;
@@ -25,8 +21,6 @@
       screen and (min-resolution: 2dppx) {
     //  background-image: linear-gradient( rgba(0, 0, 0, 0.5 ), 
     //  rgba(0, 0, 0, 0.5)), url(./img/hero/1@2x.jpg);
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5 ), 
-    rgba(0, 0, 0, 0.5));
     }
     @media screen and (max-width: 1150px){
          padding: 50px 150px 64px 150px;
@@ -52,7 +46,7 @@ video{
     position: absolute;
     top: 0;
     left: 0;
-
+    z-index: -1;
 }
 
 
@@ -60,7 +54,7 @@ video{
     display: flex;
     align-self: center;
     margin-left: auto;
-    margin-right: auto;z-index: 2;
+    margin-right: auto;
 }
 ._link {
 }
@@ -80,7 +74,6 @@ video{
     gap: 32px;
     justify-content: center;
     align-items: center;
-    z-index: 2;
     @media screen and (max-width: 1023px){
         flex-direction: column;
         gap: 50px;
@@ -163,7 +156,6 @@ video{
     line-height: 133%;
     margin-top: 125px;
     max-width: 647px;
-    z-index: 2;
     @media screen and (max-width: 1024px){
         margin-top: 70px;
 
@@ -194,7 +186,6 @@ video{
  font-weight: 600;
  line-height: 178%;
  margin-top: 24px;
- z-index: 2;
 //  backdrop-filter: blur(24px);
 white-space: nowrap;
 background: linear-gradient(0deg, #D10914, #D10914), linear-gradient(180deg, #FF2828 0%, #FF6F2F 100%);
