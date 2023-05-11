@@ -305,4 +305,9 @@
 }
 
 .fourth-step__item, .fifth-step__item{
-flex-basis: calc((100% - 20px) / 2);}
+     @media screen and (min-width: 700px){
+        flex-basis: calc((100% - 20px) / 2);
+     }
+
+  
+}
