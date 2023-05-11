@@ -281,3 +281,19 @@
     width: 210px;
     }
 }
+
+.fourth-step__list.step__list, .fifth-step__list.step__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    @media screen and (max-width: 700px){
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+.fourth-step__item, .fifth-step__item{
+flex-basis: calc((100% - 20px) / 2);}
