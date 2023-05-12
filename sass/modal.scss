@@ -274,7 +274,7 @@
     }
     @media screen and (max-width: 660px){
         font-size: 18px;
-        height: 38px;
+        height:42px;
         width: 350px;
     }
     @media screen and (max-width: 400px){
@@ -722,15 +722,15 @@
   }
 }
 
-select.modal__input-state{
-     display: flex;
+// select.modal__input-state{
+//      display: flex;
   
-}
-option{
-    display: flex;
-      width: 565px;
+// }
+// option{
+//     display: flex;
+//       width: 565px;
 
-    &:hover{
-        background-color:red;
-    }
-}
+//     &:hover{
+//         background-color:red;
+//     }
+// }
