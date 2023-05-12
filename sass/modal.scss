@@ -251,12 +251,7 @@
     padding-right: 24px;
     transition: $transition__stock;
     outline: none;
-    &:valid{
-         border: 2px solid green;
-    }
-     &:invalid{
-         border: 2px solid red;
-    }
+   
     &:focus{
         outline: none;
         font-size: 18px;
@@ -299,12 +294,7 @@
     padding-right: 24px;
     transition: $transition__stock;
     outline: none;
-    &:valid{
-         border: 2px solid green;
-    }
-     &:invalid{
-         border: 2px solid red;
-    }
+    
     &:focus{
         outline: none;
         font-size: 18px;
