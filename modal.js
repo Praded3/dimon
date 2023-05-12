@@ -229,7 +229,7 @@ function onLoseDateInutChange(event) {
     loseDate.buttonNext.disabled = !losDate;
      console.log(losDate);
     
-    if (losDate) {
+    if (losDate >= today && losDate <= maxDateCorrect) {
 
         loseDate.buttonNext.addEventListener('click', onLoseDateButtonNextClick);
     };
@@ -264,9 +264,8 @@ let expDate;
 function onExpiredDateInutChange(event) {
     expDate = event.currentTarget.value;
     expiredDate.buttonNext.disabled = !expDate;
-     console.log(expDate);
     
-    if (expDate) {
+    if (expDate >= today && expDate <= maxDateCorrect) {
         expiredDate.buttonNext.addEventListener('click', onExpiredDateButtonNextClick);
     };
 
@@ -430,6 +429,7 @@ function onSixthModalStepButtonPrevClick(params) {
 
 }
 
+ console.log("2023-05-12">"2023-05-11");
 
 //==================== /estate agent/ ======================
 
@@ -768,6 +768,9 @@ expiredDate.input.max = maxDateCorrect;
 
  console.log(loseDate.input.min);
 
+
+ 
+ console.log(typeof(today));
 
 
 // const qqq = document.querySelectorAll('.is-not-displayed');
