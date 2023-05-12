@@ -62,6 +62,9 @@ function addZero(num) {
 		return num;
 	}
 }
+
+ console.log(date);
+
  
 const today =
 	addZero(date.getFullYear()) + '-' + 
@@ -71,14 +74,23 @@ const today =
 
     
 const maxDate = new Date(date.setDate(date.getDate() + 150));
- console.log(maxDate);
-
-     
+console.log(maxDate);
+ 
+const yesterday = new Date(date.setDate(date.getDate() -151));
+console.log(yesterday); 
+    
 const maxDateCorrect =
 	addZero(maxDate.getFullYear() + 1) + '-' + 
 	addZero(maxDate.getMonth() + 1) + '-' +
     addZero(maxDate.getDate());
-     console.log(maxDateCorrect);
+console.log(maxDateCorrect);
+     
+
+const yesterdayCorrect = 
+addZero(yesterday.getFullYear() ) + '-' + 
+	addZero(yesterday.getMonth()+1) + '-' +
+    addZero(yesterday.getDate()-1);
+console.log(yesterdayCorrect);
     
 //===================/ date /============
 
@@ -370,7 +382,7 @@ const sixthModalStep = {
 }
 
 function remuveExpDate(){
-    loseDate.input.value = today;
+    loseDate.input.value = yesterdayCorrect;
  
     
 }
@@ -379,7 +391,7 @@ function remuveExpDate(){
 
 
 function remuveLosDate(){
-    expiredDate.input.value = today;
+    expiredDate.input.value = yesterdayCorrect;
     console.log('qweqweqweqweqwe');
     
 }
