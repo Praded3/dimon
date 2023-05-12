@@ -19,12 +19,13 @@
     overflow: auto;
     gap: 40px;
     left: 50%;
-    width: 70%;
+    width: 90%;
     min-height: 80%;
     top: 50%;
     transform: translate(-50%, -50%);
     padding: 55px;
     background-color: #fff;
+      transition: $transition__stock;
     @media screen and (max-width: 1024px){
         padding: 35px 25px;
     }
@@ -158,20 +159,26 @@
     // }
 }
 .modal__fourth-step.modal__step, .modal__fifth-step.modal__step{
-    justify-content: flex-end; 
-    align-items: flex-start;
-    align-self: flex-start;
+    display: flex;
+    // justify-content: flex-start; 
+    // align-items: center;
+    // align-self: flex-start;
     position: absolute;
-    top: auto;
+    top: 1vh;
     left: 0;
     padding: 50px 0;
      left: 50%;
      transform: translate(-50%, 0);
      width: 90%;
+     transition: all 500ms linear;
+     
    @media screen and (max-width: 1920px){
     top: 0;
    }
+  
 }
+
+
 
 
 
@@ -180,6 +187,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    align-self: flex-start;
     position: fixed;
     overflow: auto;
     left: 50%;
@@ -317,6 +325,12 @@
     align-items: center;
     // padding: 50px 0; 
     overflow: auto;
+    width: 100%;
+    // height: 100%;
+    opacity: 1;
+    clip:auto;
+    transition: all 500ms linear;
+
 
 }
 .step__list{
@@ -502,7 +516,16 @@
 }
 
 .is-not-displayed{
-    display: none;
+    // display: none;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+    opacity: 0;
+
 }
 .input-radio-label{
     display: flex;

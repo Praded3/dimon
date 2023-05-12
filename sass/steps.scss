@@ -295,19 +295,28 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    // justify-content: center;
+    align-items: center;
     width: 100%;
     gap: 20px;
     @media screen and (max-width: 700px){
-        flex-wrap: wrap;
-        flex-direction: column;
-        gap: 15px;
+        // flex-wrap: wrap;
+        // flex-direction: column;
+        // gap: 15px;
+        display: block;
+        // &:not(:first-child){
+        //     margin-top: 15px;
+        // }
     }
 }
 
 .fourth-step__item, .fifth-step__item{
-     @media screen and (min-width: 700px){
+     @media screen and (min-width: 701px){
         flex-basis: calc((100% - 20px) / 2);
      }
+      &:not(:first-child){
+            margin-top: 15px;
+        }
 
   
 }

@@ -4,6 +4,7 @@ const refs = {
     modalFormBtn: document.querySelector('.modal__btn'),
     modalCloseBtn: document.querySelector('.modal__close-btn'),
     body: document.querySelector('body'),
+    modal:document.querySelector(".modal"),
 
 };
 
@@ -31,7 +32,63 @@ const steps = {
     modalThanksPage: document.querySelector('.modal__thanks-page'),
     
 } 
+
+//=================== date ============
+// const minDate = new Date();
+// const getmaxDate = function(date){
+// 		const day = date.getDate();
+// 		const month = date.getMonth() + 1;
+//         const year = date.getFullYear()+2;
+    
+// 		return month + '/' + day + '/' + year ;
+// };
+    
+// console.log(minDate);
+    
+// const maxDate = new Date(minDate.setDate(minDate.getDate() + 150)
+// );
+// console.log(maxDate);
+ 
+
+// const dsv = Date.parse(maxDate)
+//  console.log(dsv);
+
+const date = new Date();
+
+function addZero(num) {
+	if (num >= 0 && num <= 9) {
+		return '0' + num;
+	} else {
+		return num;
+	}
+}
+ 
+const today =
+	addZero(date.getFullYear()) + '-' + 
+	addZero(date.getMonth() + 1) + '-' +
+    addZero(date.getDate());
+
+
+    
+const maxDate = new Date(date.setDate(date.getDate() + 150));
+ console.log(maxDate);
+
+     
+const maxDateCorrect =
+	addZero(maxDate.getFullYear() + 1) + '-' + 
+	addZero(maxDate.getMonth() + 1) + '-' +
+    addZero(maxDate.getDate());
+     console.log(maxDateCorrect);
+    
+//===================/ date /============
+
+
+
 //=================== formData ============
+
+
+
+
 
 refs.modalForm.addEventListener('submit', modalFormSubmit);
 
@@ -153,6 +210,7 @@ function onLoseDateButtonPrevClick(event) {
     loseDate.input.removeEventListener('input', (onLoseDateInutChange));
     steps.modalSevenStep.classList.toggle('is-not-displayed');
     steps.modalContract.classList.toggle('is-not-displayed');
+    
     sevenModalStep.checkBoxYes.addEventListener('click', (onSevenModalStepCheckBoxYesClick));
     sevenModalStep.checkBoxNo.addEventListener('click', (onSevenModalStepCheckBoxNOClick));
     sevenModalStep.buttonPrev.addEventListener('click', (onSevenModalStepButtonPrevClick));
@@ -169,6 +227,7 @@ let losDate;
 function onLoseDateInutChange(event) {
     losDate = event.currentTarget.value;
     loseDate.buttonNext.disabled = !losDate;
+     console.log(losDate);
     
     if (losDate) {
 
@@ -200,20 +259,6 @@ function onExpiredDateButtonNextClick(event) {
 
 }
 
-function onExpiredDateButtonPrevClick(event) {
-    console.log('XXXXXXXXX');
-    expiredDate.input.removeEventListener('input', (onExpiredDateInutChange));
-    steps.modalListing.classList.toggle('is-not-displayed');
-    steps.modalSixthStep.classList.toggle('is-not-displayed');
-    sixthModalStep.checkBoxYes.addEventListener('click', (onSixthModalStepCheckBoxYesClick));
-    sixthModalStep.buttonPrev.addEventListener('click', (onSixthModalStepButtonPrevClick));
-    sixthModalStep.checkBoxNo.addEventListener('click', (onSixthModalStepCheckBoxNoClick));
-    expiredDate.buttonNext.removeEventListener('click', (onExpiredDateButtonNextClick));
-    expiredDate.buttonPrev.removeEventListener('click', (onExpiredDateButtonPrevClick));
-
-}
-
-
 let expDate;
 
 function onExpiredDateInutChange(event) {
@@ -227,6 +272,27 @@ function onExpiredDateInutChange(event) {
 
     console.log(zipCode);
 };
+
+
+
+
+function onExpiredDateButtonPrevClick(event) {
+    console.log('XXXXXXXXX');
+    expiredDate.input.removeEventListener('input', (onExpiredDateInutChange));
+    steps.modalListing.classList.toggle('is-not-displayed');
+    steps.modalSixthStep.classList.toggle('is-not-displayed');
+    
+    sixthModalStep.checkBoxYes.addEventListener('click', (onSixthModalStepCheckBoxYesClick));
+    sixthModalStep.buttonPrev.addEventListener('click', (onSixthModalStepButtonPrevClick));
+    sixthModalStep.checkBoxNo.addEventListener('click', (onSixthModalStepCheckBoxNoClick));
+    expiredDate.buttonNext.removeEventListener('click', (onExpiredDateButtonNextClick));
+    
+    expiredDate.buttonPrev.removeEventListener('click', (onExpiredDateButtonPrevClick));
+
+}
+
+
+
 
 //==================== /expiredDate/ ======================
 
@@ -249,7 +315,7 @@ function onSevenModalStepCheckBoxYesClick(event) {
     steps.modalContract.classList.toggle('is-not-displayed');
     loseDate.input.addEventListener('input', (onLoseDateInutChange));
     loseDate.buttonPrev.addEventListener('click', (onLoseDateButtonPrevClick));
-
+remuveExpDate();
     
     
     
@@ -304,6 +370,24 @@ const sixthModalStep = {
 
 }
 
+function remuveExpDate(){
+    loseDate.input.value = today;
+ 
+    
+}
+
+
+
+
+function remuveLosDate(){
+    expiredDate.input.value = today;
+    console.log('qweqweqweqweqwe');
+    
+}
+
+
+
+
 function onSixthModalStepCheckBoxYesClick(event) {
     console.log('yes agent');
 
@@ -313,7 +397,7 @@ function onSixthModalStepCheckBoxYesClick(event) {
     sixthModalStep.buttonPrev.removeEventListener('click', (onSixthModalStepButtonPrevClick));
     expiredDate.input.addEventListener('input', onExpiredDateInutChange);
     expiredDate.buttonPrev.addEventListener('click', (onExpiredDateButtonPrevClick));
-    
+    remuveLosDate();
 
     sixthModalStep.checkBoxYes.removeEventListener('click', (onSixthModalStepCheckBoxYesClick));
 
@@ -381,6 +465,7 @@ function onFifthModalStepButtonPrevClick(event) {
     steps.modalFourthStep.classList.toggle('is-not-displayed');
     steps.modalFifthStep.classList.toggle('is-not-displayed');
     fourthModalStep.buttonPrev.addEventListener('click', (onfourthModalStepButtonPrevClick));
+    scrollTo0Modal();
     fourthModalStep.buttonNext.addEventListener('click', (onFourthModalStepButtonNextClick));
     fifthModalStep.buttonPrev.removeEventListener('click', (onFifthModalStepButtonPrevClick)) ;
 
@@ -408,7 +493,10 @@ const fourthModalStep = {
     buttonPrev: document.querySelector('.previous-fourth-step__btn'), 
 
 }
-
+function scrollTo0Modal() { 
+        
+        refs.modal.scrollTo(0,0); // Скролл первого элемента данного класса прокручиваем до нужного положения
+    }
  console.log(fourthModalStep.checkBox);
 
 
@@ -416,8 +504,9 @@ function onFourthModalStepButtonNextClick(event) {
     steps.modalFifthStep.classList.toggle('is-not-displayed');
     steps.modalFourthStep.classList.toggle('is-not-displayed');
     fourthModalStep.checkBox.removeEventListener('click', (onReasonsItemClick)) ;
-    fifthModalStep.checkBox.addEventListener('click', (onRepairsItemClick))
-    fifthModalStep.buttonPrev.addEventListener('click', (onFifthModalStepButtonPrevClick)) ;
+    fifthModalStep.checkBox.addEventListener('click', (onRepairsItemClick));
+    fifthModalStep.buttonPrev.addEventListener('click', (onFifthModalStepButtonPrevClick));
+    scrollTo0Modal();
     fourthModalStep.buttonNext.removeEventListener('click', (onFourthModalStepButtonNextClick));
 }
 
@@ -429,6 +518,7 @@ function onfourthModalStepButtonPrevClick(event) {
     steps.modalThirdStep.classList.toggle('is-not-displayed');
     steps.modalFourthStep.classList.toggle('is-not-displayed');
     modalThirdStep.livingList.addEventListener('click', (onLivingItemClick));
+    
     fourthModalStep.buttonPrev.removeEventListener('click', (onfourthModalStepButtonPrevClick)) ;
     }
 
@@ -670,8 +760,13 @@ function onCorrectZipClick(event) {
 };
 
 
+loseDate.input.min = today;
+expiredDate.input.min = today;
 
+loseDate.input.max = maxDateCorrect;
+expiredDate.input.max = maxDateCorrect;
 
+ console.log(loseDate.input.min);
 
 
 
