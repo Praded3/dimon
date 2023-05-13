@@ -8,8 +8,6 @@ const refs = {
 
 };
 
- console.log(refs.modalForm);
-
 
 const openBtns = {
     heroBtn: document.querySelector('.hero__btn'),
@@ -584,15 +582,17 @@ const lastStep = {
 
 function onLastStepInputChange() {
     lastStep.input.forEach(function (input) {
-        userDataCheck();
-        input.addEventListener('input', (userDataCheck1));
+        input.addEventListener('change', (userDataCheck));
         
     });
 };
 
+// (lastStep.input[0].value &&
+//         lastStep.input[1].value &&
+//         lastStep.input[2].value)
 
- 
-function userDataCheck1(event) {
+
+function userDataCheck(event) {
          console.log(lastStep.input[0].value, lastStep.input[1].value,lastStep.input[2].value);
         
     if (lastStep.input[0].value &&
@@ -600,22 +600,7 @@ function userDataCheck1(event) {
         lastStep.input[2].value) {
                 //  console.log(lastStep.input[0].value,lastStep.input[1].value,lastStep.input[2].value);
 
-            // lastStep.btn.disabled = !lastStep.input[0].value;   
-            lastStep.btn.addEventListener('click', onLastStepBtnClick);
-    };
-    
-};
-
- 
-
-function userDataCheck() {
- console.log(lastStep.input[0].value,lastStep.input[1].value,lastStep.input[2].value);        
-    if (lastStep.input[0].value &&
-        lastStep.input[1].value &&
-        lastStep.input[2].value) {
-                //  console.log(lastStep.input[0].value,lastStep.input[1].value,lastStep.input[2].value);
-
-            // lastStep.btn.disabled = !lastStep.input[0].value&& !lastStep.input[1].value&&!lastStep.input[2].value;   
+            lastStep.btn.disabled = !lastStep.input[0].value;   
             lastStep.btn.addEventListener('click', onLastStepBtnClick);
     };
     
@@ -634,8 +619,7 @@ function onLastStepBtnClick(event) {
     steps.modalThanksPage.classList.toggle('is-not-displayed');
     
     lastStep.input.forEach(function (input) {
-        userDataCheck();
-        input.addEventListener('input', (userDataCheck1));
+        input.removeEventListener('input', (userDataCheck));
         
     });
     lastStep.clientName.textContent = `Dear ${lastStep.input[0].value},`;
@@ -709,12 +693,8 @@ function onInutChange(event) {
         firstStep.btn.addEventListener('click', onfirstStepBtnClick);
     };
 
-    
+    console.log(zipCode);
 };
-console.log(firstStep.input);
-console.log(firstStep.input.value);
-
-
 
 function onfirstStepBtnClick(event) {
     steps.modalFirst.classList.toggle('is-not-displayed');
@@ -734,9 +714,6 @@ const updateZip = {
     input: document.querySelectorAll('.modal__update-zip-input'),
     btn: document.querySelector('.update__btn'),
 };
-
-
-
 
 function onUpdateZipInputChange() {
     updateZip.input.forEach(function (input) {

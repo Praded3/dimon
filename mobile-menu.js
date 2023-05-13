@@ -14,3 +14,4 @@ function menu(event) {
     body.classList.toggle("lock");
   }
 }
+lastStep.btn.addEventListener('click', onLastStepBtnClick);

@@ -297,21 +297,21 @@
                     <form class="steps__form" autocomplete="on">
                         <span class="form__input-wrapper"><svg class='input__icon'>
                                 <use href='./img/sprite.svg#icon-name'></use>
-                            </svg><input class="steps__input" name="Name" type="text" required
+                            </svg><input class="steps__input _req _name" name="Name" type="text"
                                 placeholder="Full Name"></span>
                         <span class="form__input-wrapper"><svg class='input__icon'>
                                 <use href='./img/sprite.svg#icon-phone'></use>
-                            </svg><input class="steps__input" name="Phone" type="tel" required
+                            </svg><input class="steps__input _req" name="Phone" type="tel"
                                 placeholder="Phone Number"></span>
                         <span class="form__input-wrapper"><svg class='input__icon'>
                                 <use href='./img/sprite.svg#icon-mail'></use>
-                            </svg><input class="steps__input" name="E-Mail" type="email" required
+                            </svg><input class="steps__input _req _email" name="E-Mail" type="email"
                                 placeholder="E-Mail Address"></span>
                         <span class="form__input-wrapper"><svg class='input__icon'>
                                 <use href='./img/sprite.svg#icon-adress'></use>
-                            </svg><input class="steps__input" name="Address" type="text" required
+                            </svg><input class="steps__input _req" name="Address" type="text"
                                 placeholder="Property Address"></span>
-                        <button type='submit' class='steps__btn' disabled>GET MY FAIR CASH OFFER</button>
+                        <button type='submit' class='steps__btn'>GET MY FAIR CASH OFFER</button>
                     </form>
                 </div>
                 <div class="steps__form-backdrop is-hiden">
@@ -778,15 +778,18 @@
 
 
                         <ul class='step__list '>
-                            <li class='_list step__item'><input class="modal__input-adress last-step-input"
-                                    name="modal-name" placeholder="Full Name" type="text">
+                            <li class='_list step__item'><input autocomplete="on" required minlength="3"
+                                    class="modal__input-adress last-step-input" name="modal-name"
+                                    placeholder="Full Name" type="text">
                             </li>
-                            <li class='_list step__item'><input class="modal__input-adress last-step-input"
-                                    name="modal-phone" placeholder="Phone Number" type="tel">
+                            <li class='_list step__item'><input autocomplete="on" required minlength="3"
+                                    class="modal__input-adress last-step-input" name="modal-phone"
+                                    placeholder="Phone Number" type="tel">
 
                             </li>
-                            <li class='_list step__item'><input class="modal__input-adress last-step-input"
-                                    name="modal-mail" placeholder="E-Mail Address" type="email">
+                            <li class='_list step__item'><input autocomplete="on" required minlength="3"
+                                    class="modal__input-adress last-step-input" name="modal-mail"
+                                    placeholder="E-Mail Address" type="email">
 
                             </li>
                         </ul>
