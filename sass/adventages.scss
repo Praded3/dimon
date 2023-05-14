@@ -27,6 +27,8 @@
     display: flex;
     justify-content: space-between;
     gap: 80px;
+    position: relative;
+    overflow: hidden;
     @media screen and (max-width: 1150px){
         gap: 50px;
     }

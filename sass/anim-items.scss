@@ -12,71 +12,75 @@
 
 // ======================
 
-// .slider__title._anim-items {
-//   transform: translate(0px, 120px);
-//   opacity: 0;
-//   transition: all 0.8s ease 0;
-// }
-// .slider__title._anim-items._active {
-//   transform: translate(0px, 0px);
-//   opacity: 1;
-//   transition: all 0.8s ease 0.1s;
-// }
+.slider__title._anim-items {
+  transform: translate(0px, 120px);
+  opacity: 0;
+  transition: all 0.8s ease 0;
+  &._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+  transition: all 0.8s ease 0.1s;
+}
+}
+
 
 .item__timer._anim-items{
     transform: translate(150%, 0px);
     opacity: 0;
     overflow: hidden;
-
-}
-
-.item__timer._anim-items._active{
+    &.item__timer._anim-items._active{
     transform: translate(0px, 0px);
     opacity: 1;
     transition: all 0.8s ease 0.2s;
 }
+}
+
+
 
 
 .item__hous._anim-items{
     transform: translate(150%, 0px);
     opacity: 0;
 overflow: hidden;
-}
-
-.item__hous._anim-items._active{
+&.item__hous._anim-items._active{
     transform: translate(0px, 0px);
     opacity: 1;
     transition: all 0.8s ease 0.5s;
 }
 
+}
+
+
 .item__payments._anim-items{
     transform: translate(150%, 0px);
     opacity: 0;
 overflow: hidden;
-}
-
-.item__payments._anim-items._active{
+&.item__payments._anim-items._active{
     transform: translate(0px, 0px);
     opacity: 1;
     transition: all 0.8s ease 0.8s;
 }
+}
+
+
 
 .hero__btn._anim-items{
     transform: translate(0px, -120%);
     opacity: 0;
     overflow: hidden;
-}
-
-.hero__btn._anim-items._active{
+    &.hero__btn._anim-items._active{
     transform: translate(0px, 0px);
     opacity: 1;
     transition: all 0.8s ease 0.1s;
 }
+}
+
+
 
 ._benefits._anim-items{
     transform: translate(120%, 0px);
     opacity: 0;
-    overflow: hidden;
+    // overflow: hidden;
     @media screen and (max-width: 767px){
         transform: translate(120%, 0px);
     }
@@ -93,7 +97,7 @@ overflow: hidden;
 ._selling._anim-items{
     transform: translate(220%, 0px);
     opacity: 0;
-    overflow: hidden;
+    // overflow: hidden;
     @media screen and (max-width: 767px){
         transform: translate(120%, 0px);
     }
@@ -109,7 +113,7 @@ overflow: hidden;
 ._our-company._anim-items{
     transform: translate(320%, 0px);
     opacity: 0;
-    overflow: hidden;
+    // overflow: hidden;
     @media screen and (max-width: 767px){
         transform: translate(120%, 0px);
     }
