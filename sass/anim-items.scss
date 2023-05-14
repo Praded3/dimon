@@ -1,0 +1,72 @@
+
+// .slider__description._anim-items {
+//   transform: translate(0px, 150%);
+//   opacity: 0;
+//   transition: all 0.8s ease 0;
+// }
+// .slider__description._anim-items._active {
+//   transform: translate(0px, 0px);
+//   opacity: 1;
+//   transition: all 0.8s ease 0.1s;
+// }
+
+// ======================
+
+// .slider__title._anim-items {
+//   transform: translate(0px, 120px);
+//   opacity: 0;
+//   transition: all 0.8s ease 0;
+// }
+// .slider__title._anim-items._active {
+//   transform: translate(0px, 0px);
+//   opacity: 1;
+//   transition: all 0.8s ease 0.1s;
+// }
+
+.item__timer._anim-items{
+    transform: translate(150%, 0px);
+    opacity: 0;
+
+}
+
+.item__timer._anim-items._active{
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 0.8s ease 0.2s;
+}
+
+
+.item__hous._anim-items{
+    transform: translate(150%, 0px);
+    opacity: 0;
+
+}
+
+.item__hous._anim-items._active{
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 0.8s ease 0.5s;
+}
+
+.item__payments._anim-items{
+    transform: translate(150%, 0px);
+    opacity: 0;
+
+}
+
+.item__payments._anim-items._active{
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 0.8s ease 0.8s;
+}
+
+.hero__btn._anim-items{
+    transform: translate(0px, -120%);
+    opacity: 0;
+}
+
+.hero__btn._anim-items._active{
+    transform: translate(0px, 0px);
+    opacity: 1;
+    transition: all 0.8s ease 0.1s;
+}
