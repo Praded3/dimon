@@ -27,7 +27,7 @@
 .item__timer._anim-items{
     transform: translate(150%, 0px);
     opacity: 0;
-    overflow: hidden;
+    // overflow: hidden;
     &.item__timer._anim-items._active{
     transform: translate(0px, 0px);
     opacity: 1;
@@ -41,7 +41,7 @@
 .item__hous._anim-items{
     transform: translate(150%, 0px);
     opacity: 0;
-overflow: hidden;
+// overflow: hidden;
 &.item__hous._anim-items._active{
     transform: translate(0px, 0px);
     opacity: 1;
@@ -54,7 +54,7 @@ overflow: hidden;
 .item__payments._anim-items{
     transform: translate(150%, 0px);
     opacity: 0;
-overflow: hidden;
+// overflow: hidden;
 &.item__payments._anim-items._active{
     transform: translate(0px, 0px);
     opacity: 1;
@@ -70,7 +70,7 @@ overflow: hidden;
 .steps__btn._anim-items{
     transform: translate(0px, -120%);
     opacity: 0;
-    overflow: hidden;
+    // overflow: hidden;
         &.hero__btn._anim-items._active,
         &.advantages__btn._anim-items._active,
         &.question__btn._anim-items._active,
