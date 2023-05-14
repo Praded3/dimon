@@ -64,11 +64,17 @@ overflow: hidden;
 
 
 
-.hero__btn._anim-items{
+.hero__btn._anim-items,
+.advantages__btn._anim-items,
+.question__btn._anim-items,
+.steps__btn._anim-items{
     transform: translate(0px, -120%);
     opacity: 0;
     overflow: hidden;
-    &.hero__btn._anim-items._active{
+        &.hero__btn._anim-items._active,
+        &.advantages__btn._anim-items._active,
+        &.question__btn._anim-items._active,
+        &.steps__btn._anim-items._active{
     transform: translate(0px, 0px);
     opacity: 1;
     transition: all 0.8s ease 0.1s;
@@ -77,7 +83,8 @@ overflow: hidden;
 
 
 
-._benefits._anim-items{
+._benefits._anim-items, 
+.nationwide__right-side._anim-items{
     transform: translate(120%, 0px);
     opacity: 0;
     // overflow: hidden;
@@ -127,3 +134,31 @@ overflow: hidden;
     }}
 
 
+.question__top-container._anim-items,
+.question__bottom-left-container._anim-items{
+    transform: translate(-120%, 0px);
+    opacity: 0;
+
+     &._active{
+        transform: translate(0px, 0px);
+        opacity: 1;
+        transition: all 1s ease 0.1s;
+        @media screen and (max-width: 767px){
+            transition: all 1s ease 0.2s;
+        }
+    }
+}
+
+
+.question__bottom-right-container._anim-items{
+    transform: translate(120%, 0px);
+    opacity: 0;
+     &._active{
+        transform: translate(0px, 0px);
+        opacity: 1;
+        transition: all 1s ease 0.1s;
+        @media screen and (max-width: 767px){
+            transition: all 1s ease 0.2s;
+        }
+    }
+}
