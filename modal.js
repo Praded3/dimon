@@ -8,7 +8,7 @@ const refs = {
 
 };
 
- console.log(refs.modalForm);
+
 
 
 const openBtns = {
@@ -102,14 +102,14 @@ console.log(yesterdayCorrect);
 
 
 
+bigForm = document.querySelector('.modal__form'),
 
-
-refs.modalForm.addEventListener('submit', modalFormSubmit);
-
+bigForm.addEventListener('submit', modalFormSubmit);
+ 
 async function modalFormSubmit(event) {
     event.preventDefault();
 
-    let error = formValidate(refs.modalForm);
+    let error = formValidate(bigForm);
 
 
     const formData = new FormData(event.currentTarget);
@@ -131,7 +131,7 @@ async function modalFormSubmit(event) {
 
 
     if (error === 0) {
-        // onLastStepBtnClick()
+        onLastStepBtnClick()
     }
 
        // let response = await fetch('sendmail.php', {
@@ -156,7 +156,7 @@ async function modalFormSubmit(event) {
     });
     // console.dir(event.currentTarget.elements.repairs.checked);
     
-    function formValidate(modalForm) {
+    function formValidate(bigForm) {
         let error = 0;
         let formReq = document.querySelectorAll('._req-big');
          console.log(formReq);
@@ -228,7 +228,7 @@ const doModalClose = () => {
 refs.modalCloseBtn.addEventListener('click', (doModalClose));
 
 const visabilityBackdrop = () => {
-    refs.modalForm.addEventListener('submit', modalFormSubmit);
+    bigForm.addEventListener('submit', modalFormSubmit);
 
     refs.backdrop.classList.toggle('is-hiden');
     refs.body.classList.toggle('lock');
@@ -718,7 +718,7 @@ function userDataCheck1(event) {
         lastStep.input[2].value) {
 
             // lastStep.btn.disabled = !lastStep.input[0].value;   
-            lastStep.btn.addEventListener('click', onLastStepBtnClick);
+            // lastStep.btn.addEventListener('click', onLastStepBtnClick);
     };
     
 };
@@ -733,7 +733,7 @@ function userDataCheck() {
                 //  console.log(lastStep.input[0].value,lastStep.input[1].value,lastStep.input[2].value);
 
             // lastStep.btn.disabled = !lastStep.input[0].value&& !lastStep.input[1].value&&!lastStep.input[2].value;   
-            lastStep.btn.addEventListener('click', onLastStepBtnClick);
+            // lastStep.btn.addEventListener('click', onLastStepBtnClick);
     };
     
 };
