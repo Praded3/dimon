@@ -108,22 +108,38 @@ function onModalFormBtnClick(event) {
     console.log('qqqq');
     refs.backdrop.classList.toggle('is-hiden');
 
-
+    refs.backdrop.addEventListener('click', onBackdropClick);
     refs.modalCloseBtn.addEventListener('click', (onModalCloseBtnClick));
 
     refs.clientName.textContent = `Dear ${refs.modalInput[0].value},`;
+    window.addEventListener('keydown', onEscKeyPress);
     // refs.modalFormBtn.removeEventListener('click', (onModalFormBtnClick));
 }
 
 function onModalCloseBtnClick(event) {
+    window.removeEventListener('keydown', onEscKeyPress);
+    refs.backdrop.removeEventListener('click', onBackdropClick);
 
-    refs.backdrop.classList.toggle('is-hiden');
     refs.modalCloseBtn.removeEventListener('click', (onModalCloseBtnClick));
- 
+    refs.modalCloseBtn.removeEventListener('click', (onModalCloseBtnClick));
+    refs.backdrop.classList.toggle('is-hiden');
 
 }
+function onBackdropClick(event) {
 
+    if (event.target === event.currentTarget) {
 
+        onModalCloseBtnClick();
+    }
+};
+
+function onEscKeyPress(event) {   
+    
+    if (event.code==="Escape") {
+        onModalCloseBtnClick();
+    }
+    
+}
 
 
 

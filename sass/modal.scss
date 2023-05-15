@@ -192,7 +192,7 @@
     overflow: auto;
     left: 50%;
     top: 10%;
-    width: 80%;
+    width: 90%;
     height: 70vh;
     // top: 50%;
     transform: translate(-50%, 0);
@@ -712,9 +712,44 @@
   }
 }
 
+.pac-container{
 
+ 
+}
+// .pac-icon{
+//     background-color: green;
+// }
+.pac-item{ 
+    font-size: 18px;
+    line-height: 155%;
+    font-weight: 400;
+    font-family: $primery_font;
+    color: $primery-text-color ;
 
+    @media screen and (max-width: 767px){
+        font-size: 14px;
+    }
+  
+    &:hover{
+        background-color:#629DE2;
+    }
+}
 
+.pac-item-query	{
+    font-size: 18px;
+    line-height: 155%;
+    font-weight: 500;
+    font-family: $primery_font;
+    @media screen and (max-width: 767px){
+        font-size: 14px;
+    }
+    // color: #4189DD;
+}
+
+.pac-item-selected{
+    background-color:#629DE2;
+
+}
 // select.modal__input-state{
 //      display: flex;
   

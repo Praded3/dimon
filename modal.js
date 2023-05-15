@@ -106,15 +106,33 @@ console.log(yesterdayCorrect);
 
 refs.modalForm.addEventListener('submit', modalFormSubmit);
 
-function modalFormSubmit(event) {
+async function modalFormSubmit(event) {
     event.preventDefault();
+
+    let error = formValidate(refs.modalForm);
+
 
     const formData = new FormData(event.currentTarget);
     formData.append('object', address.formatted_address);
 
     console.log(formData);
   
- console.log(address.formatted_address);
+    console.log(address.formatted_address);
+
+    if (formData) {
+            }
+
+
+        formData.forEach((x, y) => {
+        console.log(x);
+        console.log(y);
+        
+    });
+
+
+    if (error === 0) {
+        // onLastStepBtnClick()
+    }
 
        // let response = await fetch('sendmail.php', {
 			// 	method: 'POST',
@@ -138,6 +156,59 @@ function modalFormSubmit(event) {
     });
     // console.dir(event.currentTarget.elements.repairs.checked);
     
+    function formValidate(modalForm) {
+        let error = 0;
+        let formReq = document.querySelectorAll('._req-big');
+         console.log(formReq);
+        
+
+        for (let index = 0; index < formReq.length; index++) {
+            const input = formReq[index];
+            formRemoveError(input);
+
+            if (input.classList.contains('_req-big-mail')) {
+                if (emailTest(input)) {
+                    formAddError(input);
+                    error++;
+                }
+            }
+            if (input.classList.contains('_req-big-tel')) {
+                if (telTest(input)) {
+                    formAddError(input);
+                    error++;
+                }
+            } 
+            else {
+				if (input.value === '') {
+					formAddError(input);
+					error++;
+				}
+			}
+        }
+        return error;
+    }
+
+    function formAddError(input) {
+        input.classList.add('_error');
+        input.classList.add('_error');
+    }
+    function formRemoveError(input) {
+        input.classList.remove('_error');
+        input.classList.remove('_error');
+    }
+
+
+    function emailTest(input) {
+        return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+    }
+    function telTest(input) {
+        return !/^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/.test(input.value);
+    }
+
+
+
+
+
 }
 //====================/ formData /============
 
@@ -145,6 +216,8 @@ function modalFormSubmit(event) {
 const doModalClose = () => {
     refs.backdrop.classList.toggle('is-hiden');
     refs.body.classList.toggle('lock');
+    refs.backdrop.removeEventListener('click', onBackdropClick);
+    window.removeEventListener('keydown', onEscKeyPress);
     openBtns.heroBtn.addEventListener('click', (visabilityBackdrop) );
     openBtns.advantagesBtn.addEventListener('click', (visabilityBackdrop) );
     openBtns.nationwideBtn.addEventListener('click', (visabilityBackdrop) );
@@ -152,18 +225,43 @@ const doModalClose = () => {
     firstStep.input.removeEventListener('input', (onInutChange));
 };
 
-refs.modalCloseBtn.addEventListener('click', (doModalClose) )
+refs.modalCloseBtn.addEventListener('click', (doModalClose));
 
 const visabilityBackdrop = () => {
     refs.modalForm.addEventListener('submit', modalFormSubmit);
 
     refs.backdrop.classList.toggle('is-hiden');
     refs.body.classList.toggle('lock');
+    window.addEventListener('keydown', onEscKeyPress);
+
     openBtns.heroBtn.removeEventListener('click', (visabilityBackdrop) );
     openBtns.advantagesBtn.removeEventListener('click', (visabilityBackdrop) );
     openBtns.nationwideBtn.removeEventListener('click', (visabilityBackdrop) );
     openBtns.questionBtn.removeEventListener('click', (visabilityBackdrop) );
     firstStep.input.addEventListener('input', (onInutChange));
+    refs.backdrop.addEventListener('click', onBackdropClick);
+
+
+
+
+};
+function onEscKeyPress(event) {   
+    
+    if (event.code==="Escape") {
+        doModalClose();
+    }
+    
+}
+
+
+function onBackdropClick(event) {
+
+    if (event.target === event.currentTarget) {
+
+        doModalClose();
+    }
+    
+    
 };
 
 openBtns.heroBtn.addEventListener('click', (visabilityBackdrop) );
@@ -608,15 +706,16 @@ function onLastStepInputChange() {
     });
 };
 
+         console.log(lastStep.input[1].pattern ==true);
 
  
 function userDataCheck1(event) {
          console.log(lastStep.input[0].value, lastStep.input[1].value,lastStep.input[2].value);
+         console.log(lastStep.input[1]);
         
-    if (lastStep.input[0].value &&
-        lastStep.input[1].value &&
+    if (lastStep.input[0].value.length>=2 &&
+        lastStep.input[1].value.length>=10 &&
         lastStep.input[2].value) {
-                //  console.log(lastStep.input[0].value,lastStep.input[1].value,lastStep.input[2].value);
 
             // lastStep.btn.disabled = !lastStep.input[0].value;   
             lastStep.btn.addEventListener('click', onLastStepBtnClick);
@@ -651,11 +750,11 @@ function onLastStepBtnClick(event) {
     steps.modalAndStep.classList.toggle('is-not-displayed');
     steps.modalThanksPage.classList.toggle('is-not-displayed');
     
-    lastStep.input.forEach(function (input) {
-        userDataCheck();
-        input.addEventListener('input', (userDataCheck1));
+    // lastStep.input.forEach(function (input) {
+    //     userDataCheck();
+    //     input.addEventListener('input', (userDataCheck1));
         
-    });
+    // });
     lastStep.clientName.textContent = `Dear ${lastStep.input[0].value},`;
     lastStep.closeBtn.addEventListener('click', (onLastStepCloseBtnClick));
     lastStep.btn.removeEventListener('click', (onLastStepBtnClick));
