@@ -337,10 +337,10 @@
 
                 <form class="modal__form" autocomplete="on">
 
-                    <div class='modal__first-step modal__step'>
+                    <div class='modal__first-step modal__step' id="pac-card">
                         <h3 class='modal__step-title'>Enter your information to get started</h3>
-                        <input required class="modal__input-adress modal-zip" name="modal-zip" placeholder="Address"
-                            type="text">
+                        <input id="pac-input" required class="modal__input-adress modal-zip wqwqwqwqw" name="modal-zip"
+                            placeholder="Address" type="text">
                         <button type='button' disabled class='first-step__btn help-btn'>Get your offer!</button>
                     </div>
 
@@ -824,11 +824,17 @@
             </div>
         </div>
     </main>
-    <script src="./modal.js" type="module"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDW-p4nZpSUbbOWr0MdEUruheMS1uooSQw&libraries=places&callback=initAutocomplete"
+        async defer></script>
+    <script src="./modal.js"></script>
     <script src="./small-form.js" type="module"></script>
     <script src="./animation.js" type="module"></script>
+
 
 
 </body>
 
 </html>
+<!-- onFifthModalStepButtonPrevClick -->
+<!-- fourthModalStep.checkBox.addEventListener('click', (onReasonsItemClick)); -->
