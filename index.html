@@ -11,19 +11,30 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700;900&family=Lato&display=swap"
         rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"> -->
 
     <link rel="stylesheet" href="style.css">
+    <script>
+        window.onload = function () {
+            let qwerrrr = document.getElementById('video-container');
+            if (window.innerWidth >= 768) {
+                qwerrrr.insertAdjacentHTML("beforebegin", `<video src="./video/pexels-1366x720.mp4" width="640" autoplay muted loop playsinline preload="auto"></video>`);
 
+            }
+        };
+    </script>
 </head>
 
 <body>
     <main>
-        <section class="hero__section _section">
-            <video src="./video/pexels-1366x720.mp4" width="640" autoplay muted loop playsinline preload="auto"></video>
+        <section class="hero__section _section" id="video-container">
+            <!-- <video src="./video/pexels-1366x720.mp4" width="640" autoplay muted loop playsinline preload="auto"></video> -->
 
-            </video>
-            <div class='hero__container _container'>
+
+
+
+            <div class='hero__container  _container'>
+
+
                 <a rel='noopener no-referrel nofollow' class='hero__link _link' href='#'>
                     <picture>
                         <source srcset='./img/logo/logo.webp 1x, ./img/logo/logo@2x.webp 2x' type='image/webp'
@@ -49,7 +60,7 @@
                 <p class='hero__sup-title'>Sell to Road Runner Home Buyers get a fair cash offer today and skip the
                     hassle
                     of listing</p>
-                <button type='button' class='hero__btn _anim-items _anim-no-hide'>GET YOUR OFFER!</button>
+                <button type='button' class='hero__btn '>GET YOUR OFFER!</button>
             </div>
         </section>
 
@@ -824,6 +835,7 @@
             </div>
         </div>
     </main>
+
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDW-p4nZpSUbbOWr0MdEUruheMS1uooSQw&libraries=places&callback=initAutocomplete"
         async defer></script>
