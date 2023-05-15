@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // }
             
         } else {
-            alert('zapolnite polya');
+            // alert('zapolnite polya');
         }
 
     }

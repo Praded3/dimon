@@ -880,11 +880,26 @@ console.log(firstStep.input.value);
 
 function onfirstStepBtnClick(event) {
     steps.modalFirst.classList.toggle('is-not-displayed');
-    steps.modalCorrectZip.classList.toggle('is-not-displayed');
+    console.log(address.formatted_address);
     firstStep.btn.removeEventListener('click', onfirstStepBtnClick);
     firstStep.input.removeEventListener('input', onInutChange);
-    firstStep.zipCodeCheck.textContent = address.formatted_address;
-    onCorrectZipClick(firstStep.correctZip);
+    
+    if (address.formatted_address) {
+        steps.modalCorrectZip.classList.toggle('is-not-displayed');
+        firstStep.zipCodeCheck.textContent = address.formatted_address;
+        onCorrectZipClick(firstStep.correctZip);
+    } else {
+        steps.modalUpdateZip.classList.toggle('is-not-displayed');
+        onUpdateZipInputChange(updateZip.input);
+        }
+
+
+
+    // steps.modalCorrectZip.classList.toggle('is-not-displayed');
+    // firstStep.btn.removeEventListener('click', onfirstStepBtnClick);
+    // firstStep.input.removeEventListener('input', onInutChange);
+    // firstStep.zipCodeCheck.textContent = address.formatted_address;
+    // onCorrectZipClick(firstStep.correctZip);
 
 }
 let zip;
@@ -906,19 +921,25 @@ function onUpdateZipInputChange() {
         
     });
 };
-
+  let asd = updateZip.input[0].value;
 
 function updateZipCheck(event) {
+  
+    
+         console.log(updateZip.input[0].value);
         
-    if (updateZip.input[0].value &&
+    if (updateZip.input[0].value != "State *" &&
         updateZip.input[1].value &&
         updateZip.input[2].value &&
         updateZip.input[3].value) {
         
-            updateZip.btn.disabled = !event.currentTarget.value;   
+        updateZip.btn.disabled = !(updateZip.input[0].value != "State *" &&
+        updateZip.input[1].value &&
+        updateZip.input[2].value &&
+        updateZip.input[3].value);   
             updateZip.btn.addEventListener('click', onUpdateZipBtnClick);
     };
-     console.log(  updateZip.input[1].value);
+  
     
 };
 
