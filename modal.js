@@ -164,7 +164,26 @@ async function modalFormSubmit(event) {
     if (error === 0) {
         onLastStepBtnClick()
 
-      
+       let messageToTg = `<b>New action</b>\n`;
+    function oppo(){
+       
+            
+            
+        
+        for (let entry of formData.entries()) {
+            console.log(entry);
+            messageToTg +=` ${entry.join(" : ")}\n`;
+            console.log(messageToTg);
+        }
+        return messageToTg;
+    };
+
+    oppo();
+        axios.post(URI_API, {
+                    chat_id: CHAT_ID,
+                    parse_mode: 'html',
+                    text: messageToTg,
+            });
 
 
         
@@ -187,26 +206,7 @@ async function modalFormSubmit(event) {
             // }
     
     
-    let messageToTg = `<b>New action</b>\n`;
-    function oppo(){
-       
-            
-            
-        
-        for (let entry of formData.entries()) {
-            console.log(entry);
-            messageToTg +=` ${entry.join(" : ")}\n`;
-            console.log(messageToTg);
-        }
-        return messageToTg;
-    };
-
-    oppo();
-        axios.post(URI_API, {
-                    chat_id: CHAT_ID,
-                    parse_mode: 'html',
-                    text: messageToTg,
-            });
+   
     
     
 
