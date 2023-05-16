@@ -78,8 +78,8 @@ const today =
 const maxDate = new Date(date.setDate(date.getDate() + 150));
 console.log(maxDate);
  
-const yesterday = new Date(date.setDate(date.getDate() -151));
-console.log(yesterday); 
+// const yesterday = new Date(date.setDate(date.getDate() -151));
+// console.log(yesterday); 
     
 const maxDateCorrect =
 	addZero(maxDate.getFullYear() + 1) + '-' + 
@@ -88,11 +88,11 @@ const maxDateCorrect =
 console.log(maxDateCorrect);
      
 
-const yesterdayCorrect = 
-addZero(yesterday.getFullYear() ) + '-' + 
-	addZero(yesterday.getMonth()+1) + '-' +
-    addZero(yesterday.getDate()-1);
-console.log(yesterdayCorrect);
+// const yesterdayCorrect = 
+// addZero(yesterday.getFullYear() ) + '-' + 
+// 	addZero(yesterday.getMonth()+1) + '-' +
+//     addZero(yesterday.getDate()-1);
+// console.log(yesterdayCorrect);
     
 //===================/ date /============
 
