@@ -100,6 +100,9 @@ console.log(yesterdayCorrect);
 
 //=================== formData ============
 
+const TOKEN = '';
+const CHAT_ID = '';
+const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
 
 bigForm = document.querySelector('.modal__form'),
@@ -108,6 +111,16 @@ bigForm.addEventListener('submit', modalFormSubmit);
  
 async function modalFormSubmit(event) {
     event.preventDefault();
+
+    
+    let messageToTg = `<b>Заявка</b>\n`;
+    messageToTg += formData;
+
+    axios.post(URI_API, {
+        chat_id: CHAT_ID,
+        parce_mode: 'html',
+        text: messageToTg,
+    });
 
     let error = formValidate(bigForm);
 
@@ -600,10 +613,10 @@ function onFifthModalStepButtonPrevClick(event) {
     }
 
     function onRepairsItemClick(event) {
-
+         
     const checkedReasons = event.target.nodeName == 'INPUT';
     fifthModalStep.buttonNext.disabled = !checkedReasons;
-
+ console.log(event.target.value == 'PAINT-OUTSIDE');
     if (checkedReasons) {
         fifthModalStep.buttonNext.addEventListener('click', (onFifthModalStepButtonNextClick));
     }
@@ -730,11 +743,11 @@ const secondStep = {
 }
 
 
-
 function onOwnerChecking(event) {
+    
     secondStep.ownerCheckBoxes.forEach(function (checkBox, id) {
         checkBox.addEventListener('click', (onOwnerCheckBoxesClick));
-
+        
         function onOwnerCheckBoxesClick() {
 
             if (checkBox.id === 'is-owner') {
