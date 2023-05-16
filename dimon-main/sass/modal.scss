@@ -1,0 +1,110 @@
+.backdrop{
+    position: fixed;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 100;
+    display: none;
+}
+.modal { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 55px;
+    border-radius: 20px;
+    background-color: #629DE2;
+    @media screen and (max-width: 475px){
+        padding: 35px 25px;
+    }
+}
+.modal__title {
+      font-weight: 600;
+    font-size: 44px;
+    line-height: 96%;
+    color: #4B4B4B;
+    margin-bottom: 24px;
+    text-align: center;
+    @media screen and (max-width: 960px){
+        font-size: 34px;
+    }
+    @media screen and (max-width: 767px){
+         font-size: 28px;
+    }
+}
+.modal__form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+     justify-content: center;
+    align-items: center;
+}
+.modal__input-adress {
+    height: 48px;
+    width: 512px;
+    border-radius: 8px;
+    border: 2px solid #fff;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 155%;
+    padding-left: 24px;
+    &:focus{
+        outline: none;
+        box-shadow: 12px 12px 22px #F1F6FE, -12px -12px 22px #F1F6FE;
+        border-color: #629DE2;
+    }
+    &:hover{
+        border-color: #629DE2;
+
+    }
+    @media screen and (max-width: 660px){
+        font-size: 16px;
+        height: 38px;
+        width: 300px;
+    }
+    @media screen and (max-width: 400px){
+    font-size: 14px;
+    width: 210px;
+    }
+}
+.modal__btn {
+    display: flex;
+    justify-content: center;
+    padding: 15px 60px 15px 60px;
+    margin-top: 44px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    border: 2px solid #D10914;
+    border-radius: 12px;
+    background-color: #D10914;
+    color: #FFFFFF;
+    transition: $transition__stock;
+    text-transform: uppercase;
+    width: 90%;
+    text-align: center;
+    &:hover, &:focus{
+        border-color: #629DE2;
+        background-color: #F1F6FE;
+        color: #D10914;
+        box-shadow: 12px 12px 22px #F1F6FE, -12px -12px 22px #F1F6FE;
+    }
+    @media screen and (max-width: 767px){
+         padding:20px;
+         font-size: 20px;
+    }
+     @media screen and (max-width: 425px){
+         margin-top: 24px;
+         padding: 10px 60px 10px 60px;
+    }
+    @media screen and (max-width: 370px){
+         font-size: 16px;
+         
+    }
+}

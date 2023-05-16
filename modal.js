@@ -100,10 +100,9 @@ console.log(yesterdayCorrect);
 
 //=================== formData ============
 
-const TOKEN = '';
-const CHAT_ID = '';
-const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
-
+        const TOKEN = '6279094717:AAEINNI-WB8PTYW-nQglKgNdX6lALH6T6A0';
+        const CHAT_ID = '-1001887598395';
+        const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
 bigForm = document.querySelector('.modal__form'),
 
@@ -111,40 +110,47 @@ bigForm.addEventListener('submit', modalFormSubmit);
  
 async function modalFormSubmit(event) {
     event.preventDefault();
-
     
-    let messageToTg = `<b>Заявка</b>\n`;
-    messageToTg += formData;
-
-    axios.post(URI_API, {
-        chat_id: CHAT_ID,
-        parce_mode: 'html',
-        text: messageToTg,
-    });
-
-    let error = formValidate(bigForm);
-
-
+    
+    
     const formData = new FormData(event.currentTarget);
     formData.append('object', address.formatted_address);
 
     console.log(formData);
   
+
+
+
+
     console.log(address.formatted_address);
+    let error = formValidate(bigForm);
+    
+   
+    
 
     if (formData) {
             }
+
 
 
         formData.forEach((x, y) => {
         console.log(x);
         console.log(y);
         
+        
     });
 
 
     if (error === 0) {
         onLastStepBtnClick()
+
+      
+
+
+        
+        
+
+
     }
 
        // let response = await fetch('sendmail.php', {
@@ -159,14 +165,31 @@ async function modalFormSubmit(event) {
 			// } else {
 			// 	alert("Ошибка");
             // }
-
-
-
-    formData.forEach((x, y) => {
-        console.log(x);
-        console.log(y);
+    
+    
+    let messageToTg = `<b>New action</b>\n`;
+    function oppo(){
+       
+            
+            
         
-    });
+        for (let entry of formData.entries()) {
+            console.log(entry);
+            messageToTg +=` ${entry}\n`;
+            console.log(messageToTg);
+        }
+        return messageToTg;
+    };
+
+    oppo();
+        axios.post(URI_API, {
+                    chat_id: CHAT_ID,
+                    parse_mode: 'html',
+                    text: messageToTg,
+            });
+    
+    
+
     // console.dir(event.currentTarget.elements.repairs.checked);
     
     function formValidate(bigForm) {
@@ -613,10 +636,10 @@ function onFifthModalStepButtonPrevClick(event) {
     }
 
     function onRepairsItemClick(event) {
-         
+
     const checkedReasons = event.target.nodeName == 'INPUT';
     fifthModalStep.buttonNext.disabled = !checkedReasons;
- console.log(event.target.value == 'PAINT-OUTSIDE');
+
     if (checkedReasons) {
         fifthModalStep.buttonNext.addEventListener('click', (onFifthModalStepButtonNextClick));
     }
@@ -743,11 +766,11 @@ const secondStep = {
 }
 
 
+
 function onOwnerChecking(event) {
-    
     secondStep.ownerCheckBoxes.forEach(function (checkBox, id) {
         checkBox.addEventListener('click', (onOwnerCheckBoxesClick));
-        
+
         function onOwnerCheckBoxesClick() {
 
             if (checkBox.id === 'is-owner') {

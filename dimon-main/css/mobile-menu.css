@@ -1,21 +1,21 @@
 /*
-Error: Undefined variable: "$color_white".
-        on line 111 of D:\prog\dimon\sass\adventages.scss
+Error: Undefined variable: "$header-text-color".
+        on line 12 of D:\prog\dimon\sass\mobile-menu.scss
 
-106:     border-radius: 11px;
-107:     background: linear-gradient(#FF2828, #FF6F2F);
-108:     box-shadow: 16px 16px 48px rgba(156, 173, 201, 1), -12px -12px 22px  rgba(255, 255, 255, 1);
-109:     
-110:     & .advantages-title{
-111:         color: $color_white;
-112:         white-space: nowrap;
-113:     }
-114:     @media screen and (max-width: 980px){
-115:         padding: 28px 20px 29px 20px;
-116:      }
+7:     gap: 40px;
+8:     &::before {
+9:       content: "";
+10:       width: 60px;
+11:       height: 1px;
+12:       background-color: $header-text-color;
+13:       margin-right: 20px;
+14:       position: absolute;
+15:       top: 7px;
+16:     }
+17:   }
 
 Backtrace:
-D:\prog\dimon\sass\adventages.scss:111
+D:\prog\dimon\sass\mobile-menu.scss:12
 D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
@@ -54,6 +54,20 @@ D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in 
 D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
 D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
 D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:528:in `visit_media'
+D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
+D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
 D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
 D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
 D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
@@ -73,4 +87,4 @@ D:/prog/koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color_white\".\A         on line 111 of D:\prog\dimon\sass\adventages.scss\A \A 106:     border-radius: 11px;\A 107:     background: linear-gradient(#FF2828, #FF6F2F);\A 108:     box-shadow: 16px 16px 48px rgba(156, 173, 201, 1), -12px -12px 22px  rgba(255, 255, 255, 1);\A 109:     \A 110:     & .advantages-title{\A 111:         color: $color_white;\A 112:         white-space: nowrap;\A 113:     }\A 114:     @media screen and (max-width: 980px){\A 115:         padding: 28px 20px 29px 20px;\A 116:      }"; }
+  content: "Error: Undefined variable: \"$header-text-color\".\A         on line 12 of D:\prog\dimon\sass\mobile-menu.scss\A \A 7:     gap: 40px;\A 8:     &::before {\A 9:       content: \"\";\A 10:       width: 60px;\A 11:       height: 1px;\A 12:       background-color: $header-text-color;\A 13:       margin-right: 20px;\A 14:       position: absolute;\A 15:       top: 7px;\A 16:     }\A 17:   }"; }

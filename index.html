@@ -474,15 +474,15 @@
 
                         <ul class='step__list is-living step__list-radio'>
                             <li class='_list step__item'><input class="input-radio living-radio visually-hidden"
-                                    value="true" name="is-living" id="owner-occupied" type="radio">
+                                    value="owner-occupied" name="is-living" id="owner-occupied" type="radio">
                                 <label class="input-radio-label" for="owner-occupied">Owner Occupied</label>
                             </li>
                             <li class='_list step__item'><input class="input-radio living-radio visually-hidden"
-                                    value="false" name="is-living" id="tenant-occupied" type="radio">
+                                    value="tenant-occupied" name="is-living" id="tenant-occupied" type="radio">
                                 <label class="input-radio-label" for="tenant-occupied">Tenant Occupied</label>
                             </li>
                             <li class='_list step__item'><input class="input-radio living-radio visually-hidden"
-                                    value="false" name="is-living" id="nobody-living" type="radio">
+                                    value="nobody-living" name="is-living" id="nobody-living" type="radio">
                                 <label class="input-radio-label" for="nobody-living">No its Vacant</label>
                             </li>
 
@@ -835,6 +835,7 @@
             </div>
         </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDW-p4nZpSUbbOWr0MdEUruheMS1uooSQw&libraries=places&callback=initAutocomplete"
         async defer></script>

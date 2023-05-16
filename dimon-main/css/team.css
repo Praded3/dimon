@@ -1,35 +1,24 @@
 /*
-Error: Undefined variable: "$color_white".
-        on line 111 of D:\prog\dimon\sass\adventages.scss
+Error: Undefined variable: "$header-text-color".
+        on line 21 of D:\prog\dimon\sass\team.scss
 
-106:     border-radius: 11px;
-107:     background: linear-gradient(#FF2828, #FF6F2F);
-108:     box-shadow: 16px 16px 48px rgba(156, 173, 201, 1), -12px -12px 22px  rgba(255, 255, 255, 1);
-109:     
-110:     & .advantages-title{
-111:         color: $color_white;
-112:         white-space: nowrap;
-113:     }
-114:     @media screen and (max-width: 980px){
-115:         padding: 28px 20px 29px 20px;
-116:      }
+16:   font-weight: 400;
+17:   font-size: 18px;
+18:   line-height: 25/18 * 100%;
+19:   text-align: center;
+20:   letter-spacing: 0.02em;
+21:   color: $header-text-color;
+22:   margin-top: 30px;
+23: }
+24: .team__qualification {
+25:   font-weight: 400;
+26:   font-size: 14px;
 
 Backtrace:
-D:\prog\dimon\sass\adventages.scss:111
+D:\prog\dimon\sass\team.scss:21
 D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
 D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
 D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:402:in `visit_prop'
-D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
-D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
-D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
-D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
-D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
-D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block (2 levels) in visit_rule'
-D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `map'
-D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:444:in `block in visit_rule'
-D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:442:in `visit_rule'
 D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
 D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
 D:/prog/koala/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
@@ -73,4 +62,4 @@ D:/prog/koala/bin/sass:22:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color_white\".\A         on line 111 of D:\prog\dimon\sass\adventages.scss\A \A 106:     border-radius: 11px;\A 107:     background: linear-gradient(#FF2828, #FF6F2F);\A 108:     box-shadow: 16px 16px 48px rgba(156, 173, 201, 1), -12px -12px 22px  rgba(255, 255, 255, 1);\A 109:     \A 110:     & .advantages-title{\A 111:         color: $color_white;\A 112:         white-space: nowrap;\A 113:     }\A 114:     @media screen and (max-width: 980px){\A 115:         padding: 28px 20px 29px 20px;\A 116:      }"; }
+  content: "Error: Undefined variable: \"$header-text-color\".\A         on line 21 of D:\prog\dimon\sass\team.scss\A \A 16:   font-weight: 400;\A 17:   font-size: 18px;\A 18:   line-height: 25/18 * 100%;\A 19:   text-align: center;\A 20:   letter-spacing: 0.02em;\A 21:   color: $header-text-color;\A 22:   margin-top: 30px;\A 23: }\A 24: .team__qualification {\A 25:   font-weight: 400;\A 26:   font-size: 14px;"; }
