@@ -961,7 +961,6 @@ let zip;
 const updateZip = {
     input: document.querySelectorAll('.modal__update-zip-input'),
     btn: document.querySelector('.update__btn'),
-    message: document.querySelector('.modal__required-message'),
 };
 
 
@@ -972,46 +971,29 @@ function onUpdateZipInputChange() {
         input.addEventListener('input', (updateZipCheck));
         
     });
-    updateZip.btn.addEventListener('click', onUpdateZipBtnClickMistake);
-
 };
 
+const ceckUpdateZip = 0;
 
 function updateZipCheck(event) {
-      updateZip.btn.addEventListener('click', onUpdateZipBtnClickMistake);
-
-
-         console.log(updateZip.input[1].value.length);
+  
+    
+         console.log(updateZip.input[0].value);
         
     if (updateZip.input[0].value != "State *" &&
-        updateZip.input[1].value.length > 2 &&
-        updateZip.input[2].value.length >= 5 &&
-        updateZip.input[3].value.length >= 5) {
+        updateZip.input[1].value &&
+        updateZip.input[2].value &&
+        updateZip.input[3].value) {
         
-        // updateZip.btn.disabled = !(updateZip.input[0].value != "State *" &&
-        // updateZip.input[1].value &&
-        // updateZip.input[2].value &&
-        // updateZip.input[3].value);   
-        updateZip.btn.removeEventListener('click', onUpdateZipBtnClickMistake);
-
-        updateZip.btn.addEventListener('click', onUpdateZipBtnClick);
-    } 
+        updateZip.btn.disabled = !(updateZip.input[0].value != "State *" &&
+        updateZip.input[1].value &&
+        updateZip.input[2].value &&
+        updateZip.input[3].value);   
+            updateZip.btn.addEventListener('click', onUpdateZipBtnClick);
+    };
   
     
 };
-
-function onUpdateZipBtnClickMistake(event) {
-    console.log(event.target);
-     console.log(event.currentTarget);
-    
-    
-     if (event.target === event.currentTarget) {
-        updateZip.message.classList.remove('is-not-displayed');
-
-        console.log('pqpqpqpqp');
-        
-    }
-}
 
 
 function onUpdateZipBtnClick(event) {
@@ -1024,8 +1006,6 @@ function onUpdateZipBtnClick(event) {
 
     steps.modalUpdateZip.classList.toggle('is-not-displayed');
     steps.modalSecondStep.classList.toggle('is-not-displayed');
-    updateZip.btn.removeEventListener('click', onUpdateZipBtnClickMistake);
-
     onOwnerChecking(secondStep.ownerCheckBoxes);
 
 }
