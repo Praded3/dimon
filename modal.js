@@ -175,7 +175,7 @@ async function modalFormSubmit(event) {
         
         for (let entry of formData.entries()) {
             console.log(entry);
-            messageToTg +=` ${entry}\n`;
+            messageToTg +=` ${entry.join(" : ")}\n`;
             console.log(messageToTg);
         }
         return messageToTg;
