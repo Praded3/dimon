@@ -106,8 +106,28 @@ console.log(yesterdayCorrect);
 
 bigForm = document.querySelector('.modal__form'),
 
-bigForm.addEventListener('submit', modalFormSubmit);
- 
+    bigForm.addEventListener('submit', modalFormSubmit);
+
+
+    
+    
+    function ban(event) {
+    if(event.keyCode == 13) {
+       event.preventDefault();
+    }
+    if(event.keyCode == 37) {
+       event.preventDefault();
+    }
+    if(event.keyCode == 38) {
+       event.preventDefault();
+    }
+    if(event.keyCode == 39) {
+       event.preventDefault();
+    }
+    if(event.keyCode == 40) {
+       event.preventDefault();
+    }
+ };
 async function modalFormSubmit(event) {
     event.preventDefault();
     
@@ -254,6 +274,7 @@ const doModalClose = () => {
     refs.body.classList.toggle('lock');
     refs.backdrop.removeEventListener('click', onBackdropClick);
     window.removeEventListener('keydown', onEscKeyPress);
+    bigForm.removeEventListener('keydown', (ban));
     openBtns.heroBtn.addEventListener('click', (visabilityBackdrop) );
     openBtns.advantagesBtn.addEventListener('click', (visabilityBackdrop) );
     openBtns.nationwideBtn.addEventListener('click', (visabilityBackdrop) );
@@ -269,7 +290,7 @@ const visabilityBackdrop = () => {
     refs.backdrop.classList.toggle('is-hiden');
     refs.body.classList.toggle('lock');
     window.addEventListener('keydown', onEscKeyPress);
-
+bigForm.addEventListener('keydown', (ban));
     openBtns.heroBtn.removeEventListener('click', (visabilityBackdrop) );
     openBtns.advantagesBtn.removeEventListener('click', (visabilityBackdrop) );
     openBtns.nationwideBtn.removeEventListener('click', (visabilityBackdrop) );
