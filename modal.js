@@ -554,7 +554,7 @@ const sixthModalStep = {
 }
 
 function remuveExpDate(){
-    loseDate.input.value = yesterdayCorrect;
+    loseDate.input.value = today;
  
     
 }
@@ -563,7 +563,7 @@ function remuveExpDate(){
 
 
 function remuveLosDate(){
-    expiredDate.input.value = yesterdayCorrect;
+    expiredDate.input.value = today;
     console.log('qweqweqweqweqwe');
     
 }
