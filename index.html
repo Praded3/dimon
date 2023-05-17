@@ -20,7 +20,10 @@
 <body>
     <main>
         <section class="hero__section _section">
-            <video src="./video/pexels-1366x720.mp4" width="640" autoplay muted loop playsinline preload="auto"></video>
+            <video class="video" width="640" autoplay muted loop playsinline preload="auto">
+
+                <!-- <source src="./video/pexels-960x506.mp4"> -->
+            </video>
 
             <div class='hero__container _container'>
                 <a rel='noopener no-referrel nofollow' class='hero__link _link' href='#'>
@@ -458,11 +461,11 @@
                                 <label class="input-radio-label" for="is-owner">owner</label>
                             </li>
                             <li class='_list step__item'><input class="input-radio owner-check-boxes visually-hidden"
-                                    value="false" name="owner" id="is-agent" type="radio">
+                                    value="is-agent" name="owner" id="is-agent" type="radio">
                                 <label class="input-radio-label" for="is-agent">an agent</label>
                             </li>
                             <li class='_list step__item'><input class="input-radio owner-check-boxes visually-hidden"
-                                    value="false" name="owner" id="is-wholesaler" type="radio">
+                                    value="is-wholesaler" name="owner" id="is-wholesaler" type="radio">
                                 <label class="input-radio-label" for="is-wholesaler">a wholesaler</label>
                             </li>
 

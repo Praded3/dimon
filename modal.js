@@ -55,6 +55,19 @@ const steps = {
 // const dsv = Date.parse(maxDate)
 //  console.log(dsv);
 
+const windowInnerWidth = document.documentElement.clientWidth;
+const video = document.querySelector('.video');
+console.log(video);
+if (windowInnerWidth<= 768) {
+        video.insertAdjacentHTML('afterbegin', `<source src="./video/pexels-960x506.mp4">`)
+} else {
+            video.insertAdjacentHTML('afterbegin', `<source src="./video/pexels-1366x720.mp4">`)
+    }
+
+
+
+
+
 const date = new Date();
 
 function addZero(num) {
@@ -165,31 +178,30 @@ async function modalFormSubmit(event) {
         onLastStepBtnClick()
 
        let messageToTg = `<b>New action</b>\n`;
-    function oppo(){
+    function sendMessage(){
        
             
             
         
         for (let entry of formData.entries()) {
             console.log(entry);
-            messageToTg +=` ${entry.join(" : ")}\n`;
-            console.log(messageToTg);
+
+            if (entry[1] !='') {
+                messageToTg += ` ${entry.join(" : ")}\n`;
+                console.log(messageToTg);
+            }
+
+            
         }
         return messageToTg;
     };
 
-    oppo();
+    sendMessage();
         axios.post(URI_API, {
                     chat_id: CHAT_ID,
                     parse_mode: 'html',
                     text: messageToTg,
             });
-
-
-        
-        
-
-
     }
 
        // let response = await fetch('sendmail.php', {

@@ -23,39 +23,47 @@ document.addEventListener('DOMContentLoaded', function () {
         let formData = new FormData(modalForm);
 
         if (formData) {
-            }
+        }
 
 
         formData.forEach((x, y) => {
-        console.log(x);
-        console.log(y);
+            console.log(x);
+            console.log(y);
         
-    });
+        });
 
 
         if (error === 0) {
             onModalFormBtnClick();
-
-
-
-            // let response = await fetch('sendmail.php', {
-			// 	method: 'POST',
-			// 	body: formData
-            // });
+            let messageToTg = `<b>New small action</b>\n`;
+            function sendMessage() {
+       
             
-            // if (response.ok) {
-			// 	let result = await response.json();
-			// 	alert(result.message);
-			// 	form.reset();
-			// } else {
-			// 	alert("Ошибка");
-            // }
             
-        } else {
-            // alert('zapolnite polya');
+        
+                for (let entry of formData.entries()) {
+                    console.log(entry);
+
+                    if (entry[1] != '') {
+                        messageToTg += ` ${entry.join(" : ")}\n`;
+                        console.log(messageToTg);
+                    }
+
+            
+                }
+                return messageToTg;
+            };
+
+            sendMessage();
+            axios.post(URI_API, {
+                chat_id: CHAT_ID,
+                parse_mode: 'html',
+                text: messageToTg,
+            });
         }
 
-    }
+    };
+
 
     function formValidate(modalForm) {
         let error = 0;

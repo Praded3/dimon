@@ -40,19 +40,19 @@
     }
     @media screen and (max-width: 767px){
         padding: 50px 15px 64px 15px;
-        background-image: linear-gradient( rgba(0, 0, 0, 0.4 ), 
-        rgba(0, 0, 0, 0.5)), url(./img/hero/1.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-color: transparent;
-        @media screen and (min-device-pixel-ratio: 2),
-            screen and (min-resolution: 192dpi),
-            screen and (min-resolution: 2dppx) {
-            background-image: linear-gradient( rgba(0, 0, 0, 0.4 ), 
-            rgba(0, 0, 0, 0.5)), url(./img/hero/1@2x.jpg);
-            background-position: center;
-            background-repeat: no-repeat;background-color: transparent;
-    }
+    //     background-image: linear-gradient( rgba(0, 0, 0, 0.4 ), 
+    //     rgba(0, 0, 0, 0.5)), url(./img/hero/1.jpg);
+    //     background-position: center;
+    //     background-repeat: no-repeat;
+    //     background-color: transparent;
+    //     @media screen and (min-device-pixel-ratio: 2),
+    //         screen and (min-resolution: 192dpi),
+    //         screen and (min-resolution: 2dppx) {
+    //         background-image: linear-gradient( rgba(0, 0, 0, 0.4 ), 
+    //         rgba(0, 0, 0, 0.5)), url(./img/hero/1@2x.jpg);
+    //         background-position: center;
+    //         background-repeat: no-repeat;background-color: transparent;
+    // }
    
     }
     @media screen and (max-width: 425px){
@@ -68,9 +68,9 @@ video{
     top: 0;
     left: 0;
     z-index: -1;
-    @media screen and (max-width: 767px){
-        display: none;
-    }
+//     @media screen and (max-width: 767px){
+//         display: none;
+//     }
 }
 
 
