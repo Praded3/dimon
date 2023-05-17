@@ -58,9 +58,12 @@ const steps = {
 const windowInnerWidth = document.documentElement.clientWidth;
 const video = document.querySelector('.video');
 console.log(video);
-if (windowInnerWidth<= 768) {
+if (windowInnerWidth <= 425) {
+    video.insertAdjacentHTML('afterbegin', `<source src="./video/pexels-640x338.mp4">`)
+} else if  (windowInnerWidth<= 768) {
         video.insertAdjacentHTML('afterbegin', `<source src="./video/pexels-960x506.mp4">`)
-} else {
+}
+else {
             video.insertAdjacentHTML('afterbegin', `<source src="./video/pexels-1366x720.mp4">`)
     }
 
